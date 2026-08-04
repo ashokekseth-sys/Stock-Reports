@@ -104,9 +104,10 @@
     .hdr { flex-direction:column !important; align-items:stretch !important; gap:10px; }
     .hdr .pricebox { text-align:left !important; }
 
-    .tagstrip { flex-direction:column !important; }
-    .tagstrip div { border-right:none !important; border-bottom:1px solid #dde2ea; text-align:left !important; padding:8px 4px !important; }
-    .tagstrip div:last-child { border-bottom:none; }
+    .tagstrip { display:grid !important; grid-template-columns:1fr 1fr !important; }
+    .tagstrip div { font-size:9px !important; text-align:left !important; padding:7px 6px !important; border-right:1px solid #dde2ea !important; border-bottom:1px solid #dde2ea !important; }
+    .tagstrip div:nth-child(2n) { border-right:none !important; }
+    .tagstrip div:last-child { grid-column:1 / -1 !important; border-right:none !important; border-bottom:none !important; }
 
     .mobile-jump {
       display:flex !important; gap:4px; overflow-x:auto; -webkit-overflow-scrolling:touch;
@@ -125,7 +126,8 @@
     .cols { row-gap:16px; }
 
     .tile { flex:1 1 45% !important; }
-    .tiles { row-gap:8px; }
+    .tiles { flex-wrap:wrap !important; row-gap:8px; }
+    .tiles-stack .tile { flex:1 1 100% !important; }
 
     div[style*="flex:1 1 44%"] { flex:1 1 100% !important; }
     div[style*="flex:1 1 30%"] { flex:1 1 45% !important; }
@@ -144,10 +146,35 @@
 
     h1 { font-size:21px !important; }
     .price { font-size:22px !important; }
+
+    /* header sub-line duplicates the cover page — hide on mobile */
+    .hdr .sub { display:none !important; }
+
+    /* revenue-mix donut: swap for the compact side-by-side mobile version */
+    .donut-desktop { display:none !important; }
+    .donut-mobile { display:flex !important; }
+
+    /* event metric strip (e.g. section 03): stack vertically instead of N-across */
+    .eventstrip { flex-direction:column !important; }
+    .eventstrip > div { border-right:none !important; border-bottom:1px solid #e7ebf1 !important; text-align:left !important; display:flex !important; align-items:baseline !important; gap:8px !important; padding:8px 4px !important; }
+    .eventstrip > div:last-child { border-bottom:none !important; }
+    .eventstrip > div > div:first-child { flex:0 0 36% !important; }
+
+    /* stock performance + peer comparison tables: stretch to fill width instead of horizontal scroll */
+    table.peer, table.wfill { display:table !important; width:100% !important; table-layout:fixed !important; white-space:normal !important; overflow-x:visible !important; }
+    table.peer th, table.peer td, table.wfill th, table.wfill td { font-size:8.3px !important; padding:3px 2px !important; word-break:break-word; }
+    table.peer th:first-child, table.peer td:first-child, table.wfill th:first-child, table.wfill td:first-child { width:22%; }
+
+    /* risk analysis table: category + severity share a line, evidence wraps full-width below */
+    table.risk tr { display:flex !important; flex-wrap:wrap !important; padding:8px 0 !important; border-bottom:1px solid #edf0f5; }
+    table.risk th { display:none !important; }
+    table.risk td { display:inline !important; border:none !important; padding:0 !important; }
+    table.risk td:nth-child(1) { order:1; font-size:12px; margin-right:8px; }
+    table.risk td:nth-child(3) { order:2; }
+    table.risk td:nth-child(2) { order:3; flex:1 1 100%; margin-top:5px; font-size:11px; }
   }
 
   @media (max-width: 480px) {
-    .tile { flex:1 1 100% !important; }
     div[style*="flex:1 1 45%"] { flex:1 1 100% !important; }
   }
 </style>
@@ -419,13 +446,28 @@
       </div>
       <div style="flex:1">
         <div class="microhead">Revenue Mix (FY26)</div>
-        <svg viewBox="0 0 480 386" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto">
+        <div class="donut-desktop">
+<svg viewBox="0 0 480 386" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto">
 <path d="M240.0,20.0 A148,148 0 1 1 103.8,110.2 L153.5,131.3 A94,94 0 1 0 240.0,74.0 Z" fill="#1a2a4a"/><path d="M104.2,109.2 A148,148 0 0 1 226.9,20.6 L231.7,74.4 A94,94 0 0 0 153.7,130.7 Z" fill="#2e7d32"/><path d="M227.9,20.5 A148,148 0 0 1 239.0,20.0 L239.3,74.0 A94,94 0 0 0 232.3,74.3 Z" fill="#e67e22"/><text x="240.0" y="51.0" text-anchor="middle" font-size="14" font-weight="900" fill="#fff">81.5%</text><text x="169.5" y="73.7" text-anchor="middle" font-size="14" font-weight="900" fill="#fff">17.2%</text>
 <text x="240" y="232" text-anchor="middle" font-size="19" font-weight="900" fill="#1a2a4a">&#8377;603 Cr</text>
 <text x="240" y="248" text-anchor="middle" font-size="9" letter-spacing="1.5" fill="#8a94a6">FY26 REVENUE (+31.8%)</text>
 <rect x="26" y="272" width="11" height="11" rx="2" fill="#1a2a4a"/><text x="43" y="282" font-size="10.5" fill="#2a3342" font-weight="700">Energy &amp; Oil/Gas</text><text x="43" y="295" font-size="9" fill="#8a94a6">81.5% — GE Vernova, MHI, Siemens Energy</text><rect x="252" y="272" width="11" height="11" rx="2" fill="#2e7d32"/><text x="269" y="282" font-size="10.5" fill="#2a3342" font-weight="700">Aerospace &amp; Defence</text><text x="269" y="295" font-size="9" fill="#8a94a6">17.2% — Rolls-Royce, Safran, DRDO</text><rect x="26" y="316" width="11" height="11" rx="2" fill="#e67e22"/><text x="43" y="326" font-size="10.5" fill="#2a3342" font-weight="700">Other / Scrap</text><text x="43" y="339" font-size="9" fill="#8a94a6">1.3% of revenue</text>
 <text x="240" y="374" text-anchor="middle" font-size="9.3" fill="#8a94a6">Exports ~92% of revenue &#183; Order book &#8377;6,500+ Cr (~11-12x FY26 revenue)</text>
 </svg>
+</div>
+<div class="donut-mobile" style="display:none;align-items:center;gap:14px">
+  <div style="width:108px;height:108px;border-radius:50%;flex:0 0 auto;background:conic-gradient(#1a2a4a 0% 81.5%, #2e7d32 81.5% 98.7%, #e67e22 98.7% 100%);position:relative">
+    <div style="position:absolute;inset:17px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;text-align:center">
+      <div><div style="font-size:12.5px;font-weight:900;color:#1a2a4a">&#8377;603 Cr</div><div style="font-size:6.6px;letter-spacing:0.6px;color:#8a94a6">FY26 REV +31.8%</div></div>
+    </div>
+  </div>
+  <div style="flex:1;min-width:0">
+    <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px"><span style="width:10px;height:10px;border-radius:2px;background:#1a2a4a;flex:0 0 auto"></span><span style="font-size:10px"><b>Energy &amp; Oil/Gas</b> <span style="color:#8a94a6">81.5%</span></span></div>
+    <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px"><span style="width:10px;height:10px;border-radius:2px;background:#2e7d32;flex:0 0 auto"></span><span style="font-size:10px"><b>Aerospace &amp; Defence</b> <span style="color:#8a94a6">17.2%</span></span></div>
+    <div style="display:flex;align-items:center;gap:6px"><span style="width:10px;height:10px;border-radius:2px;background:#e67e22;flex:0 0 auto"></span><span style="font-size:10px"><b>Other / Scrap</b> <span style="color:#8a94a6">1.3%</span></span></div>
+    <div style="font-size:8.6px;color:#8a94a6;margin-top:7px">Exports ~92% of revenue &#183; Order book &#8377;6,500+ Cr (~11-12x FY26 rev)</div>
+  </div>
+</div>
       </div>
       <div style="flex:1.05">
         
@@ -460,7 +502,7 @@
   <!-- ================= 03 EVENT: DRDO TURBOJET ================= -->
   <div class="sec">
     <div class="sec-title" id="sec03"><span class="num">03</span><h2>Event Read-Through — India's First Indigenous Turbojet (22 Jul 2026)</h2></div>
-    <div style="border:1px solid #dde2ea;border-top:3px solid #2e7d32;border-radius:6px;display:flex;background:linear-gradient(180deg,#fdfefe,#f7f9fc);margin-bottom:12px"><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">22 Jul 2026</div><div style="font-size:15.5px;font-weight:900;color:#2e7d32">First Indigenous</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">Turbojet delivered to DRDO/MoD</div></div><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Engine Class</div><div style="font-size:15.5px;font-weight:900;color:#1a2a4a">350 kg thrust</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">Designed by DRDO's GTRE</div></div><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Use Case</div><div style="font-size:15.5px;font-weight:900;color:#1a2a4a">Missiles &amp; UAVs</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">Sovereign propulsion program</div></div><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Market Read</div><div style="font-size:15.5px;font-weight:900;color:#2e7d32">52-Wk High</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">&#8377;2,530 hit 13 Jul, days before</div></div><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Broker Response</div><div style="font-size:15.5px;font-weight:900;color:#2e7d32">Goldman &#8377;2,460</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">Target raised on the back of this + order book</div></div><div style="flex:1;text-align:center;padding:8px 4px;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Disclosure</div><div style="font-size:15.5px;font-weight:900;color:#e67e22">Not Yet Quantified</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">Mgmt declined unit-count / cadence detail</div></div></div>
+    <div class="eventstrip" style="border:1px solid #dde2ea;border-top:3px solid #2e7d32;border-radius:6px;display:flex;background:linear-gradient(180deg,#fdfefe,#f7f9fc);margin-bottom:12px"><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">22 Jul 2026</div><div style="font-size:15.5px;font-weight:900;color:#2e7d32">First Indigenous</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">Turbojet delivered to DRDO/MoD</div></div><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Engine Class</div><div style="font-size:15.5px;font-weight:900;color:#1a2a4a">350 kg thrust</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">Designed by DRDO's GTRE</div></div><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Use Case</div><div style="font-size:15.5px;font-weight:900;color:#1a2a4a">Missiles &amp; UAVs</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">Sovereign propulsion program</div></div><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Market Read</div><div style="font-size:15.5px;font-weight:900;color:#2e7d32">52-Wk High</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">&#8377;2,530 hit 13 Jul, days before</div></div><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Broker Response</div><div style="font-size:15.5px;font-weight:900;color:#2e7d32">Goldman &#8377;2,460</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">Target raised on the back of this + order book</div></div><div style="flex:1;text-align:center;padding:8px 4px;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Disclosure</div><div style="font-size:15.5px;font-weight:900;color:#e67e22">Not Yet Quantified</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">Mgmt declined unit-count / cadence detail</div></div></div>
     <div class="cols">
       <div style="flex:0 0 calc(50% - 10px);min-width:0">
         <div class="microhead" style="margin-top:0">What Happened &amp; Why It Matters Beyond The Headline</div>
@@ -521,7 +563,7 @@
       </div>
       <div style="flex:1.08">
         <div class="sec-title" id="sec06"><span class="num">06</span><h2>Shareholding — 4 Qtrs</h2></div>
-        <table class="t">
+        <table class="t wfill">
           <tr><th>Category</th><th>Sep'25</th><th>Dec'25</th><th>Mar'26</th><th>Jun'26</th><th>&#916;</th></tr>
           <tr><td>Promoters</td><td>55.42%</td><td>55.84%</td><td>55.84%</td><td>55.84%</td><td class="pos">&#9650; 0.42pp</td></tr>
           <tr><td>FIIs</td><td>15.76%</td><td>15.33%</td><td>14.75%</td><td><b>13.30%</b></td><td class="neg">&#9660; 2.46pp</td></tr>
@@ -590,7 +632,7 @@
       <div style="flex:0 0 calc(50% - 7px);min-width:0">
         <div class="microhead">Annual P&amp;L — Last 5 Years (FY = Apr–Mar)</div>
         <table class="t fit">
-          <tr><th>Year</th><th>Revenue</th><th>Op Profit</th><th>OPM%</th><th>PBT</th><th>Net Profit</th><th>EPS (&#8377;)</th></tr>
+          <tr><th>Year</th><th>Rev</th><th>OP</th><th>OPM%</th><th>PBT</th><th>NP</th><th>EPS</th></tr>
           <tr><td>FY22</td><td>194</td><td>62</td><td>32%</td><td>40</td><td>29</td><td>194.69*</td></tr>
           <tr><td>FY23</td><td>252</td><td>72</td><td>29%</td><td>13</td><td>8</td><td>51.28*</td></tr>
           <tr><td>FY24</td><td>341</td><td>117</td><td>34%</td><td>81</td><td>59</td><td>9.91</td></tr>
@@ -600,12 +642,12 @@
         <div class="chartcap">*FY22/23 EPS pre-dates the pre-IPO share split — not comparable to FY24 onward on a per-share basis; revenue/profit figures are unaffected.</div>
         <div class="microhead" style="margin-top:9px">Quarterly Trend — Last 5 Quarters</div>
         <table class="t fit">
-          <tr><th>Quarter</th><th>Revenue</th><th>Op Profit</th><th>OPM%</th><th>PBT</th><th>Net Profit</th><th>EPS (&#8377;)</th></tr>
-          <tr><td>Q4 FY25 (Mar'25)</td><td>127</td><td>46</td><td>36%</td><td>36</td><td>25</td><td>3.91</td></tr>
-          <tr><td>Q1 FY26 (Jun'25)</td><td>137</td><td>49</td><td>36%</td><td>42</td><td>29</td><td>4.60</td></tr>
-          <tr><td>Q2 FY26 (Sep'25)</td><td>146</td><td>53</td><td>36%</td><td>46</td><td>33</td><td>5.07</td></tr>
-          <tr><td>Q3 FY26 (Dec'25)</td><td>159</td><td>62</td><td>39%</td><td>48</td><td>35</td><td>5.34</td></tr>
-          <tr><td><b>Q4 FY26 (Mar'26)</b></td><td><b>162</b></td><td><b>61</b></td><td><b class="pos">38%</b></td><td><b class="pos">51</b></td><td><b class="pos">37</b></td><td><b class="pos">5.57</b></td></tr>
+          <tr><th>Quarter</th><th>Rev</th><th>OP</th><th>OPM%</th><th>PBT</th><th>NP</th><th>EPS</th></tr>
+          <tr><td>Q4 (Mar'25)</td><td>127</td><td>46</td><td>36%</td><td>36</td><td>25</td><td>3.91</td></tr>
+          <tr><td>Q1 (Jun'25)</td><td>137</td><td>49</td><td>36%</td><td>42</td><td>29</td><td>4.60</td></tr>
+          <tr><td>Q2 (Sep'25)</td><td>146</td><td>53</td><td>36%</td><td>46</td><td>33</td><td>5.07</td></tr>
+          <tr><td>Q3 (Dec'25)</td><td>159</td><td>62</td><td>39%</td><td>48</td><td>35</td><td>5.34</td></tr>
+          <tr><td><b>Q4 (Mar'26)</b></td><td><b>162</b></td><td><b>61</b></td><td><b class="pos">38%</b></td><td><b class="pos">51</b></td><td><b class="pos">37</b></td><td><b class="pos">5.57</b></td></tr>
         </table>
       </div>
       <div style="flex:0 0 calc(50% - 7px);min-width:0">
@@ -650,7 +692,7 @@
   <!-- ================= 10 MANAGEMENT METRICS ================= -->
   <div class="sec">
     <div class="sec-title" id="sec10"><span class="num">10</span><h2>Management Metrics</h2></div>
-    <div class="tiles">
+    <div class="tiles tiles-stack">
       <div class="tile">
         <div class="lab">Mgmt Remuneration as % of PAT</div>
         <div class="val pos">8.7-9.7%</div>
@@ -751,7 +793,7 @@
   <!-- ================= 15 RISK ANALYSIS ================= -->
   <div class="sec">
     <div class="sec-title" id="sec15"><span class="num">15</span><h2>Risk Analysis</h2></div>
-    <table class="t prose">
+    <table class="t prose risk">
       <tr><th style="text-align:left">Risk Category</th><th style="text-align:left">Evidence</th><th>Severity</th></tr>
       <tr><td style="text-align:left"><b>Economic Risks</b></td><td style="text-align:left">93.3% of FY26 revenue is exports (USD/EUR) with no disclosed FX hedging program found; 42.6% of raw materials sourced from a <b>single supplier</b> (H1 FY24 disclosure) compounds titanium/nickel-superalloy price risk. A sharp INR move or a supplier disruption hits margins with limited near-term pass-through against fixed long-term contracts.</td><td><span class="badge b-bear">Medium-High</span></td></tr>
       <tr><td style="text-align:left"><b>Industry Disruption</b></td><td style="text-align:left">No Azad-specific evidence of additive-manufacturing (3D printing) displacement or customer in-sourcing found — and the same 30-48 month qualification cycles that form Azad's moat also slow AM's ability to displace already-qualified parts. Longer-horizon risk: next-gen engine architectures (open fan, hydrogen combustion) could obsolete specific part geometries.</td><td><span class="badge b-warn">Low-Medium</span></td></tr>
