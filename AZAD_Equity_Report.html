@@ -161,9 +161,9 @@
     .eventstrip > div > div:first-child { flex:0 0 36% !important; }
 
     /* stock performance + peer comparison tables: stretch to fill width instead of horizontal scroll */
-    table.peer, table.wfill { display:table !important; width:100% !important; table-layout:fixed !important; white-space:normal !important; overflow-x:visible !important; }
-    table.peer th, table.peer td, table.wfill th, table.wfill td { font-size:8.3px !important; padding:3px 2px !important; word-break:break-word; }
-    table.peer th:first-child, table.peer td:first-child, table.wfill th:first-child, table.wfill td:first-child { width:22%; }
+    table.peer, table.wfill, table.fit { display:table !important; width:100% !important; table-layout:fixed !important; white-space:normal !important; overflow-x:visible !important; }
+    table.peer th, table.peer td, table.wfill th, table.wfill td, table.fit th, table.fit td { font-size:8.3px !important; padding:3px 2px !important; word-break:break-word; }
+    table.peer th:first-child, table.peer td:first-child, table.wfill th:first-child, table.wfill td:first-child, table.fit th:first-child, table.fit td:first-child { width:16%; }
 
     /* risk analysis table: category + severity share a line, evidence wraps full-width below */
     table.risk tr { display:flex !important; flex-wrap:wrap !important; padding:8px 0 !important; border-bottom:1px solid #edf0f5; }
