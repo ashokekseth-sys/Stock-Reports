@@ -142,7 +142,238 @@
   }
 </style>
 </head>
-<body><div class="page">
+<body>
+<style>
+  :root{
+    --navy:#1a2a4a;
+    --navy-2:#243a63;
+    --gold:#c9a24b;
+    --ink:#1a2a4a;
+    --muted:#5c6b85;
+    --hair:#dde2ea;
+    --page-bg:#ffffff;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  .cover-wrap{
+    font-family:'Source Sans 3','Segoe UI',Arial,sans-serif;
+    background:#e9edf3;
+    display:flex;
+    justify-content:center;
+    padding:24px 12px;
+  }
+  .cover-page{
+    width:1400px;
+    max-width:100%;
+    min-height:900px;
+    background:var(--page-bg);
+    display:flex;
+    flex-direction:column;
+    box-shadow:0 6px 24px rgba(26,42,74,0.18);
+    overflow:hidden;
+  }
+  .top-band{
+    height:14px;
+    background:linear-gradient(90deg,var(--navy) 0%,var(--navy-2) 55%,var(--gold) 100%);
+    flex-shrink:0;
+  }
+  .brand-bar{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:26px 56px 0 56px;
+    flex-shrink:0;
+  }
+  .brand-bar .doc-type{
+    font-size:12px;
+    letter-spacing:3px;
+    color:var(--muted);
+    text-transform:uppercase;
+    font-weight:600;
+  }
+  .brand-bar .doc-date{
+    font-size:12px;
+    color:var(--muted);
+    letter-spacing:0.4px;
+  }
+  .main{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:20px 60px 40px 60px;
+  }
+  .logo-wrap{
+    width:260px;
+    height:150px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:34px;
+  }
+  .logo-wrap img{
+    max-width:100%;
+    max-height:100%;
+    object-fit:contain;
+  }
+  .kicker{
+    font-size:15px;
+    letter-spacing:6px;
+    color:var(--gold);
+    font-weight:700;
+    text-transform:uppercase;
+    margin-bottom:16px;
+  }
+  h1.report-title{
+    font-size:46px;
+    letter-spacing:1px;
+    color:var(--navy);
+    font-weight:800;
+    text-transform:uppercase;
+    line-height:1.15;
+  }
+  .divider{
+    width:120px;
+    height:3px;
+    background:var(--gold);
+    margin:26px 0;
+  }
+  .company-name{
+    font-size:34px;
+    font-weight:700;
+    color:var(--navy);
+    letter-spacing:0.3px;
+  }
+  .ticker-row{
+    margin-top:10px;
+    display:flex;
+    gap:14px;
+    align-items:center;
+    justify-content:center;
+  }
+  .ticker-chip{
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:0.6px;
+    color:var(--navy);
+    background:#eef1f7;
+    border:1px solid var(--hair);
+    border-radius:4px;
+    padding:6px 14px;
+  }
+  .sector-line{
+    margin-top:18px;
+    font-size:14px;
+    color:var(--muted);
+    letter-spacing:0.3px;
+    font-style:italic;
+  }
+  .meta-block{
+    margin-top:46px;
+    display:flex;
+    gap:70px;
+    justify-content:center;
+  }
+  .meta-item{
+    text-align:center;
+  }
+  .meta-label{
+    font-size:11px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:var(--muted);
+    margin-bottom:6px;
+    font-weight:600;
+  }
+  .meta-value{
+    font-size:16px;
+    color:var(--navy);
+    font-weight:700;
+  }
+  .prepared-by{
+    margin-top:60px;
+    font-size:13px;
+    color:var(--muted);
+    letter-spacing:0.3px;
+  }
+  .prepared-by strong{
+    color:var(--navy);
+  }
+  .footer{
+    flex-shrink:0;
+    background:#ffffff;
+    border-top:1px solid var(--hair);
+    padding:16px 56px;
+    text-align:center;
+  }
+  .footer p{
+    font-size:10.5px;
+    line-height:1.6;
+    color:#8992a6;
+    letter-spacing:0.2px;
+  }
+  .footer strong{
+    color:var(--muted);
+  }
+  .bottom-band{
+    height:8px;
+    background:var(--navy);
+    flex-shrink:0;
+  }
+</style>
+<div class="cover-wrap">
+  <div class="cover-page">
+  <div class="top-band"></div>
+
+  <div class="brand-bar">
+    <div class="doc-type">Equity Research</div>
+    <div class="doc-date">Confidential — For Educational Use</div>
+  </div>
+
+  <div class="main">
+    <div class="logo-wrap">
+      <img src="data:image/png;base64,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" alt="Azad Engineering logo" />
+    </div>
+
+    <div class="kicker">Stock Analysis Report</div>
+    <h1 class="report-title">Azad Engineering Limited</h1>
+
+    <div class="divider"></div>
+
+    <div class="ticker-row">
+      <div class="ticker-chip">NSE: AZAD</div>
+      <div class="ticker-chip">BSE: 544061</div>
+    </div>
+    <div class="sector-line">Precision Forged &amp; Machined Components — Aerospace, Defence, Energy &amp; Oil and Gas</div>
+
+    <div class="meta-block">
+      <div class="meta-item">
+        <div class="meta-label">Date of Generation</div>
+        <div class="meta-value">04 August 2026</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-label">Exchange</div>
+        <div class="meta-value">NSE / BSE</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-label">Report Type</div>
+        <div class="meta-value">Technical + Fundamental</div>
+      </div>
+    </div>
+
+    <div class="prepared-by">Prepared by <strong>Ashoke Kumar Seth</strong></div>
+  </div>
+
+  <div class="footer">
+    <p><strong>Report by Ashoke Kumar Seth</strong> — Disclosure: I am not SEBI registered. The information provided here is for educational purposes only. I will not be responsible for any of your profit/loss with this channel's suggestions. Consult your financial advisor before taking any decisions. This report is neither advice nor endorsement — Do Your Own Research.</p>
+  </div>
+
+  <div class="bottom-band"></div>
+</div>
+</div>
+
+<div class="page">
 
   <!-- ================= HEADER ================= -->
   <div class="hdr">
@@ -596,7 +827,7 @@
     </div>
   </div>
 
-  <div class="disclaim">Disclaimer: This report is prepared using publicly available data from NSE, BSE, Screener.in, MarketSmith India, Trendlyne, MoneyControl, Goldman Sachs research coverage, Azad Engineering's FY25 Annual Report, Q4 FY26 earnings-call transcript, company filings, investor presentations and other public web sources as of 4 Aug 2026, and from the author's own MotiveWave Elliott Wave analysis. Azad Engineering is a high-growth, high-valuation, capital-intensive manufacturer with a recently negative operating cash flow, elevated leverage growth, and single-site concentration; these are material risks discussed herein. Price, volume and financial figures should be independently verified. Ashoke Kumar Seth is not a SEBI-registered research analyst. This is not investment advice; always consult a licensed financial adviser before making investment decisions. All figures in &#8377; Crore unless stated otherwise.</div>
+  <div class="disclaim">Sources: NSE, BSE, Screener.in, MarketSmith India, Trendlyne, MoneyControl, Goldman Sachs research coverage, Azad Engineering's FY25 Annual Report, Q4 FY26 earnings-call transcript, company filings, investor presentations and other public web sources as of 4 Aug 2026, plus the author's own MotiveWave Elliott Wave analysis. Azad Engineering is a high-growth, high-valuation, capital-intensive manufacturer with a recently negative operating cash flow, elevated leverage growth, and single-site concentration; these are material risks discussed in Section 15. Price, volume and financial figures should be independently verified. All figures in &#8377; Crore unless stated otherwise.</div>
   <div class="footer-blue"><b>Copyright &copy; Ashoke Kumar Seth</b> &nbsp;|&nbsp; Ashokekseth@gmail.com &nbsp;|&nbsp; This report is for informational purposes only and does not constitute investment advice.</div>
 </div>
 
