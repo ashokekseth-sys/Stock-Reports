@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:type" content="website">
+<meta property="og:title" content="GACM Technologies Ltd — Equity Research Report">
+<meta property="og:description" content="Equity report on GACM Technologies Ltd (NSE: GATECH, formerly Stampede Capital) — business overview, financials, governance risk flags and technical read. Prepared by Ashoke Kumar Seth.">
+<title>GACM Technologies Ltd — Equity Research Report</title>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#ffffff; font-family:'Source Sans 3',Arial,sans-serif; color:#2a3342; font-size:12.5px; line-height:1.5; }
+  .page { width:1400px; margin:0 auto; background:#fff; }
+  /* header */
+  .hdr { background:linear-gradient(135deg,#101c36 0%,#1a2a4a 55%,#2b4570 100%); border-bottom:4px solid; border-image:linear-gradient(90deg,#f7b733,#e67e22,#c62828) 1; color:#fff; padding:16px 26px 13px; display:flex; justify-content:space-between; align-items:flex-start; }
+  .hdr .meta { font-size:10.5px; letter-spacing:0.6px; color:#9fb0cf; text-transform:uppercase; }
+  .hdr h1 { font-size:26px; font-weight:900; letter-spacing:0.2px; margin:2px 0 3px; }
+  .hdr .tagline { font-size:11.5px; color:#c7d2e8; }
+  .hdr .pricebox { text-align:right; }
+  .hdr .price { font-size:26px; font-weight:900; }
+  .hdr .chg { color:#ff8a80; font-weight:700; font-size:14px; }
+  .hdr .sub { font-size:10.5px; color:#9fb0cf; margin-top:3px; }
+  .tagstrip { display:flex; gap:0; border-bottom:1px solid #dde2ea; }
+  .tagstrip div { flex:1; text-align:center; padding:6px 4px; font-size:10px; font-weight:700; letter-spacing:0.4px; text-transform:uppercase; border-right:1px solid #dde2ea; }
+  .tagstrip div:last-child { border-right:none; }
+  /* key snapshot band */
+  .snapshot { display:flex; border-bottom:1px solid #dde2ea; background:#f7f8fa; }
+  .snapshot .cell { flex:1; text-align:center; padding:10px 6px; border-right:1px solid #dde2ea; }
+  .snapshot .cell:last-child { border-right:none; }
+  .snapshot .lab { font-size:9px; font-weight:900; letter-spacing:0.6px; text-transform:uppercase; color:#8a94a6; }
+  .snapshot .val { font-size:14px; font-weight:900; color:#1a2a4a; margin-top:2px; }
+  .snapshot .val small { display:block; font-weight:600; color:#5a6475; font-size:9px; margin-top:1px; }
+  /* sections */
+  .sec { padding:16px 26px 20px; border-bottom:1px solid #e4e8ef; }
+  .sec-title { display:flex; align-items:center; gap:9px; margin-bottom:12px; padding-bottom:7px; border-bottom:2px solid #f0b429; }
+  .sec-title .num { background:linear-gradient(135deg,#f7b733,#e67e22); color:#1a2a4a; font-size:11px; font-weight:900; padding:2px 7px; border-radius:3px; }
+  .sec-title h2 { font-size:14.5px; font-weight:900; letter-spacing:0.8px; text-transform:uppercase; color:#1a2a4a; }
+  .microhead { font-size:10px; font-weight:900; letter-spacing:0.9px; text-transform:uppercase; color:#b07716; margin:10px 0 6px; }
+  table.t { width:100%; border-collapse:collapse; }
+  table.t th { background:linear-gradient(180deg,#243a63,#1a2a4a); color:#fff; font-size:10.5px; letter-spacing:0.5px; text-transform:uppercase; padding:6px 9px; text-align:right; font-weight:700; }
+  table.t th:first-child { text-align:left; }
+  table.t td { padding:5.5px 9px; border-bottom:1px solid #edf0f5; text-align:right; font-size:12px; }
+  table.t td:first-child { text-align:left; font-weight:600; }
+  table.t tr:nth-child(even) td { background:#f8f9fb; }
+  .pos { color:#2e7d32; font-weight:700; } .neg { color:#c62828; font-weight:700; }
+  .warn { color:#f57f17; font-weight:700; }
+  .tiles { display:flex; gap:10px; flex-wrap:wrap; }
+  .tile { flex:1 1 calc(25% - 8px); border:1px solid #dde2ea; border-top:3px solid #2b4570; border-radius:6px; padding:9px 12px; background:linear-gradient(180deg,#fdfefe,#f7f9fc); }
+  .tile .lab { font-size:9.5px; font-weight:900; letter-spacing:0.8px; text-transform:uppercase; color:#8a94a6; }
+  .tile .val { font-size:19px; font-weight:900; margin:2px 0 1px; color:#1a2a4a; }
+  .tile .note { font-size:10.3px; color:#5a6475; line-height:1.35; }
+  .notebox { border-left:4px solid #f9a825; background:#fffbe8; padding:9px 13px; font-size:11.8px; margin-top:11px; border-radius:0 5px 5px 0; }
+  .notebox.green { border-left-color:#2e7d32; background:#f0f7f0; }
+  .notebox.red { border-left-color:#c62828; background:#fdf0f0; }
+  .notebox.blue { border-left-color:#1565c0; background:#eef4fc; }
+  .badge { display:inline-block; font-size:9.5px; font-weight:900; letter-spacing:0.5px; padding:1.5px 7px; border-radius:9px; text-transform:uppercase; vertical-align:middle; }
+  .b-bull { background:#e8f5e9; color:#2e7d32; } .b-bear { background:#ffebee; color:#c62828; }
+  .b-neut { background:#e3f2fd; color:#1565c0; } .b-warn { background:#fff9c4; color:#f57f17; }
+  .cols { display:flex; gap:20px; }
+  .panel { flex:1; border:1px solid #dde2ea; border-radius:6px; padding:12px 15px; }
+  .panel .plab { font-size:9.5px; font-weight:900; letter-spacing:0.9px; text-transform:uppercase; color:#8a94a6; margin-bottom:3px; }
+  .panel .pval { font-size:21px; font-weight:900; }
+  .chartcap { font-size:10px; color:#8a94a6; margin-top:5px; line-height:1.4; }
+  .footer-blue { border-top:3px solid #f0b429; background:linear-gradient(135deg,#101c36,#1a2a4a 55%,#2b4570); color:#fff; text-align:center; padding:10px 16px; font-size:11px; letter-spacing:0.4px; }
+  .disclaim { font-size:9.8px; color:#8a94a6; padding:12px 26px; line-height:1.5; }
+  .compact { padding:13px 26px 14px; }
+  .compact table.t td { padding:3.5px 8px; font-size:11.3px; }
+  .compact table.t th { padding:5px 8px; }
+  .krow { display:flex; justify-content:space-between; align-items:baseline; gap:8px; border-bottom:1px solid #edf0f5; padding:5px 2px; }
+  .krow .klab { color:#8a94a6; font-weight:900; font-size:9.3px; text-transform:uppercase; letter-spacing:0.5px; flex:0 0 auto; }
+  .krow .kval { font-weight:900; color:#1a2a4a; font-size:12.5px; text-align:right; }
+  .krow .kval small { display:block; font-weight:600; color:#8a94a6; font-size:9.3px; }
+  .mininote { font-size:10px; color:#5a6475; line-height:1.45; margin-top:8px; padding:7px 9px; border-radius:4px; }
+  .srclist { font-size:9.3px; color:#8a94a6; line-height:1.6; }
+  .srclist a { color:#5a7bb8; }
+
+  /* ===================== RESPONSIVE / MOBILE ===================== */
+  .mobile-jump { display:none; }
+  @media (max-width: 860px) {
+    html { -webkit-text-size-adjust:100%; }
+    body { overflow-x:hidden; }
+    .page { width:100% !important; max-width:100% !important; }
+    .sec, .hdr { padding-left:16px !important; padding-right:16px !important; }
+    .disclaim { padding-left:16px !important; padding-right:16px !important; }
+    .footer-blue { padding-left:16px !important; padding-right:16px !important; }
+    .hdr { flex-direction:column !important; align-items:stretch !important; gap:10px; }
+    .hdr .pricebox { text-align:left !important; }
+    .tagstrip { display:grid !important; grid-template-columns:1fr 1fr !important; }
+    .tagstrip div { font-size:9px !important; text-align:left !important; padding:7px 6px !important; border-right:1px solid #dde2ea !important; border-bottom:1px solid #dde2ea !important; }
+    .tagstrip div:nth-child(2n) { border-right:none !important; }
+    .snapshot { flex-wrap:wrap !important; }
+    .snapshot .cell { flex:1 1 33.33% !important; border-bottom:1px solid #dde2ea; }
+    .mobile-jump {
+      display:flex !important; gap:4px; overflow-x:auto; -webkit-overflow-scrolling:touch;
+      position:sticky; top:0; z-index:20; background:#1a2a4a; padding:10px 12px;
+      border-bottom:3px solid #f0b429; white-space:nowrap; scrollbar-width:none;
+    }
+    .mobile-jump::-webkit-scrollbar { display:none; }
+    .mobile-jump a {
+      color:#c7d2e8; font-size:11.5px; font-weight:700; text-decoration:none;
+      padding:6px 10px; border-radius:14px; background:rgba(255,255,255,0.08); flex:0 0 auto;
+    }
+    .sec-title { scroll-margin-top:56px; }
+    .cols { flex-wrap:wrap !important; }
+    .cols > div { flex:1 1 100% !important; min-width:0 !important; width:100% !important; }
+    .cols { row-gap:16px; }
+    .tile { flex:1 1 45% !important; }
+    table.t { display:block !important; overflow-x:auto !important; -webkit-overflow-scrolling:touch; white-space:nowrap; max-width:100%; }
+    table.t tr { display:table-row; }
+    .krow { flex-wrap:wrap; }
+    .krow .kval { text-align:right; }
+    h1 { font-size:21px !important; }
+    .price { font-size:22px !important; }
+  }
+</style>
+</head>
+<body>
+<style>
+  :root{
+    --navy:#1a2a4a;
+    --navy-2:#243a63;
+    --gold:#c9a24b;
+    --ink:#1a2a4a;
+    --muted:#5c6b85;
+    --hair:#dde2ea;
+    --page-bg:#ffffff;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  .cover-wrap{ font-family:'Source Sans 3','Segoe UI',Arial,sans-serif; background:#e9edf3; display:flex; justify-content:center; padding:24px 12px; }
+  .cover-page{ width:1400px; max-width:100%; min-height:760px; background:var(--page-bg); display:flex; flex-direction:column; box-shadow:0 6px 24px rgba(26,42,74,0.18); overflow:hidden; }
+  .top-band{ height:14px; background:linear-gradient(90deg,var(--navy) 0%,var(--navy-2) 55%,var(--gold) 100%); flex-shrink:0; }
+  .brand-bar{ display:flex; align-items:center; justify-content:space-between; padding:26px 56px 0 56px; flex-shrink:0; }
+  .brand-bar .doc-type{ font-size:12px; letter-spacing:3px; color:var(--muted); text-transform:uppercase; font-weight:600; }
+  .brand-bar .doc-date{ font-size:12px; color:var(--muted); letter-spacing:0.4px; }
+  .main{ flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:20px 60px 40px 60px; }
+  .logo-wrap{ width:150px; height:150px; display:flex; align-items:center; justify-content:center; margin-bottom:24px; border-radius:50%; background:linear-gradient(135deg,#1a2a4a,#2b4570); color:#f0b429; font-size:44px; font-weight:900; letter-spacing:1px; }
+  .kicker{ font-size:15px; letter-spacing:6px; color:var(--gold); font-weight:700; text-transform:uppercase; margin-bottom:16px; }
+  h1.report-title{ font-size:44px; letter-spacing:1px; color:var(--navy); font-weight:800; text-transform:uppercase; line-height:1.15; }
+  .divider{ width:120px; height:3px; background:var(--gold); margin:26px 0; }
+  .ticker-row{ margin-top:10px; display:flex; gap:14px; align-items:center; justify-content:center; flex-wrap:wrap; }
+  .ticker-chip{ font-size:13px; font-weight:600; letter-spacing:0.6px; color:var(--navy); background:#eef1f7; border:1px solid var(--hair); border-radius:4px; padding:6px 14px; }
+  .sector-line{ margin-top:18px; font-size:14px; color:var(--muted); letter-spacing:0.3px; font-style:italic; }
+  .meta-block{ margin-top:40px; display:flex; gap:70px; justify-content:center; }
+  .meta-item{ text-align:center; }
+  .meta-label{ font-size:11px; letter-spacing:2px; text-transform:uppercase; color:var(--muted); margin-bottom:6px; font-weight:600; white-space:nowrap; }
+  .meta-value{ font-size:16px; color:var(--navy); font-weight:700; }
+  .footer{ flex-shrink:0; background:#ffffff; border-top:1px solid var(--hair); padding:16px 56px; text-align:center; }
+  .footer p{ font-size:10.5px; line-height:1.6; color:#8992a6; letter-spacing:0.2px; }
+  .footer strong{ color:var(--muted); }
+  .bottom-band{ height:8px; background:var(--navy); flex-shrink:0; }
+</style>
+<div class="cover-wrap">
+  <div class="cover-page">
+  <div class="top-band"></div>
+
+  <div class="brand-bar">
+    <div class="doc-type">Equity Research</div>
+    <div class="doc-date">Confidential — For Educational Use</div>
+  </div>
+
+  <div class="main">
+    <div class="logo-wrap">GT</div>
+
+    <div class="kicker">Stock Analysis Report</div>
+    <h1 class="report-title">GACM Technologies Limited</h1>
+
+    <div class="divider"></div>
+
+    <div class="ticker-row">
+      <div class="ticker-chip">NSE: GATECH</div>
+      <div class="ticker-chip">BSE: 531723</div>
+      <div class="ticker-chip">Mkt Cap: ~&#8377;60-65 Cr</div>
+      <div class="ticker-chip">Book Value: &#8377;0.96/sh</div>
+    </div>
+    <div class="sector-line">Financial, Management &amp; Business Consultancy Services · Fintech — formerly Stampede Capital Limited</div>
+
+    <div class="meta-block">
+      <div class="meta-item">
+        <div class="meta-label">Generated On</div>
+        <div class="meta-value">06 August 2026</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-label">Report Type</div>
+        <div class="meta-value">Fundamental + Governance Risk Read</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p><strong>Report by Ashoke Kumar Seth</strong> (ashokekseth@gmail.com) — Disclosure: I am not SEBI registered. The information provided here is for educational purposes only. I will not be responsible for any of your profit/loss with this channel's suggestions. Consult your financial advisor before taking any decisions. This report is neither advice nor endorsement — Do Your Own Research.</p>
+  </div>
+
+  <div class="bottom-band"></div>
+</div>
+</div>
+
+<div class="page">
+
+  <!-- ================= HEADER ================= -->
+  <div class="hdr">
+    <div>
+      <div class="meta">NSE: GATECH &nbsp;·&nbsp; BSE: 531723 &nbsp;·&nbsp; Financial &amp; Fintech Consultancy Services &nbsp;·&nbsp; Formerly Stampede Capital Ltd &nbsp;·&nbsp; Promoter holding: 0.91% (very low)</div>
+      <h1>GACM Technologies Limited</h1>
+      <div class="tagline">Micro-cap, sub-&#8377;1 penny stock &nbsp;·&nbsp; Renamed from Stampede Capital in May 2023 &nbsp;·&nbsp; FY26 revenue/profit growth on a tiny base &nbsp;·&nbsp; Outsized US$699 Mn FCCB proposal pending regulatory approval &nbsp;·&nbsp; SEBI enforcement order on record (Jan 2025)</div>
+    </div>
+    <div class="pricebox">
+      <div class="price">&#8377;0.69 <span class="chg" style="color:#ffca80">&#9679; Range-bound</span></div>
+      <div class="sub">Report date: 6 Aug 2026 &nbsp;|&nbsp; CMP as of 4 Aug 2026 close &nbsp;|&nbsp; Mkt Cap: ~&#8377;60-65 Cr &nbsp;|&nbsp; No broker/analyst coverage identified</div>
+    </div>
+  </div>
+  <div class="tagstrip">
+    <div style="color:#c62828;background:#fdeef0">&#9679; Governance: Promoter holding just 0.91%</div>
+    <div style="color:#e07c00;background:#fff6e6">&#9679; Momentum: Volatile, thinly traded penny stock</div>
+    <div style="color:#2e7d32;background:#ecf6ec">&#9679; Valuation: Statistically cheap (~8x P/E, 0.7x P/B)</div>
+    <div style="color:#c62828;background:#fdeef0">&#9679; Compliance: SEBI order on record (Jan 2025)</div>
+    <div style="color:#e07c00;background:#fff6e6">&#9679; Watch: US$699 Mn FCCB proposal vs ~&#8377;63 Cr market cap</div>
+  </div>
+
+  <!-- ================= KEY SNAPSHOT ================= -->
+  <div class="snapshot">
+    <div class="cell"><div class="lab">Sector</div><div class="val" style="font-size:12px">Diversified Financials / Fintech Consultancy</div></div>
+    <div class="cell"><div class="lab">CMP (NSE / BSE)</div><div class="val">&#8377;0.68 / &#8377;0.70<small>4 Aug 2026 close</small></div></div>
+    <div class="cell"><div class="lab">Market Cap</div><div class="val">~&#8377;60-65 Cr<small>varies with frequent issuances</small></div></div>
+    <div class="cell"><div class="lab">52-Wk High / Low</div><div class="val">&#8377;0.93 / &#8377;0.40<small>~26% off high</small></div></div>
+    <div class="cell"><div class="lab">P/E (TTM)</div><div class="val">~8.0x<small>vs peer median ~25x</small></div></div>
+    <div class="cell"><div class="lab">Book Value / P-B</div><div class="val">&#8377;0.96 <small>P/B ~0.68-0.7x</small></div></div>
+    <div class="cell"><div class="lab">Promoter Holding</div><div class="val" style="color:#c62828">0.91%<small>Public/retail 98.81%</small></div></div>
+  </div>
+
+  <nav class="mobile-jump"><a href="#sec01">Overview</a><a href="#sec02">Financials</a><a href="#sec03">Valuation</a><a href="#sec04">Shareholding</a><a href="#sec05">Catalysts</a><a href="#sec06">Risks</a><a href="#sec07">Technical</a><a href="#sec08">View</a></nav>
+
+  <!-- ================= 01 COMPANY OVERVIEW ================= -->
+  <div class="sec">
+    <div class="sec-title" id="sec01"><span class="num">01</span><h2>Company Overview &amp; Business Model</h2></div>
+    <div class="cols">
+      <div style="flex:1.6">
+        <div class="microhead">What They Do</div>
+        <p>GACM Technologies Limited was incorporated in 1995 and, until 2022-23, operated as <b>Stampede Capital Limited</b> — a stockbroking and Portfolio Management Services (PMS) firm. The company discontinued its stock-broking business in 2022, surrendered its PMS licence, and was renamed <b>GACM Technologies Limited</b> via a fresh Certificate of Incorporation dated 4 May 2023. It now describes itself as being engaged in <b>financial, management, business and other ancillary consultancy services</b>, alongside financial-technology (fintech) related services.</p>
+        <p style="margin-top:7px">This is a fundamental change of business rather than an organic evolution of the old broking franchise, so the pre-2023 track record under "Stampede Capital" has limited read-through to the current consultancy/fintech model. The company has since undertaken a series of large, unusual corporate actions relative to its size — a rights issue (Jan 2025, undersubscribed), a &#8377;200 Cr QIP private-placement announcement (Jul 2025), a proposed UK subsidiary and share-swap plan, and a board-approved US$699 million FCCB issuance (Apr 2026) — discussed in Section 05.</p>
+        <p style="margin-top:7px">There is also a separate DVR (Differential Voting Rights) share class (NSE: GATECHDVR) linked to the same group, which is <b>not</b> covered in this report — figures here relate to the ordinary equity shares (BSE: 531723).</p>
+      </div>
+      <div style="flex:1">
+        <div class="microhead">Quick Facts</div>
+        <div class="krow"><span class="klab">Incorporated</span><span class="kval">1995</span></div>
+        <div class="krow"><span class="klab">Renamed</span><span class="kval">4 May 2023<small>ex-Stampede Capital Ltd</small></span></div>
+        <div class="krow"><span class="klab">Prior Business</span><span class="kval">Stockbroking / PMS<small>discontinued 2022</small></span></div>
+        <div class="krow"><span class="klab">Current Business</span><span class="kval">Financial &amp; fintech consultancy</span></div>
+        <div class="krow"><span class="klab">Debt Position</span><span class="kval">Almost debt-free</span></div>
+        <div class="krow"><span class="klab">Analyst Coverage</span><span class="kval">None identified</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= 02 KEY FINANCIALS ================= -->
+  <div class="sec compact">
+    <div class="sec-title" id="sec02"><span class="num">02</span><h2>Key Financials — FY25 vs FY26 (Consolidated, &#8377; Crore)</h2></div>
+    <div class="cols">
+      <div style="flex:1">
+        <table class="t">
+          <tr><th>Metric</th><th>FY25</th><th>FY26</th><th>YoY</th></tr>
+          <tr><td>Revenue from Operations</td><td>14.6</td><td>22.94</td><td class="pos">&#9650; +57.4%</td></tr>
+          <tr><td>Net Profit (PAT)</td><td>4.12</td><td>8.60</td><td class="pos">&#9650; +108.5%</td></tr>
+          <tr><td>Net Margin</td><td>~28-29%</td><td>~37-38%</td><td class="pos">&#9650; expanding</td></tr>
+          <tr><td>EPS (&#8377;)</td><td>0.065</td><td>0.072</td><td class="pos">&#9650; +10.8%</td></tr>
+        </table>
+        <div class="notebox warn" style="border-left-color:#f57f17;background:#fff9e6"><b>Read carefully:</b> PAT more than doubled (+108.5%) YoY, yet EPS rose only ~11%. That gap is arithmetic evidence of substantial <b>equity dilution</b> during FY26 — consistent with the rights issue, QIP private placement and other share allotments described in Section 05. Judge this company on a per-share basis, not on headline profit growth, since the share count is a moving target.</div>
+      </div>
+      <div style="flex:1">
+        <div class="microhead" style="margin-top:0">Revenue &amp; PAT — FY25 vs FY26 (&#8377; Cr)</div>
+        <svg viewBox="0 0 400 170" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto">
+          <line x1="40" y1="140" x2="380" y2="140" stroke="#dde2ea"/>
+          <text x="10" y="20" font-size="9" fill="#8a94a6">Rs Cr</text>
+          <rect x="60" y="70" width="50" height="70" fill="#1a2a4a" rx="2"/><text x="85" y="64" text-anchor="middle" font-size="10" font-weight="700" fill="#1a2a4a">14.6</text>
+          <rect x="130" y="30.4" width="50" height="109.6" fill="#1a2a4a" rx="2"/><text x="155" y="24.4" text-anchor="middle" font-size="10" font-weight="700" fill="#1a2a4a">22.94</text>
+          <text x="120" y="158" text-anchor="middle" font-size="9.5" fill="#5a6475">Revenue (FY25 &#8594; FY26)</text>
+          <rect x="230" y="120.3" width="50" height="19.7" fill="#2e7d32" rx="2"/><text x="255" y="114.3" text-anchor="middle" font-size="10" font-weight="700" fill="#2e7d32">4.12</text>
+          <rect x="300" y="98.9" width="50" height="41.1" fill="#2e7d32" rx="2"/><text x="325" y="92.9" text-anchor="middle" font-size="10" font-weight="700" fill="#2e7d32">8.60</text>
+          <text x="290" y="158" text-anchor="middle" font-size="9.5" fill="#5a6475">PAT (FY25 &#8594; FY26)</text>
+        </svg>
+        <div class="chartcap">Both revenue and PAT roughly grew off a very small base — a &#8377;22.94 Cr topline and &#8377;8.60 Cr PAT are tiny in absolute terms, so percentage growth rates should be read with that scale in mind.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= 03 VALUATION ================= -->
+  <div class="sec">
+    <div class="sec-title" id="sec03"><span class="num">03</span><h2>Valuation &amp; Balance Sheet</h2></div>
+    <div class="tiles">
+      <div class="tile"><div class="lab">P/E (TTM)</div><div class="val">~8.0x</div><div class="note">Reported at a ~70%+ discount to a peer median near 25x — but "peers" in generic diversified-financials screens are a loose fit for this business.</div></div>
+      <div class="tile"><div class="lab">Price / Book</div><div class="val">~0.68-0.7x</div><div class="note">Book value ~&#8377;0.96/share against a ~&#8377;0.68-0.70 CMP.</div></div>
+      <div class="tile"><div class="lab">ROE</div><div class="val">~10.1%</div><div class="note">Modest, and moving each quarter as fresh equity is issued.</div></div>
+      <div class="tile"><div class="lab">Debt</div><div class="val pos">Almost Nil</div><div class="note">Company is reported as almost debt-free on a standalone/consolidated basis.</div></div>
+    </div>
+    <div class="notebox blue"><b>Why "cheap" needs a caveat here:</b> A single-digit P/E and sub-1x P/B look statistically attractive, but for a sub-&#8377;1 stock with a &#8377;60-65 Cr market cap, near-zero promoter skin in the game, and no analyst coverage, low multiples are as consistent with the market pricing in <b>elevated risk, illiquidity and dilution</b> as they are with genuine undervaluation. Valuation ratios on a fast-diluting, thinly-traded micro-cap are far less reliable signals than on an established, well-covered company.</div>
+  </div>
+
+  <!-- ================= 04 SHAREHOLDING ================= -->
+  <div class="sec">
+    <div class="sec-title" id="sec04"><span class="num">04</span><h2>Shareholding Pattern (Latest Available)</h2></div>
+    <div class="cols">
+      <div style="flex:1">
+        <table class="t">
+          <tr><th>Category</th><th>% Holding</th></tr>
+          <tr><td>Promoters</td><td class="neg">0.91%</td></tr>
+          <tr><td>FIIs</td><td>0.22%</td></tr>
+          <tr><td>DIIs</td><td>0.05%</td></tr>
+          <tr><td>Public / Retail &amp; Others</td><td><b>98.81%</b></td></tr>
+        </table>
+      </div>
+      <div style="flex:1">
+        <div class="notebox red"><b>This is the single biggest governance flag in this report.</b> Promoter holding of <b>under 1%</b> is exceptionally low for a listed Indian company — the founders/promoters have almost no direct economic stake left in the business relative to public shareholders. Publicly available data lists one non-promoter individual investor, Venkata Jonna, holding ~5.07% of the company — a larger stake than the promoter group itself. Near-zero promoter holding, combined with a history of large equity issuances (rights issue, QIP, and a proposed FCCB), is a pattern that typically raises questions about who ultimately controls the float and why capital keeps being raised at a company of this size. Investors should independently verify the current shareholding pattern on the BSE/NSE corporate filings before relying on this figure, since it changes every quarter and this company issues shares unusually often.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= 05 CATALYSTS ================= -->
+  <div class="sec">
+    <div class="sec-title" id="sec05"><span class="num">05</span><h2>Corporate Actions &amp; Growth Catalysts</h2></div>
+    <table class="t">
+      <tr><th style="text-align:left">Date</th><th style="text-align:left">Action</th><th style="text-align:left">Status / Note</th></tr>
+      <tr><td style="text-align:left">Jan 2025</td><td style="text-align:left">Rights issue of equity shares</td><td style="text-align:left">Reported as undersubscribed; promoters said to have stepped in for the shortfall</td></tr>
+      <tr><td style="text-align:left">9 Jul 2025</td><td style="text-align:left">Private placement / QIP announced</td><td style="text-align:left">Gross proceeds target of &#8377;200 Cr — roughly 3x the company's own market cap</td></tr>
+      <tr><td style="text-align:left">7 Apr 2026</td><td style="text-align:left">Board approves FCCB issuance</td><td style="text-align:left">Up to <b>US$699 million</b> (&#8776;&#8377;5,800+ Cr) in one or more tranches</td></tr>
+      <tr><td style="text-align:left">29 Apr 2026</td><td style="text-align:left">EGM approves FCCB proposal</td><td style="text-align:left">Reported ~99.91% shareholder approval</td></tr>
+      <tr><td style="text-align:left">29 May 2026</td><td style="text-align:left">BSE in-principle approval for FCCB</td><td style="text-align:left">Subject to further approvals from SEBI, RBI, MCA and FEMA — not yet a completed fundraise</td></tr>
+      <tr><td style="text-align:left">2026</td><td style="text-align:left">UK subsidiary + share-swap plan</td><td style="text-align:left">Board reported to be considering a UK subsidiary and share-swap route to acquire strategic stakes</td></tr>
+    </table>
+    <div class="notebox warn" style="border-left-color:#f57f17;background:#fff9e6"><b>Scale mismatch worth flagging:</b> A proposed US$699 million (&#8776;&#8377;5,800+ Cr) FCCB issuance is roughly <b>90-95x the company's entire current market capitalisation</b> (~&#8377;60-65 Cr). Even if only a fraction of this is ever actually raised, an approval of this magnitude at a company of this size is unusual and warrants scrutiny — such proposals can signal ambitious (and as-yet unproven) expansion plans, but disproportionately large fundraising announcements at micro-cap, low-promoter-holding companies are also a pattern regulators and market commentators watch closely for potential dilution or speculative-narrative risk. Treat the FCCB as a pending regulatory process, not a completed catalyst, until SEBI/RBI/MCA/FEMA approvals and actual subscription are confirmed.</div>
+  </div>
+
+  <!-- ================= 06 RISKS ================= -->
+  <div class="sec">
+    <div class="sec-title" id="sec06"><span class="num">06</span><h2>Governance &amp; Key Risks</h2></div>
+    <table class="t">
+      <tr><th style="text-align:left">Risk</th><th style="text-align:left">Detail</th><th>Severity</th></tr>
+      <tr><td style="text-align:left">Governance / promoter alignment</td><td style="text-align:left">Promoter holding is just 0.91% — among the lowest of any listed Indian company, meaning founders have very limited direct financial alignment with public shareholders.</td><td><span class="badge b-bear">High</span></td></tr>
+      <tr><td style="text-align:left">SEBI enforcement history</td><td style="text-align:left">SEBI has an order on record dated January 2025 "in the matter of GACM Technologies Ltd (formerly known as Stampede Capital Ltd)" (published on sebi.gov.in). The specific findings and directions were not independently verifiable through public search in this exercise — investors should read the order in full on the SEBI website before investing.</td><td><span class="badge b-bear">High</span></td></tr>
+      <tr><td style="text-align:left">Dilution / capital structure</td><td style="text-align:left">Rights issue, QIP and a proposed US$699 Mn FCCB within roughly 18 months — a pattern of frequent, large capital-raising relative to company size, which historically dilutes existing shareholders' per-share value.</td><td><span class="badge b-bear">High</span></td></tr>
+      <tr><td style="text-align:left">Liquidity / price level</td><td style="text-align:left">Sub-&#8377;1 "penny stock" — prone to sharp percentage swings on low absolute price moves, wide bid-ask spreads, and thin depth.</td><td><span class="badge b-warn">Medium-High</span></td></tr>
+      <tr><td style="text-align:left">Business-model track record</td><td style="text-align:left">The current consultancy/fintech business is only ~3 years old (renamed May 2023); FY25/FY26 revenue and profit are still small in absolute terms (&#8377;22.94 Cr / &#8377;8.60 Cr), leaving little multi-year history to validate durability.</td><td><span class="badge b-warn">Medium</span></td></tr>
+      <tr><td style="text-align:left">Coverage / disclosure</td><td style="text-align:left">No identifiable broker or analyst coverage; limited independent verification of granular quarterly and shareholding data was possible from public sources during this research.</td><td><span class="badge b-warn">Medium</span></td></tr>
+    </table>
+    <div class="notebox red" style="margin-top:10px"><b>The sentence that would make an investor pause:</b> a company whose founders hold under 1% of it, which carries a SEBI order on its record under its former name, and which has just secured approval to raise foreign-currency bonds worth roughly 90x its own market capitalisation, is not a "cheap growth stock" in any normal sense — it is a high-uncertainty, event-driven micro-cap that demands its own independent due diligence before any capital is put at risk.</div>
+  </div>
+
+  <div style="background:linear-gradient(135deg,#101c36,#1a2a4a 55%,#2b4570);border-top:3px solid #f0b429;border-bottom:3px solid #f0b429;color:#f0b429;padding:9px 26px;font-weight:900;letter-spacing:2.5px;font-size:14px;text-transform:uppercase">Technical Analysis</div>
+
+  <!-- ================= 07 TECHNICAL ================= -->
+  <div class="sec">
+    <div class="sec-title" id="sec07"><span class="num">07</span><h2>Price Action &amp; Technical Read</h2></div>
+    <div class="cols">
+      <div style="flex:1">
+        <div class="krow"><span class="klab">CMP</span><span class="kval">&#8377;0.68 (NSE) / &#8377;0.70 (BSE)<small>4 Aug 2026 close; intraday range &#8377;0.68-&#8377;0.77</small></span></div>
+        <div class="krow"><span class="klab">52-Wk High</span><span class="kval">&#8377;0.93<small>~26% below high</small></span></div>
+        <div class="krow"><span class="klab">52-Wk Low</span><span class="kval">&#8377;0.40<small>~72% above low</small></span></div>
+        <p style="margin-top:10px;font-size:11.5px">No independently verifiable OHLC/volume history, moving-average (SMA 20/50/200), or Relative Strength data could be sourced through public web search for this report — most retail terminals do not carry deep technical coverage for a stock at this price and market-cap level. The commentary below is therefore a qualitative read from the verified price levels only, not a substitute for a live charting terminal.</p>
+      </div>
+      <div style="flex:1">
+        <div class="notebox blue"><b>Qualitative read:</b> The stock currently trades roughly a quarter below its 52-week high and more than 70% above its 52-week low — consistent with a name that has already run up substantially from its lows and is now consolidating/correcting off the top of its range. At sub-&#8377;1 price levels, small absolute moves translate into large percentage swings, and price action is more sensitive to news flow (e.g. FCCB/regulatory updates) and low-float dynamics than to conventional technical patterns. Anyone trading this name should rely on a live NSE/BSE terminal for actual intraday levels, volumes and moving averages rather than any static figures in this report.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= 08 INVESTMENT VIEW ================= -->
+  <div class="sec">
+    <div class="sec-title" id="sec08"><span class="num">08</span><h2>Investment View &amp; Recommendation</h2></div>
+    <div class="cols">
+      <div class="panel" style="background:#fdf0f0;border-color:#c62828;flex:1.3">
+        <div class="plab" style="color:#c62828">&#9733; Recommendation</div>
+        <div class="pval" style="color:#c62828;font-size:19px">HIGH RISK / SPECULATIVE — NOT SUITABLE FOR CORE INVESTMENT</div>
+        <p style="font-size:11.4px;margin-top:6px">GACM Technologies shows real revenue and profit growth off a very small base and screens statistically "cheap" on P/E and P/B. But the combination of (a) 0.91% promoter holding, (b) a SEBI order on record under its former name, (c) a pattern of large, repeated capital raises culminating in a US$699 Mn FCCB proposal roughly 90x its market cap, and (d) sub-&#8377;1 price with no analyst coverage, together constitute governance and disclosure risk that outweighs the headline valuation and growth numbers for most investors. This profile fits a small, high-risk speculative trading position at most — not a core portfolio holding — and only for investors who fully understand and accept the possibility of permanent capital loss.</p>
+      </div>
+      <div class="panel" style="border-color:#1565c0">
+        <div class="plab" style="color:#1565c0">Before Considering Any Position</div>
+        <ul style="font-size:11.3px;margin-left:16px;line-height:1.7">
+          <li>Read the full SEBI order (Jan 2025) on sebi.gov.in relating to GACM Technologies / Stampede Capital.</li>
+          <li>Verify the latest quarterly shareholding pattern directly on BSE/NSE, since promoter/public holding here has been unusually fluid.</li>
+          <li>Track FCCB approval status (SEBI/RBI/MCA/FEMA) rather than assuming the in-principle BSE nod means the funds are secured.</li>
+          <li>Size any position as strictly speculative capital, with a firm stop-loss, given the stock's low price, low liquidity and volatility.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="mininote" style="background:#eef4fc"><b>Sources consulted:</b> Angel One, ValueResearch, INDmoney, Business Standard, HDFC Securities, mStock, NSE India, Screener.in (via search snippets), Trendlyne, SimplyWall.st, SEBI.gov.in enforcement orders, ScanX/BSE corporate announcements. Site-blocking prevented direct verification of a few granular figures (multi-quarter shareholding trend, full SEBI order text); those points are flagged inline above and should be independently confirmed before acting.</div>
+  </div>
+
+  <div class="disclaim">
+    <b>Disclaimer:</b> This report is prepared for educational purposes only and does not constitute investment advice, a recommendation, or a solicitation to buy or sell any security. The author is not a SEBI-registered investment adviser or research analyst. Data has been compiled from publicly available secondary sources believed to be reliable but not independently audited; figures for this company change unusually frequently due to ongoing corporate actions and may be out of date by the time this report is read. GACM Technologies Ltd carries elevated governance and regulatory risk as detailed in Sections 04 and 06, including a SEBI order on record and extremely low promoter shareholding. Please conduct your own due diligence and consult a qualified, SEBI-registered financial advisor before making any investment decision. Neither the author nor this report shall be liable for any losses arising from reliance on this content.
+  </div>
+  <div class="footer-blue"><b>Copyright &copy; Ashoke Kumar Seth</b> &nbsp;|&nbsp; Ashokekseth@gmail.com &nbsp;|&nbsp; This report is for informational purposes only and does not constitute investment advice.</div>
+</div>
+
+</body>
+</html>
