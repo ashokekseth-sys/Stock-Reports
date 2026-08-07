@@ -124,6 +124,8 @@
 
     .cols { flex-wrap:wrap !important; }
     .cols > div { flex:1 1 100% !important; min-width:0 !important; width:100% !important; }
+    .cols-keep { flex-wrap:nowrap !important; gap:10px !important; }
+    .cols-keep > div { flex:1 1 0 !important; width:auto !important; }
     .cols { row-gap:16px; }
 
     .tile { flex:1 1 45% !important; }
@@ -526,7 +528,7 @@
     <div class="sec-title" id="sec03"><span class="num">03</span><h2>Competitive Advantage (Moat) Analysis</h2></div>
     <div class="krow"><span class="klab">Brand Strength</span><span class="kval" style="color:#2e7d32">STRONG</span></div>
     <div class="krow"><span class="klab">Network Effects</span><span class="kval" style="color:#e07c00">MODERATE</span></div>
-    <div class="cols" style="margin:8px 0">
+    <div class="cols cols-keep" style="margin:8px 0">
       <div style="flex:1">
         <div class="krow"><span class="klab">Switching Costs</span><span class="kval" style="color:#e07c00">MODERATE</span></div>
       </div>
