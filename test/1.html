@@ -253,7 +253,7 @@
     display:flex;
     align-items:center;
     justify-content:center;
-    margin-bottom:34px;
+    margin-bottom:44px;
   }
   .logo-wrap img{
     max-width:100%;
@@ -296,7 +296,7 @@
     letter-spacing:0.3px;
   }
   .ticker-row{
-    margin-top:10px;
+    margin-top:26px;
     display:grid;
     grid-template-columns:1fr 1fr;
     gap:10px 14px;
@@ -316,14 +316,14 @@
     padding:6px 14px;
   }
   .sector-line{
-    margin-top:18px;
+    margin-top:28px;
     font-size:14px;
     color:var(--muted);
     letter-spacing:0.3px;
     font-style:italic;
   }
   .meta-block{
-    margin-top:46px;
+    margin-top:64px;
     display:flex;
     gap:70px;
     justify-content:center;
@@ -373,6 +373,10 @@
   @media (max-width: 860px) {
     .footer { padding:14px 20px !important; text-align:left !important; }
     .footer p { text-align:left !important; }
+    .cover-page { min-height:auto !important; }
+    .main { padding-top:14px !important; padding-bottom:14px !important; }
+    .logo-wrap { margin-bottom:20px !important; }
+    .meta-block { margin-top:30px !important; }
   }
   .bottom-band{
     height:8px;
@@ -404,15 +408,9 @@
     </div>
     <div class="sector-line">India's Largest Retail-Asset NBFC — Vehicle, Gold, MSME &amp; Personal Finance</div>
 
-    <div class="meta-block">
-      <div class="meta-item">
-        <div class="meta-label">Generated On</div>
-        <div class="meta-value">06 August 2026</div>
-      </div>
-      <div class="meta-item">
-        <div class="meta-label">Report Type</div>
-        <div class="meta-value">Technical + Fundamental</div>
-      </div>
+    <div class="meta-block" style="display:block">
+      <span style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);font-weight:600">Generated On</span>
+      <span style="font-size:14px;color:var(--navy);font-weight:700;margin-left:8px">06 August 2026</span>
     </div>
   </div>
 
