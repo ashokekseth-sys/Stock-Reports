@@ -1,3 +1,8 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ceinsys Tech — Q1 FY27 Snapshot</title>
 <style>
   @font-face {
@@ -398,8 +403,16 @@
     .charts { grid-template-columns: 1fr; }
     .body-grid { grid-template-columns: 1fr; }
     .price-block { text-align: left; }
+    .bar-val { opacity: 1; }
+    .bars { gap: 5vw; }
+    .bar-labels { gap: 5vw; }
+  }
+  @media (hover: none) {
+    .bar-val { opacity: 1; }
   }
 </style>
+</head>
+<body>
 
 <div class="sheet">
 
@@ -606,3 +619,5 @@
   </div>
 
 </div>
+</body>
+</html>
