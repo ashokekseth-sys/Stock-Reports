@@ -414,6 +414,167 @@
 </head>
 <body>
 
+<style>
+  :root{
+    --cv-navy:#1a2a4a;
+    --cv-navy-2:#243a63;
+    --cv-gold:#c9a24b;
+    --cv-muted:#5c6b85;
+    --cv-hair:#dde2ea;
+  }
+  .cover-wrap{
+    font-family:'Source Sans 3','Segoe UI',Arial,sans-serif;
+    background:#e9edf3;
+    display:flex;
+    justify-content:center;
+    padding:24px 12px;
+  }
+  .cover-page{
+    width:1400px;
+    max-width:100%;
+    min-height:820px;
+    background:#ffffff;
+    display:flex;
+    flex-direction:column;
+    box-shadow:0 6px 24px rgba(26,42,74,0.18);
+    overflow:hidden;
+  }
+  .cv-top-band{
+    height:14px;
+    background:linear-gradient(90deg,var(--cv-navy) 0%,var(--cv-navy-2) 55%,var(--cv-gold) 100%);
+    flex-shrink:0;
+  }
+  .cv-brand-bar{ height:26px; flex-shrink:0; }
+  .cv-main{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:flex-start;
+    text-align:center;
+    padding:20px 60px 40px 60px;
+  }
+  .cv-text-logo{
+    font-size:clamp(20px, 6.2vw, 38px);
+    font-weight:900;
+    letter-spacing:1px;
+    color:var(--cv-navy);
+    margin-bottom:40px;
+  }
+  .cv-text-logo span{ color:var(--cv-gold); }
+  .cv-kicker{
+    font-size:15px;
+    letter-spacing:6px;
+    color:var(--cv-gold);
+    font-weight:700;
+    text-transform:uppercase;
+    margin-bottom:16px;
+  }
+  .cv-title{
+    font-size:44px;
+    letter-spacing:0.5px;
+    color:var(--cv-navy);
+    font-weight:800;
+    line-height:1.15;
+  }
+  .cv-divider{
+    width:120px;
+    height:3px;
+    background:var(--cv-gold);
+    margin:26px auto;
+  }
+  .cv-ticker-row{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:10px 14px;
+    max-width:640px;
+    margin:0 auto;
+  }
+  .cv-ticker-chip{
+    text-align:center;
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:0.4px;
+    color:var(--cv-navy);
+    background:#eef1f7;
+    border:1px solid var(--cv-hair);
+    border-radius:4px;
+    padding:6px 10px;
+  }
+  .cv-sector-line{
+    margin-top:28px;
+    font-size:14px;
+    color:var(--cv-muted);
+    letter-spacing:0.3px;
+    font-style:italic;
+  }
+  .cv-meta-block{ margin-top:56px; }
+  .cv-meta-label{
+    font-size:11px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:var(--cv-muted);
+    font-weight:600;
+  }
+  .cv-meta-value{
+    font-size:14px;
+    color:var(--cv-navy);
+    font-weight:700;
+    margin-left:8px;
+  }
+  .cv-footer{
+    flex-shrink:0;
+    background:#ffffff;
+    border-top:1px solid var(--cv-hair);
+    padding:16px 56px;
+    text-align:center;
+  }
+  .cv-footer p{
+    font-size:10.5px;
+    line-height:1.6;
+    color:#8992a6;
+    letter-spacing:0.2px;
+  }
+  .cv-footer strong{ color:var(--cv-muted); }
+  .cv-bottom-band{ height:8px; background:var(--cv-navy); flex-shrink:0; }
+  @media (max-width: 860px) {
+    .cv-footer { padding:14px 20px !important; text-align:left !important; }
+    .cv-footer p { text-align:left !important; }
+    .cover-page { min-height:auto !important; }
+    .cv-main { padding-top:14px !important; padding-bottom:14px !important; }
+    .cv-text-logo { margin-bottom:20px !important; }
+    .cv-meta-block { margin-top:28px !important; }
+    .cv-ticker-row { grid-template-columns:repeat(2,1fr); max-width:320px; }
+  }
+</style>
+<div class="cover-wrap">
+  <div class="cover-page">
+    <div class="cv-top-band"></div>
+    <div class="cv-brand-bar"></div>
+    <div class="cv-main">
+      <div class="cv-text-logo">CEINSYS <span>TECH</span></div>
+      <div class="cv-kicker">Quarterly Results Snapshot &middot; Q1 FY27</div>
+      <h1 class="cv-title">Ceinsys Tech Ltd.</h1>
+      <div class="cv-divider"></div>
+      <div class="cv-ticker-row">
+        <div class="cv-ticker-chip">NSE: CEINSYS</div>
+        <div class="cv-ticker-chip">BSE: 538734</div>
+        <div class="cv-ticker-chip">CMP: &#8377;870.00</div>
+        <div class="cv-ticker-chip">Mkt Cap: &#8377;1,815 Cr</div>
+      </div>
+      <div class="cv-sector-line">Pure-Play Geospatial &amp; Engineering Technology Solutions &mdash; GIS, Surveying &amp; Industrial Automation</div>
+      <div class="cv-meta-block">
+        <span class="cv-meta-label">Generated On</span><span class="cv-meta-value">11 August 2026</span>
+      </div>
+    </div>
+    <div class="cv-footer">
+      <p style="margin-bottom:4px;letter-spacing:0.5px;text-transform:uppercase;font-size:9.5px;color:#8a94a6">Confidential &mdash; For Educational Use</p>
+      <p><strong>Report by Ashoke Kumar Seth</strong> (ashokekseth@gmail.com) &mdash; Disclosure: I am not SEBI registered. The information provided here is for educational purposes only. I will not be responsible for any of your profit/loss with this channel's suggestions. Consult your financial advisor before taking any decisions. This report is neither advice nor endorsement &mdash; Do Your Own Research.</p>
+    </div>
+    <div class="cv-bottom-band"></div>
+  </div>
+</div>
+
 <div class="sheet">
 
   <div class="masthead">
