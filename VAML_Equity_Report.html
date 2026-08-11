@@ -6,12 +6,12 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="Vedanta Aluminium Metal Limited — Equity Research Report">
 <meta property="og:description" content="Full equity report on Vedanta Aluminium Metal Limited (NSE: VAML) — Demerger &amp; Listing Event, Moat &amp; Risk Analysis, financials, and Elliott Wave technicals. Prepared by Ashoke Kumar Seth.">
-<meta property="og:image" content="https://raw.githubusercontent.com/ashokekseth-sys/Stock-Reports/main/shriram_og_preview.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/ashokekseth-sys/Stock-Reports/main/vaml_og_preview.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Vedanta Aluminium Metal Limited — Equity Research Report">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/ashokekseth-sys/Stock-Reports/main/shriram_og_preview.png">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/ashokekseth-sys/Stock-Reports/main/vaml_og_preview.png">
 <title>Vedanta Aluminium Metal Limited — Equity Research Report</title>
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&display=swap" rel="stylesheet">
 <style>
@@ -147,6 +147,16 @@
     table.prose td { white-space:normal !important; word-wrap:break-word; }
     table.prose td[style*="width:90px"] { width:70px !important; }
 
+    table.guru-table { display:block !important; }
+    table.guru-table tr:first-child { display:none !important; }
+    table.guru-table tbody, table.guru-table tr, table.guru-table td { display:block !important; width:100% !important; }
+    table.guru-table tr { margin-bottom:12px; border:1px solid #dde2ea; border-radius:7px; overflow:hidden; background:#fff; }
+    table.guru-table td { padding:8px 12px !important; border:none !important; border-bottom:1px solid #eef1f6 !important; text-align:left !important; }
+    table.guru-table td:last-child { border-bottom:none !important; }
+    table.guru-table td:first-child { background:#f6f8fb; font-weight:800; font-size:13px; }
+    table.guru-table td::before { content:attr(data-label); display:block; font-size:8.5px; font-weight:900; letter-spacing:0.6px; text-transform:uppercase; color:#8a94a6; margin-bottom:3px; }
+    table.guru-table td:first-child::before { display:none; }
+
     .krow { flex-wrap:wrap; }
     .krow .kval { text-align:right; }
 
@@ -251,7 +261,8 @@
     padding:36px 60px 40px 60px;
   }
   .logo-wrap{
-    width:260px;
+    width:auto;
+    max-width:92%;
     height:150px;
     display:flex;
     align-items:center;
@@ -264,10 +275,14 @@
     object-fit:contain;
   }
   .text-logo{
-    font-size:40px;
+    font-size:clamp(20px, 6.2vw, 40px);
     font-weight:900;
     letter-spacing:1px;
     color:var(--navy);
+    white-space:normal;
+    word-break:break-word;
+    text-align:center;
+    line-height:1.15;
   }
   .text-logo span{ color:var(--gold); }
   .kicker{
@@ -395,7 +410,7 @@
 
   <div class="main">
     <div class="logo-wrap">
-      <div class="text-logo">VEDANTA<span>ALUMINIUM</span></div>
+      <div class="text-logo">VEDANTA <span>ALUMINIUM</span></div>
     </div>
 
     <div class="kicker">Stock Analysis Report</div>
@@ -877,13 +892,13 @@
       </div>
     </div>
     <div class="microhead" style="margin-top:14px">Guru Scores</div>
-    <table class="t prose">
+    <table class="t prose guru-table">
       <tr><th style="text-align:left">Guru</th><th>Score</th><th style="text-align:left">What It Measures</th><th style="text-align:left">Signal for VAML</th></tr>
-      <tr><td style="text-align:left">William J. O'Neil</td><td class="warn">44%</td><td style="text-align:left">EPS growth, RS, accumulation, base quality</td><td style="text-align:left">Record EPS growth is real, but poor price-strength/accumulation readings (new listing, thin base) drag the composite score down</td></tr>
-      <tr><td style="text-align:left">James P. O'Shaughnessy</td><td class="warn">40%</td><td style="text-align:left">Value factors, price momentum, shareholder yield</td><td style="text-align:left">Cheap on estimated earnings and a fresh dividend help, but weak price momentum caps the score</td></tr>
-      <tr><td style="text-align:left">Peter Lynch</td><td class="neg">12%</td><td style="text-align:left">PEG ratio, earnings consistency, dividends</td><td style="text-align:left"><span style="color:#c62828">Very Low</span>: only one quarter of standalone earnings exists, so PEG/consistency inputs are essentially unscoreable this early</td></tr>
-      <tr><td style="text-align:left">Benjamin Graham</td><td style="color:#8a94a6">N.A.</td><td style="text-align:left">Deep value, margin of safety, low P/B</td><td style="text-align:left">Not scoreable — P/B is a data gap (opening equity restated on demerger)</td></tr>
-      <tr><td style="text-align:left">Warren Buffett</td><td style="color:#8a94a6">N.A.</td><td style="text-align:left">Durable moat, ROE consistency, predictability</td><td style="text-align:left">Not scoreable — no ROE history exists yet as a standalone entity</td></tr>
+      <tr><td data-label="Guru" style="text-align:left">William J. O'Neil</td><td data-label="Score" class="warn">44%</td><td data-label="What It Measures" style="text-align:left">EPS growth, RS, accumulation, base quality</td><td data-label="Signal for VAML" style="text-align:left">Record EPS growth is real, but poor price-strength/accumulation readings (new listing, thin base) drag the composite score down</td></tr>
+      <tr><td data-label="Guru" style="text-align:left">James P. O'Shaughnessy</td><td data-label="Score" class="warn">40%</td><td data-label="What It Measures" style="text-align:left">Value factors, price momentum, shareholder yield</td><td data-label="Signal for VAML" style="text-align:left">Cheap on estimated earnings and a fresh dividend help, but weak price momentum caps the score</td></tr>
+      <tr><td data-label="Guru" style="text-align:left">Peter Lynch</td><td data-label="Score" class="neg">12%</td><td data-label="What It Measures" style="text-align:left">PEG ratio, earnings consistency, dividends</td><td data-label="Signal for VAML" style="text-align:left"><span style="color:#c62828">Very Low</span>: only one quarter of standalone earnings exists, so PEG/consistency inputs are essentially unscoreable this early</td></tr>
+      <tr><td data-label="Guru" style="text-align:left">Benjamin Graham</td><td data-label="Score" style="color:#8a94a6">N.A.</td><td data-label="What It Measures" style="text-align:left">Deep value, margin of safety, low P/B</td><td data-label="Signal for VAML" style="text-align:left">Not scoreable — P/B is a data gap (opening equity restated on demerger)</td></tr>
+      <tr><td data-label="Guru" style="text-align:left">Warren Buffett</td><td data-label="Score" style="color:#8a94a6">N.A.</td><td data-label="What It Measures" style="text-align:left">Durable moat, ROE consistency, predictability</td><td data-label="Signal for VAML" style="text-align:left">Not scoreable — no ROE history exists yet as a standalone entity</td></tr>
     </table>
     <div class="notebox blue" style="margin-top:10px"><b>Synthesis:</b> Master Score C reflects a stock MarketSmith's own scoring system is still calibrating — EPS Strength (34) and Price Strength (57) are both POOR despite genuinely record fundamentals, precisely because there isn't yet enough independent trading/earnings history to build a normal score. Two guru screens (Graham, Buffett) can't even be computed. This is a data-maturity problem, not necessarily a company-quality signal — worth re-checking after 2-3 more quarters of standalone reporting.</div>
   </div>
