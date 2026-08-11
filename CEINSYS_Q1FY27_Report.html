@@ -1,0 +1,608 @@
+<title>Ceinsys Tech — Q1 FY27 Snapshot</title>
+<style>
+  @font-face {
+    font-family: 'system-serif';
+    src: local('Georgia'), local('Charter'), local('Iowan Old Style');
+  }
+
+  :root {
+    --paper:        #f1f3ec;
+    --card:         #fcfcfb;
+    --card-line:    rgba(22,33,29,0.12);
+    --ink:          #16211d;
+    --ink-2:        #4b554e;
+    --ink-3:        #898781;
+    --accent:       #175e56;
+    --accent-soft:  #d9e9e4;
+    --accent-line:  rgba(23,94,86,0.28);
+    --series-rev:   #2a78d6;
+    --series-pat:   #eb6834;
+    --series-mgn:   #1baf7a;
+    --good:         #0ca30c;
+    --critical:     #d03b3b;
+    --shadow:       0 1px 2px rgba(22,33,29,0.06), 0 8px 24px -16px rgba(22,33,29,0.25);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper:        #0d0d0d;
+      --card:         #1a1a19;
+      --card-line:    rgba(255,255,255,0.10);
+      --ink:          #f4f5f2;
+      --ink-2:        #c3c2b7;
+      --ink-3:        #8f8d86;
+      --accent:       #5fc9bc;
+      --accent-soft:  #17332f;
+      --accent-line:  rgba(95,201,188,0.30);
+      --series-rev:   #3987e5;
+      --series-pat:   #d95926;
+      --series-mgn:   #199e70;
+      --good:         #0ca30c;
+      --critical:     #e66767;
+      --shadow:       0 1px 2px rgba(0,0,0,0.4), 0 8px 24px -16px rgba(0,0,0,0.6);
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper:        #0d0d0d;
+    --card:         #1a1a19;
+    --card-line:    rgba(255,255,255,0.10);
+    --ink:          #f4f5f2;
+    --ink-2:        #c3c2b7;
+    --ink-3:        #8f8d86;
+    --accent:       #5fc9bc;
+    --accent-soft:  #17332f;
+    --accent-line:  rgba(95,201,188,0.30);
+    --series-rev:   #3987e5;
+    --series-pat:   #d95926;
+    --series-mgn:   #199e70;
+    --good:         #0ca30c;
+    --critical:     #e66767;
+    --shadow:       0 1px 2px rgba(0,0,0,0.4), 0 8px 24px -16px rgba(0,0,0,0.6);
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.5;
+  }
+  .sheet {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: clamp(20px, 4vw, 56px) clamp(16px, 4vw, 40px) 40px;
+  }
+  .num { font-variant-numeric: tabular-nums; font-feature-settings: "tnum" 1; }
+  .mono {
+    font-family: ui-monospace, "SF Mono", "Cascadia Mono", Consolas, monospace;
+  }
+
+  /* ---------- masthead ---------- */
+  .masthead {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding-bottom: 18px;
+    border-bottom: 2px solid var(--ink);
+    margin-bottom: 22px;
+  }
+  .eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 700;
+    margin: 0 0 8px;
+  }
+  .company {
+    font-family: 'system-serif', Georgia, 'Times New Roman', serif;
+    font-size: clamp(28px, 4.4vw, 40px);
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    margin: 0;
+    text-wrap: balance;
+  }
+  .ticker-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 6px;
+  }
+  .ticker {
+    font-family: ui-monospace, "SF Mono", Consolas, monospace;
+    font-size: 12.5px;
+    letter-spacing: 0.04em;
+    color: var(--ink-2);
+    border: 1px solid var(--card-line);
+    border-radius: 3px;
+    padding: 2px 7px;
+  }
+  .as-of { font-size: 12.5px; color: var(--ink-3); }
+  .price-block { text-align: right; }
+  .price {
+    font-family: ui-monospace, "SF Mono", Consolas, monospace;
+    font-size: clamp(26px, 3.6vw, 34px);
+    font-weight: 600;
+  }
+  .price-chg {
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: 2px;
+  }
+  .price-chg.up { color: var(--good); }
+
+  /* ---------- stat strip ---------- */
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--card-line);
+    border: 1px solid var(--card-line);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    box-shadow: var(--shadow);
+  }
+  .stat {
+    background: var(--card);
+    padding: 14px 16px;
+  }
+  .stat-label {
+    font-size: 10.5px;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin: 0 0 6px;
+  }
+  .stat-value {
+    font-family: ui-monospace, "SF Mono", Consolas, monospace;
+    font-size: 19px;
+    font-weight: 600;
+    margin: 0;
+  }
+  .stat-sub {
+    font-size: 11.5px;
+    color: var(--ink-2);
+    margin-top: 3px;
+  }
+  .range-track {
+    position: relative;
+    height: 4px;
+    background: var(--card-line);
+    border-radius: 2px;
+    margin-top: 9px;
+  }
+  .range-fill {
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    background: var(--critical);
+    border-radius: 2px;
+  }
+  .range-dot {
+    position: absolute;
+    top: 50%;
+    width: 8px; height: 8px;
+    background: var(--ink);
+    border: 2px solid var(--card);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  /* ---------- section heads ---------- */
+  h2.section {
+    font-family: 'system-serif', Georgia, serif;
+    font-weight: 400;
+    font-size: 19px;
+    margin: 0 0 4px;
+  }
+  .section-note {
+    font-size: 12.5px;
+    color: var(--ink-2);
+    margin: 0 0 16px;
+  }
+
+  /* ---------- charts ---------- */
+  .charts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin-bottom: 10px;
+  }
+  .chart-card {
+    background: var(--card);
+    border: 1px solid var(--card-line);
+    border-radius: 10px;
+    padding: 16px 14px 12px;
+    box-shadow: var(--shadow);
+  }
+  .chart-title {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    margin: 0;
+  }
+  .chart-delta {
+    font-size: 11px;
+    margin-top: 2px;
+    color: var(--ink-2);
+  }
+  .chart-delta b { font-weight: 700; }
+  .chart-delta.bad { color: var(--critical); }
+  .chart-delta.good { color: var(--good); }
+
+  .bars {
+    display: flex;
+    align-items: flex-end;
+    gap: 7px;
+    height: 122px;
+    margin: 16px 0 6px;
+    border-bottom: 1px solid var(--card-line);
+    padding-bottom: 1px;
+  }
+  .bar-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+    position: relative;
+  }
+  .bar-val {
+    font-size: 9.5px;
+    color: var(--ink-3);
+    margin-bottom: 3px;
+    opacity: 0;
+    transition: opacity .12s ease;
+    font-family: ui-monospace, "SF Mono", Consolas, monospace;
+    white-space: nowrap;
+  }
+  .bar-col.current .bar-val { opacity: 1; color: var(--ink); font-weight: 700; }
+  .bar-col:hover .bar-val, .bar-col:focus-visible .bar-val { opacity: 1; }
+  .bar {
+    width: 100%;
+    max-width: 30px;
+    border-radius: 3px 3px 0 0;
+    transition: filter .12s ease;
+  }
+  .bar-col:hover .bar, .bar-col:focus-visible .bar { filter: brightness(1.12); }
+  .bar-col.current .bar { outline: 2px solid var(--ink); outline-offset: 1px; }
+  .bar-col:focus-visible { outline: none; }
+  .bar.rev { background: var(--series-rev); }
+  .bar.pat { background: var(--series-pat); }
+  .bar.mgn { background: var(--series-mgn); }
+  .bar-labels {
+    display: flex;
+    gap: 7px;
+  }
+  .bar-label {
+    flex: 1;
+    text-align: center;
+    font-size: 9px;
+    color: var(--ink-3);
+    line-height: 1.35;
+  }
+  .bar-col.current + .bar-labels,
+  .bar-label.current { color: var(--ink); font-weight: 700; }
+
+  details.tbl { margin-top: 4px; }
+  details.tbl summary {
+    cursor: pointer;
+    font-size: 11.5px;
+    color: var(--accent);
+    font-weight: 700;
+    list-style: none;
+  }
+  details.tbl summary::-webkit-details-marker { display: none; }
+  details.tbl summary::before { content: "▸ "; }
+  details.tbl[open] summary::before { content: "▾ "; }
+  .tbl-wrap { overflow-x: auto; margin-top: 8px; }
+  table.data {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+  }
+  table.data th, table.data td {
+    text-align: right;
+    padding: 5px 8px;
+    border-bottom: 1px solid var(--card-line);
+    font-variant-numeric: tabular-nums;
+  }
+  table.data th:first-child, table.data td:first-child { text-align: left; }
+  table.data thead th {
+    color: var(--ink-3);
+    font-weight: 600;
+    font-size: 10.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  /* ---------- narrative ---------- */
+  .body-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 26px;
+    margin-top: 34px;
+    align-items: start;
+  }
+  ul.reads {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  ul.reads li {
+    padding: 11px 0;
+    border-top: 1px solid var(--card-line);
+    font-size: 14.5px;
+    color: var(--ink-2);
+    display: flex;
+    gap: 10px;
+  }
+  ul.reads li:last-child { border-bottom: 1px solid var(--card-line); }
+  ul.reads .flag {
+    flex: none;
+    width: 20px;
+    font-weight: 700;
+    font-family: ui-monospace, monospace;
+  }
+  ul.reads .flag.bad { color: var(--critical); }
+  ul.reads .flag.neutral { color: var(--ink-3); }
+  ul.reads strong { color: var(--ink); }
+
+  .verdict {
+    background: var(--accent-soft);
+    border: 1px solid var(--accent-line);
+    border-radius: 10px;
+    padding: 18px 18px 16px;
+  }
+  .verdict .eyebrow { margin-bottom: 6px; }
+  .verdict p {
+    margin: 0 0 10px;
+    font-size: 14px;
+    color: var(--ink);
+  }
+  .verdict p:last-child { margin-bottom: 0; }
+  .watch {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid var(--accent-line);
+  }
+  .watch-label {
+    font-size: 10.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--ink-2);
+    margin: 0 0 6px;
+  }
+  .watch ul { margin: 0; padding-left: 16px; font-size: 12.5px; color: var(--ink-2); }
+  .watch li { margin-bottom: 3px; }
+
+  /* ---------- footer ---------- */
+  .foot {
+    margin-top: 40px;
+    padding-top: 16px;
+    border-top: 1px solid var(--card-line);
+    font-size: 11px;
+    color: var(--ink-3);
+    line-height: 1.6;
+  }
+  .foot a { color: var(--ink-3); }
+  .foot .src { color: var(--ink-2); }
+
+  @media (max-width: 700px) {
+    .stats { grid-template-columns: repeat(2, 1fr); }
+    .charts { grid-template-columns: 1fr; }
+    .body-grid { grid-template-columns: 1fr; }
+    .price-block { text-align: left; }
+  }
+</style>
+
+<div class="sheet">
+
+  <div class="masthead">
+    <div>
+      <p class="eyebrow">Research Note · Quarterly Snapshot</p>
+      <h1 class="company">Ceinsys Tech Ltd.</h1>
+      <div class="ticker-row">
+        <span class="ticker">NSE · CEINSYS</span>
+        <span class="as-of">Q1 FY27 (Jun-2026) results, board-approved 11 Aug 2026</span>
+      </div>
+    </div>
+    <div class="price-block">
+      <div class="price num">₹870.00</div>
+      <div class="price-chg up">▲ 0.97% today · +2.11% 1W</div>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div class="stat">
+      <p class="stat-label">TTM P/E</p>
+      <p class="stat-value num">13.6×</p>
+      <p class="stat-sub">on FY26 PAT ₹133 Cr</p>
+    </div>
+    <div class="stat">
+      <p class="stat-label">Market Cap</p>
+      <p class="stat-value num">₹1,815 Cr</p>
+      <p class="stat-sub">~2.09 Cr shares</p>
+    </div>
+    <div class="stat">
+      <p class="stat-label">52-Week Range</p>
+      <p class="stat-value num">₹820 – 1,250</p>
+      <div class="range-track">
+        <div class="range-fill" style="width:11.6%"></div>
+        <div class="range-dot" style="left:11.6%"></div>
+      </div>
+      <p class="stat-sub">near 52-wk low</p>
+    </div>
+    <div class="stat">
+      <p class="stat-label">Order Book</p>
+      <p class="stat-value num">₹876 Cr</p>
+      <p class="stat-sub" style="color:var(--critical)">↓ from ₹1,092 Cr (Sep-25 peak)</p>
+    </div>
+  </div>
+
+  <h2 class="section">Five-Quarter Trend</h2>
+  <p class="section-note">Consolidated · ₹ crore unless noted · current quarter outlined and labelled</p>
+
+  <div class="charts">
+
+    <div class="chart-card">
+      <p class="chart-title">Revenue</p>
+      <p class="chart-delta bad">QoQ <b>−7.7%</b> · YoY <b>+0.8%</b></p>
+      <div class="bars">
+        <div class="bar-col" tabindex="0" aria-label="Q1 FY26 revenue 156.6 crore">
+          <span class="bar-val num">156.6</span>
+          <div class="bar rev" style="height:79%"></div>
+        </div>
+        <div class="bar-col" tabindex="0" aria-label="Q2 FY26 revenue 163.5 crore">
+          <span class="bar-val num">163.5</span>
+          <div class="bar rev" style="height:83%"></div>
+        </div>
+        <div class="bar-col" tabindex="0" aria-label="Q3 FY26 revenue 169.9 crore">
+          <span class="bar-val num">169.9</span>
+          <div class="bar rev" style="height:88%"></div>
+        </div>
+        <div class="bar-col" tabindex="0" aria-label="Q4 FY26 revenue 171.0 crore">
+          <span class="bar-val num">171.0</span>
+          <div class="bar rev" style="height:89%"></div>
+        </div>
+        <div class="bar-col current" tabindex="0" aria-label="Q1 FY27 revenue 157.8 crore, current quarter">
+          <span class="bar-val num">157.8</span>
+          <div class="bar rev" style="height:82%"></div>
+        </div>
+      </div>
+      <div class="bar-labels">
+        <span class="bar-label">Q1<br>FY26</span>
+        <span class="bar-label">Q2<br>FY26</span>
+        <span class="bar-label">Q3<br>FY26</span>
+        <span class="bar-label">Q4<br>FY26</span>
+        <span class="bar-label current">Q1<br>FY27</span>
+      </div>
+    </div>
+
+    <div class="chart-card">
+      <p class="chart-title">Net Profit</p>
+      <p class="chart-delta bad">QoQ <b>−16.4%</b> · YoY <b>−2.2%</b></p>
+      <div class="bars">
+        <div class="bar-col" tabindex="0" aria-label="Q1 FY26 net profit 31.6 crore">
+          <span class="bar-val num">31.6</span>
+          <div class="bar pat" style="height:81%"></div>
+        </div>
+        <div class="bar-col" tabindex="0" aria-label="Q2 FY26 net profit 25.7 crore">
+          <span class="bar-val num">25.7</span>
+          <div class="bar pat" style="height:66%"></div>
+        </div>
+        <div class="bar-col" tabindex="0" aria-label="Q3 FY26 net profit 38.9 crore, five-quarter high">
+          <span class="bar-val num">38.9</span>
+          <div class="bar pat" style="height:100%"></div>
+        </div>
+        <div class="bar-col" tabindex="0" aria-label="Q4 FY26 net profit 37.0 crore">
+          <span class="bar-val num">37.0</span>
+          <div class="bar pat" style="height:95%"></div>
+        </div>
+        <div class="bar-col current" tabindex="0" aria-label="Q1 FY27 net profit 31.0 crore, current quarter">
+          <span class="bar-val num">31.0</span>
+          <div class="bar pat" style="height:80%"></div>
+        </div>
+      </div>
+      <div class="bar-labels">
+        <span class="bar-label">Q1<br>FY26</span>
+        <span class="bar-label">Q2<br>FY26</span>
+        <span class="bar-label">Q3<br>FY26</span>
+        <span class="bar-label">Q4<br>FY26</span>
+        <span class="bar-label current">Q1<br>FY27</span>
+      </div>
+    </div>
+
+    <div class="chart-card">
+      <p class="chart-title">PAT Margin</p>
+      <p class="chart-delta bad">QoQ <b>−200bps</b> · YoY <b>−60bps</b></p>
+      <div class="bars">
+        <div class="bar-col" tabindex="0" aria-label="Q1 FY26 PAT margin 20.2 percent">
+          <span class="bar-val num">20.2%</span>
+          <div class="bar mgn" style="height:82%"></div>
+        </div>
+        <div class="bar-col" tabindex="0" aria-label="Q2 FY26 PAT margin 15.8 percent, five-quarter low">
+          <span class="bar-val num">15.8%</span>
+          <div class="bar mgn" style="height:64%"></div>
+        </div>
+        <div class="bar-col" tabindex="0" aria-label="Q3 FY26 PAT margin 22.9 percent, five-quarter high">
+          <span class="bar-val num">22.9%</span>
+          <div class="bar mgn" style="height:93%"></div>
+        </div>
+        <div class="bar-col" tabindex="0" aria-label="Q4 FY26 PAT margin 21.6 percent">
+          <span class="bar-val num">21.6%</span>
+          <div class="bar mgn" style="height:88%"></div>
+        </div>
+        <div class="bar-col current" tabindex="0" aria-label="Q1 FY27 PAT margin 19.6 percent, current quarter">
+          <span class="bar-val num">19.6%</span>
+          <div class="bar mgn" style="height:80%"></div>
+        </div>
+      </div>
+      <div class="bar-labels">
+        <span class="bar-label">Q1<br>FY26</span>
+        <span class="bar-label">Q2<br>FY26</span>
+        <span class="bar-label">Q3<br>FY26</span>
+        <span class="bar-label">Q4<br>FY26</span>
+        <span class="bar-label current">Q1<br>FY27</span>
+      </div>
+    </div>
+
+  </div>
+
+  <details class="tbl">
+    <summary>View underlying data as table</summary>
+    <div class="tbl-wrap">
+      <table class="data">
+        <thead>
+          <tr><th>Quarter</th><th>Revenue (₹Cr)</th><th>Net Profit (₹Cr)</th><th>PAT Margin</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Q1 FY26 (Jun-25)</td><td class="num">156.60</td><td class="num">31.64</td><td class="num">20.2%</td></tr>
+          <tr><td>Q2 FY26 (Sep-25)</td><td class="num">163.45</td><td class="num">25.74</td><td class="num">15.8%</td></tr>
+          <tr><td>Q3 FY26 (Dec-25)</td><td class="num">169.94</td><td class="num">38.87</td><td class="num">22.9%</td></tr>
+          <tr><td>Q4 FY26 (Mar-26)</td><td class="num">171.00</td><td class="num">37.00</td><td class="num">21.6%</td></tr>
+          <tr><td><strong>Q1 FY27 (Jun-26)</strong></td><td class="num"><strong>157.79</strong></td><td class="num"><strong>30.95</strong></td><td class="num"><strong>19.6%</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </details>
+
+  <div class="body-grid">
+    <div>
+      <h2 class="section">What Changed This Quarter</h2>
+      <ul class="reads">
+        <li><span class="flag bad">−</span><span><strong>Growth stalled.</strong> Revenue is up just 0.8% YoY and down 7.7% QoQ — the first sequential revenue decline across the last five quarters, breaking a run the company had called "seven consecutive quarters of growth" as of Q3 FY26.</span></li>
+        <li><span class="flag bad">−</span><span><strong>Profit fell YoY for the first time in this stretch.</strong> Net profit of ₹31.0 Cr is below both the year-ago quarter (₹31.6 Cr) and the prior quarter (₹37.0 Cr), pulling PAT margin down to 19.6% — its lowest since Q2 FY26.</span></li>
+        <li><span class="flag bad">−</span><span><strong>Order book is shrinking.</strong> Down to ₹876 Cr as of Mar-26, from a ₹1,092 Cr peak in Sep-25 — a ~20% decline that sits uneasily next to management's stated aim to match or exceed FY26 order inflow through FY27.</span></li>
+        <li><span class="flag neutral">•</span><span><strong>Base effect is real.</strong> Q1 FY26 itself was an outsized quarter (+112% YoY revenue, +166% YoY profit), so some of this quarter's flat YoY optics reflect a hard comp, not necessarily a broken business.</span></li>
+        <li><span class="flag neutral">•</span><span><strong>Valuation has already de-rated.</strong> Shares sit near their 52-week low at ~13.6× TTM earnings, down 17% over one year — the market was pricing in some of this slowdown ahead of today's print.</span></li>
+      </ul>
+    </div>
+
+    <div class="verdict">
+      <p class="eyebrow" style="margin-bottom:8px;">Quick Take</p>
+      <p>A momentum pause, not yet a breakdown. Q1 FY27 snapped a five-quarter run of sequential revenue growth and delivered the first YoY profit decline in this window, with the order book trending the wrong way for two straight halves.</p>
+      <p>The counterweight is a tough base quarter and a stock that's already de-rated to the high-teens. Whether this is order-timing noise or a real deceleration hinges on what management says next — not on this print alone.</p>
+      <div class="watch">
+        <p class="watch-label">Watch next</p>
+        <ul>
+          <li>Q1 FY27 concall — any reaffirmation or walk-back of FY27 order-inflow guidance</li>
+          <li>Order book trajectory into Q2 FY27 — does the Sep-25→Mar-26 decline continue</li>
+          <li>US-subsidiary order contribution as international mix scales</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span class="src">Sources:</span> Business Standard capital-markets wire (Q1 FY27, Q2 FY26, Q3 FY26 net-profit releases) · GuruFocus/Yahoo Finance Q4 FY26 earnings-call recap · Multibagg market-pulse (order book, US orders) · Tickertape (price, market cap, 52-week range).
+    Figures are consolidated and drawn from public wire summaries, not directly from company filings or screener.in/BSE (unreachable in this session) — cross-check against the official results PDF before acting.
+    This note is generated analysis for informational purposes only and is not investment advice. Compiled 11 Aug 2026.
+  </div>
+
+</div>
