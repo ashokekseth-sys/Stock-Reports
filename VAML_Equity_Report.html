@@ -149,13 +149,15 @@
 
     table.guru-table { display:block !important; }
     table.guru-table tr:first-child { display:none !important; }
-    table.guru-table tbody, table.guru-table tr, table.guru-table td { display:block !important; width:100% !important; }
-    table.guru-table tr { margin-bottom:12px; border:1px solid #dde2ea; border-radius:7px; overflow:hidden; background:#fff; }
-    table.guru-table td { padding:8px 12px !important; border:none !important; border-bottom:1px solid #eef1f6 !important; text-align:left !important; }
+    table.guru-table tbody { display:block !important; width:100% !important; }
+    table.guru-table tr { display:flex !important; flex-wrap:wrap !important; align-items:center; width:100% !important; margin-bottom:12px; border:1px solid #dde2ea; border-radius:7px; overflow:hidden; background:#fff; }
+    table.guru-table td { display:block !important; padding:8px 12px !important; border:none !important; border-bottom:1px solid #eef1f6 !important; text-align:left !important; }
     table.guru-table td:last-child { border-bottom:none !important; }
-    table.guru-table td:first-child { background:#f6f8fb; font-weight:800; font-size:13px; }
+    table.guru-table td:first-child { flex:1 1 auto; background:#f6f8fb; font-weight:800; font-size:13px; border-bottom:1px solid #eef1f6 !important; }
+    table.guru-table td:nth-child(2) { flex:0 0 auto; background:#f6f8fb; text-align:right !important; border-bottom:1px solid #eef1f6 !important; }
+    table.guru-table td:nth-child(3), table.guru-table td:nth-child(4) { flex:0 0 100%; width:100% !important; }
     table.guru-table td::before { content:attr(data-label); display:block; font-size:8.5px; font-weight:900; letter-spacing:0.6px; text-transform:uppercase; color:#8a94a6; margin-bottom:3px; }
-    table.guru-table td:first-child::before { display:none; }
+    table.guru-table td:first-child::before, table.guru-table td:nth-child(2)::before { display:none; }
 
     .krow { flex-wrap:wrap; }
     .krow .kval { text-align:right; }
