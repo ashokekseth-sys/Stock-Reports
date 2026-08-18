@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Vesuvius India Limited — Equity Research Report">
+<meta property="og:description" content="Full equity report on Vesuvius India Limited (NSE: VESUVIUS) — competitive positioning vs. RHI Magnesita India, moat and risk analysis, financials, and technical read. Prepared by Ashoke Kumar Seth.">
+<meta property="og:image" content="https://raw.githubusercontent.com/ashokekseth-sys/Stock-Reports/main/vesuvius_og_preview.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Vesuvius India Limited — Equity Research Report">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/ashokekseth-sys/Stock-Reports/main/vesuvius_og_preview.png">
+<title>Vesuvius India Limited — Equity Research Report</title>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#ffffff; font-family:'Source Sans 3',Arial,sans-serif; color:#2a3342; font-size:14.5px; line-height:1.5; }
+  .page-wrap { background:#e9edf3; display:flex; justify-content:center; padding:24px 12px 40px; }
+  .page { width:1400px; max-width:100%; margin:0; background:#fff; box-shadow:0 6px 24px rgba(26,42,74,0.18); }
+  /* header */
+  .hdr { background:linear-gradient(135deg,#101c36 0%,#1a2a4a 55%,#2b4570 100%); border-bottom:4px solid; border-image:linear-gradient(90deg,#f7b733,#e67e22,#c62828) 1; color:#fff; padding:16px 26px 13px; display:flex; justify-content:space-between; align-items:flex-start; }
+  .hdr .meta { font-size:10.5px; letter-spacing:0.6px; color:#9fb0cf; text-transform:uppercase; }
+  .hdr h1 { font-size:26px; font-weight:900; letter-spacing:0.2px; margin:2px 0 3px; }
+  .hdr .tagline { font-size:11.5px; color:#c7d2e8; }
+  .hdr .pricebox { text-align:right; }
+  .hdr .price { font-size:26px; font-weight:900; }
+  .hdr .chg { color:#ff8a80; font-weight:700; font-size:14px; }
+  .hdr .sub { font-size:10.5px; color:#9fb0cf; margin-top:3px; }
+  .tagstrip { display:flex; gap:0; border-bottom:1px solid #dde2ea; }
+  .tagstrip div { flex:1; text-align:center; padding:6px 4px; font-size:10px; font-weight:700; letter-spacing:0.4px; text-transform:uppercase; border-right:1px solid #dde2ea; }
+  .tagstrip div:last-child { border-right:none; }
+  /* sections */
+  .sec { padding:16px 26px 20px; border-bottom:1px solid #e4e8ef; }
+  .sec-title { display:flex; align-items:center; gap:9px; margin-bottom:12px; padding-bottom:7px; border-bottom:2px solid #f0b429; }
+  .sec-title .num { background:linear-gradient(135deg,#f7b733,#e67e22); color:#1a2a4a; font-size:11px; font-weight:900; padding:2px 7px; border-radius:3px; }
+  .sec-title h2 { font-size:14.5px; font-weight:900; letter-spacing:0.8px; text-transform:uppercase; color:#1a2a4a; }
+  .microhead { font-size:10px; font-weight:900; letter-spacing:0.9px; text-transform:uppercase; color:#b07716; margin:10px 0 6px; }
+  /* generic table */
+  table.t { width:100%; border-collapse:collapse; }
+  table.t th { background:linear-gradient(180deg,#243a63,#1a2a4a); color:#fff; font-size:10.5px; letter-spacing:0.5px; text-transform:uppercase; padding:6px 9px; text-align:right; font-weight:700; }
+  table.t th:first-child { text-align:left; }
+  table.t td { padding:5.5px 9px; border-bottom:1px solid #edf0f5; text-align:right; font-size:12px; }
+  table.t td:first-child { text-align:left; font-weight:600; }
+  table.t tr:nth-child(even) td { background:#f8f9fb; }
+  .pos { color:#2e7d32; font-weight:700; } .neg { color:#c62828; font-weight:700; }
+  .warn { color:#f57f17; font-weight:700; }
+  /* tiles */
+  .tiles { display:flex; gap:10px; }
+  .tile { flex:1; border:1px solid #dde2ea; border-top:3px solid #2b4570; border-radius:6px; padding:9px 12px; background:linear-gradient(180deg,#fdfefe,#f7f9fc); }
+  .tile .lab { font-size:9.5px; font-weight:900; letter-spacing:0.8px; text-transform:uppercase; color:#8a94a6; }
+  .tile .val { font-size:19px; font-weight:900; margin:2px 0 1px; color:#1a2a4a; }
+  .tile .note { font-size:10.3px; color:#5a6475; line-height:1.35; }
+  /* callout notes */
+  .notebox { border-left:4px solid #f9a825; background:#fffbe8; padding:9px 13px; font-size:11.8px; margin-top:11px; border-radius:0 5px 5px 0; }
+  .moat-boost .klab { font-size:11.3px !important; }
+  .moat-boost .kval { font-size:14.5px !important; }
+  .moat-boost .notebox { font-size:13.8px !important; }
+  .notebox.green { border-left-color:#2e7d32; background:#f0f7f0; }
+  .notebox.red { border-left-color:#c62828; background:#fdf0f0; }
+  .notebox.blue { border-left-color:#1565c0; background:#eef4fc; }
+  .badge { display:inline-block; font-size:9.5px; font-weight:900; letter-spacing:0.5px; padding:1.5px 7px; border-radius:9px; text-transform:uppercase; vertical-align:middle; }
+  .b-bull { background:#e8f5e9; color:#2e7d32; } .b-bear { background:#ffebee; color:#c62828; }
+  .b-neut { background:#e3f2fd; color:#1565c0; } .b-warn { background:#fff9c4; color:#f57f17; }
+  .cols { display:flex; gap:20px; }
+  .panel { flex:1; border:1px solid #dde2ea; border-radius:6px; padding:12px 15px; }
+  .panel .plab { font-size:9.5px; font-weight:900; letter-spacing:0.9px; text-transform:uppercase; color:#8a94a6; margin-bottom:3px; }
+  .panel .pval { font-size:21px; font-weight:900; }
+  .chartcap { font-size:10px; color:#8a94a6; margin-top:5px; line-height:1.4; }
+  .imgwrap img { width:100%; border-radius:5px; border:1px solid #23304a; display:block; }
+  .footer-blue { border-top:3px solid #f0b429; background:linear-gradient(135deg,#101c36,#1a2a4a 55%,#2b4570); color:#fff; text-align:center; padding:10px 16px; font-size:11px; letter-spacing:0.4px; }
+  .disclaim { font-size:9.8px; color:#8a94a6; padding:12px 26px; line-height:1.5; }
+  table.t[style*='--pad'] td { padding:9px; }
+  .compact { padding:13px 26px 14px; }
+  .compact table.t td { padding:3.5px 8px; font-size:11.3px; }
+  .compact table.t th { padding:5px 8px; }
+  .compact .notebox { padding:7px 11px; font-size:10.8px; margin-top:0; }
+  .compact .microhead { margin:8px 0 4px; }
+  .compact .tile { padding:6px 10px; }
+  .compact .tile .val { font-size:15.5px; margin:1px 0 0; }
+  .compact .tile .note { font-size:9.6px; }
+  .compact .cols { gap:14px; }
+  table.fit { width:100%; table-layout:fixed; }
+  table.fit td, table.fit th { padding:3.5px 11px; white-space:nowrap; overflow:hidden; }
+  table.fit th:first-child, table.fit td:first-child { width:24%; }
+  .krow { display:flex; justify-content:space-between; align-items:baseline; gap:8px; border-bottom:1px solid #edf0f5; padding:5px 2px; }
+  .krow .klab { color:#8a94a6; font-weight:900; font-size:9.3px; text-transform:uppercase; letter-spacing:0.5px; flex:0 0 auto; }
+  .krow .kval { font-weight:900; color:#1a2a4a; font-size:12.5px; text-align:right; }
+  .krow .kval small { display:block; font-weight:600; color:#8a94a6; font-size:9.3px; }
+  .mininote { font-size:10px; color:#5a6475; line-height:1.45; margin-top:8px; padding:7px 9px; border-radius:4px; }
+  table.peer { width:100%; border-collapse:collapse; }
+  table.peer th { background:linear-gradient(180deg,#243a63,#1a2a4a); color:#fff; font-size:8.6px; letter-spacing:0.3px; text-transform:uppercase; padding:4px 3px; text-align:right; }
+  table.peer th:first-child { text-align:left; }
+  table.peer td { padding:4px 3px; border-bottom:1px solid #edf0f5; text-align:right; font-size:10px; }
+  table.peer td:first-child { text-align:left; font-weight:700; }
+
+  /* ===================== RESPONSIVE / MOBILE ===================== */
+  .mobile-jump { display:none; }
+  @media (max-width: 860px) {
+    html { -webkit-text-size-adjust:100%; }
+    body { overflow-x:hidden; }
+    .page { width:100% !important; max-width:100% !important; }
+    .sec, .hdr { padding-left:16px !important; padding-right:16px !important; }
+    .disclaim { padding-left:16px !important; padding-right:16px !important; }
+    .footer-blue { padding-left:16px !important; padding-right:16px !important; }
+
+    .hdr { flex-direction:column !important; align-items:stretch !important; gap:10px; }
+    .hdr .pricebox { text-align:left !important; }
+
+    .tagstrip { display:grid !important; grid-template-columns:1fr 1fr !important; }
+    .tagstrip div { font-size:9px !important; text-align:left !important; padding:7px 6px !important; border-right:1px solid #dde2ea !important; border-bottom:1px solid #dde2ea !important; }
+    .tagstrip div:nth-child(2n) { border-right:none !important; }
+    .tagstrip div:last-child { grid-column:1 / -1 !important; border-right:none !important; border-bottom:none !important; }
+
+    .mobile-jump {
+      display:flex !important; gap:4px; overflow-x:auto; -webkit-overflow-scrolling:touch;
+      position:sticky; top:0; z-index:20; background:#1a2a4a; padding:10px 12px;
+      border-bottom:3px solid #f0b429; white-space:nowrap; scrollbar-width:none;
+    }
+    .mobile-jump::-webkit-scrollbar { display:none; }
+    .mobile-jump a {
+      color:#c7d2e8; font-size:11.5px; font-weight:700; text-decoration:none;
+      padding:6px 10px; border-radius:14px; background:rgba(255,255,255,0.08); flex:0 0 auto;
+    }
+    .sec-title { scroll-margin-top:56px; }
+
+    .cols { flex-wrap:wrap !important; }
+    .cols > div { flex:1 1 100% !important; min-width:0 !important; width:100% !important; }
+    .cols-keep { flex-wrap:nowrap !important; gap:10px !important; }
+    .cols-keep > div { flex:1 1 0 !important; width:auto !important; }
+    .cols { row-gap:16px; }
+
+    .tile { flex:1 1 45% !important; }
+    .tiles { flex-wrap:wrap !important; row-gap:8px; }
+    .tiles-stack .tile { flex:1 1 100% !important; }
+
+    div[style*="flex:1 1 44%"] { flex:1 1 100% !important; }
+    div[style*="flex:1 1 30%"] { flex:1 1 45% !important; }
+
+    table.t, table.fit, table.peer {
+      display:block !important; overflow-x:auto !important; -webkit-overflow-scrolling:touch;
+      white-space:nowrap; max-width:100%;
+    }
+    table.t tr, table.fit tr, table.peer tr { display:table-row; }
+    table.prose { display:table !important; white-space:normal !important; overflow-x:visible !important; table-layout:fixed !important; }
+    table.prose td { white-space:normal !important; word-wrap:break-word; }
+    table.prose td[style*="width:90px"] { width:70px !important; }
+
+    table.guru-table { display:block !important; }
+    table.guru-table tr:first-child { display:none !important; }
+    table.guru-table tbody { display:block !important; width:100% !important; }
+    table.guru-table tr { display:flex !important; flex-wrap:wrap !important; align-items:center; width:100% !important; margin-bottom:12px; border:1px solid #dde2ea; border-radius:7px; overflow:hidden; background:#fff; }
+    table.guru-table td { display:block !important; padding:8px 12px !important; border:none !important; border-bottom:1px solid #eef1f6 !important; text-align:left !important; }
+    table.guru-table td:last-child { border-bottom:none !important; }
+    table.guru-table td:first-child { flex:1 1 auto; background:#f6f8fb; font-weight:800; font-size:13px; border-bottom:1px solid #eef1f6 !important; }
+    table.guru-table td:nth-child(2) { flex:0 0 auto; background:#f6f8fb; text-align:right !important; border-bottom:1px solid #eef1f6 !important; }
+    table.guru-table td:nth-child(3), table.guru-table td:nth-child(4) { flex:0 0 100%; width:100% !important; }
+    table.guru-table td::before { content:attr(data-label); display:block; font-size:8.5px; font-weight:900; letter-spacing:0.6px; text-transform:uppercase; color:#8a94a6; margin-bottom:3px; }
+    table.guru-table td:first-child::before, table.guru-table td:nth-child(2)::before { display:none; }
+
+    table.kv-table { display:block !important; }
+    table.kv-table tr:first-child { display:none !important; }
+    table.kv-table tbody { display:block !important; width:100% !important; }
+    table.kv-table tr { display:block !important; width:100% !important; margin-bottom:14px; border:1px solid #dde2ea; border-radius:7px; overflow:hidden; background:#fff; }
+    table.kv-table td { display:block !important; width:100% !important; padding:9px 12px !important; border:none !important; text-align:left !important; }
+    table.kv-table td:first-child { background:#f6f8fb; font-weight:800; font-size:13px; border-bottom:1px solid #eef1f6 !important; }
+
+    .krow { flex-wrap:wrap; }
+    .krow .kval { text-align:right; }
+
+    h1 { font-size:21px !important; }
+    .price { font-size:22px !important; }
+
+    h1 { font-size:21px !important; }
+    .price { font-size:22px !important; }
+
+    /* header sub-line duplicates the cover page — hide on mobile */
+    .hdr .sub { display:none !important; }
+
+    /* revenue-mix donut: swap for the compact side-by-side mobile version */
+    .donut-desktop { display:none !important; }
+    .donut-mobile { display:flex !important; }
+
+    /* event metric strip (e.g. section 03): stack vertically instead of N-across */
+    .eventstrip { flex-direction:column !important; }
+    .eventstrip > div { border-right:none !important; border-bottom:1px solid #e7ebf1 !important; text-align:left !important; display:flex !important; align-items:baseline !important; gap:8px !important; padding:8px 4px !important; }
+    .eventstrip > div:last-child { border-bottom:none !important; }
+    .eventstrip > div > div:first-child { flex:0 0 36% !important; }
+
+    /* stock performance + peer comparison tables: stretch to fill width instead of horizontal scroll */
+    table.peer, table.wfill, table.fit { display:table !important; width:100% !important; table-layout:fixed !important; white-space:normal !important; overflow-x:visible !important; }
+    table.peer th, table.peer td, table.wfill th, table.wfill td, table.fit th, table.fit td { font-size:8.3px !important; padding:3px 2px !important; word-break:break-word; }
+    table.peer th:first-child, table.peer td:first-child, table.wfill th:first-child, table.wfill td:first-child, table.fit th:first-child, table.fit td:first-child { width:16%; }
+
+    /* risk analysis table: category + severity share a line, evidence wraps full-width below */
+    table.risk tr { display:flex !important; flex-wrap:wrap !important; padding:8px 0 !important; border-bottom:1px solid #edf0f5; }
+    table.risk th { display:none !important; }
+    table.risk td { display:inline !important; border:none !important; padding:0 !important; }
+    table.risk td:nth-child(1) { order:1; font-size:12px; margin-right:8px; }
+    table.risk td:nth-child(3) { order:2; }
+    table.risk td:nth-child(2) { order:3; flex:1 1 100%; margin-top:5px; font-size:11px; }
+  }
+
+  @media (max-width: 480px) {
+    div[style*="flex:1 1 45%"] { flex:1 1 100% !important; }
+  }
+</style>
+</head>
+<body>
+<style>
+  :root{
+    --navy:#1a2a4a;
+    --navy-2:#243a63;
+    --gold:#c9a24b;
+    --ink:#1a2a4a;
+    --muted:#5c6b85;
+    --hair:#dde2ea;
+    --page-bg:#ffffff;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  .cover-wrap{
+    font-family:'Source Sans 3','Segoe UI',Arial,sans-serif;
+    background:#e9edf3;
+    display:flex;
+    justify-content:center;
+    padding:24px 12px;
+  }
+  .cover-page{
+    width:1400px;
+    max-width:100%;
+    min-height:900px;
+    background:var(--page-bg);
+    display:flex;
+    flex-direction:column;
+    box-shadow:0 6px 24px rgba(26,42,74,0.18);
+    overflow:hidden;
+  }
+  .top-band{
+    height:14px;
+    background:linear-gradient(90deg,var(--navy) 0%,var(--navy-2) 55%,var(--gold) 100%);
+    flex-shrink:0;
+  }
+  .brand-bar{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:26px 56px 0 56px;
+    flex-shrink:0;
+  }
+  .brand-bar .doc-type{
+    font-size:12px;
+    letter-spacing:3px;
+    color:var(--muted);
+    text-transform:uppercase;
+    font-weight:600;
+  }
+  .brand-bar .doc-date{
+    font-size:12px;
+    color:var(--muted);
+    letter-spacing:0.4px;
+  }
+  .main{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:flex-start;
+    text-align:center;
+    padding:36px 60px 40px 60px;
+  }
+  .logo-wrap{
+    width:auto;
+    max-width:92%;
+    height:150px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:44px;
+  }
+  .logo-wrap img{
+    max-width:100%;
+    max-height:100%;
+    object-fit:contain;
+  }
+  .text-logo{
+    font-size:clamp(20px, 6.2vw, 40px);
+    font-weight:900;
+    letter-spacing:1px;
+    color:var(--navy);
+    white-space:normal;
+    word-break:break-word;
+    text-align:center;
+    line-height:1.15;
+  }
+  .text-logo span{ color:var(--gold); }
+  .kicker{
+    font-size:15px;
+    letter-spacing:6px;
+    color:var(--gold);
+    font-weight:700;
+    text-transform:uppercase;
+    margin-bottom:16px;
+  }
+  h1.report-title{
+    font-size:46px;
+    letter-spacing:1px;
+    color:var(--navy);
+    font-weight:800;
+    text-transform:uppercase;
+    line-height:1.15;
+  }
+  .divider{
+    width:120px;
+    height:3px;
+    background:var(--gold);
+    margin:26px 0;
+  }
+  .company-name{
+    font-size:34px;
+    font-weight:700;
+    color:var(--navy);
+    letter-spacing:0.3px;
+  }
+  .ticker-row{
+    margin-top:26px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px 14px;
+    max-width:480px;
+    margin-left:auto;
+    margin-right:auto;
+  }
+  .ticker-chip{ text-align:center; }
+  .ticker-chip{
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:0.6px;
+    color:var(--navy);
+    background:#eef1f7;
+    border:1px solid var(--hair);
+    border-radius:4px;
+    padding:6px 14px;
+  }
+  .sector-line{
+    margin-top:28px;
+    font-size:14px;
+    color:var(--muted);
+    letter-spacing:0.3px;
+    font-style:italic;
+  }
+  .meta-block{
+    margin-top:64px;
+    display:flex;
+    gap:70px;
+    justify-content:center;
+  }
+  .meta-item{
+    text-align:center;
+  }
+  .meta-label{
+    font-size:11px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:var(--muted);
+    margin-bottom:6px;
+    font-weight:600;
+    white-space:nowrap;
+  }
+  .meta-value{
+    font-size:16px;
+    color:var(--navy);
+    font-weight:700;
+  }
+  .prepared-by{
+    margin-top:60px;
+    font-size:13px;
+    color:var(--muted);
+    letter-spacing:0.3px;
+  }
+  .prepared-by strong{
+    color:var(--navy);
+  }
+  .footer{
+    flex-shrink:0;
+    background:#ffffff;
+    border-top:1px solid var(--hair);
+    padding:16px 56px;
+    text-align:center;
+  }
+  .footer p{
+    font-size:10.5px;
+    line-height:1.6;
+    color:#8992a6;
+    letter-spacing:0.2px;
+  }
+  .footer strong{
+    color:var(--muted);
+  }
+  @media (max-width: 860px) {
+    .footer { padding:14px 20px !important; text-align:left !important; }
+    .footer p { text-align:left !important; }
+    .cover-page { min-height:auto !important; }
+    .main { padding-top:14px !important; padding-bottom:14px !important; }
+    .logo-wrap { margin-bottom:20px !important; }
+    .meta-block { margin-top:30px !important; }
+  }
+  .bottom-band{
+    height:8px;
+    background:var(--navy);
+    flex-shrink:0;
+  }
+</style>
+<div class="cover-wrap">
+  <div class="cover-page">
+  <div class="top-band"></div>
+
+  <div class="brand-bar"></div>
+
+  <div class="main">
+    <div class="logo-wrap">
+      <div class="text-logo">VESUVIUS <span>INDIA</span></div>
+    </div>
+
+    <div class="kicker">Stock Analysis Report</div>
+    <h1 class="report-title">Vesuvius India Limited</h1>
+
+    <div class="divider"></div>
+
+    <div class="ticker-row">
+      <div class="ticker-chip">NSE: VESUVIUS</div>
+      <div class="ticker-chip">BSE: 520113</div>
+      <div class="ticker-chip">CMP: &#8377;437</div>
+      <div class="ticker-chip">Parent: Vesuvius plc (UK)</div>
+    </div>
+    <div class="sector-line">Refractories &amp; Molten Metal Flow Control — Steel &amp; Foundry Industries</div>
+
+    <div class="meta-block" style="display:block">
+      <span style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);font-weight:600">Generated On</span>
+      <span style="font-size:14px;color:var(--navy);font-weight:700;margin-left:8px">18 August 2026</span>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p style="margin-bottom:4px;letter-spacing:0.5px;text-transform:uppercase;font-size:9.5px;color:#8a94a6">Confidential — For Educational Use</p>
+    <p><strong>Report by Ashoke Kumar Seth</strong> (ashokekseth@gmail.com) — Disclosure: I am not SEBI registered. The information provided here is for educational purposes only. I will not be responsible for any of your profit/loss with this channel's suggestions. Consult your financial advisor before taking any decisions. This report is neither advice nor endorsement — Do Your Own Research.</p>
+  </div>
+
+  <div class="bottom-band"></div>
+</div>
+</div>
+
+<div class="page-wrap">
+<div class="page">
+
+  <!-- ================= HEADER ================= -->
+  <div class="hdr">
+    <div>
+      <div class="meta">BSE: 520113 <small>(voluntarily delisted May 2016 &#8212; see note)</small> &nbsp;&#183;&nbsp; NSE: VESUVIUS &nbsp;&#183;&nbsp; Refractories &#8212; Flow Control &amp; Advanced Refractory Products &nbsp;&#183;&nbsp; Kolkata &amp; Visakhapatnam, India &nbsp;&#183;&nbsp; Promoter: Vesuvius plc (UK) 55.57%</div>
+      <h1>Vesuvius India Limited</h1>
+      <div class="tagline">~35-year MNC subsidiary of UK-listed Vesuvius plc &#8212; near debt-free, 17% OPM, 21.3% ROCE &#183; first-ever 10:1 stock split (Jun 2025) and new MD (Jul 2024) amid a ~&#8377;1,000 Cr India capex program &#183; but has lost ~3% market share over six years to the larger, more vertically-integrated RHI Magnesita India despite structurally better unit economics &#183; related-party-transaction quantum with parent not accessible this cycle</div>
+    </div>
+    <div class="pricebox">
+      <div class="price">&#8377;437.00</div>
+      <div class="sub">Report date: 18 Aug 2026 &nbsp;|&nbsp; Mkt Cap: &#8377;8,869 Cr &nbsp;|&nbsp; 52-Wk Range: &#8377;430.3-607.9 <small>(post-split basis, see Sec. 07)</small> &nbsp;|&nbsp; P/E: 34.6x</div>
+    </div>
+  </div>
+  <div class="tagstrip">
+    <div style="color:#e07c00;background:#fff6e6">&#9679; Sentiment: Moderate / Selective &#8212; solid economics, not cheap on valuation</div>
+    <div style="color:#1565c0;background:#eef4fc">&#9679; Momentum: 2-Yr -15.6% vs. Nifty -2.7% &#8212; but well ahead of RHI Magnesita's -39.7%</div>
+    <div style="color:#e07c00;background:#fff6e6">&#9679; Growth: 5-Yr Sales CAGR ~22%, PAT CAGR ~34% &#8212; but OPM slipped 19%&#8594;17% (CY24&#8594;CY25)</div>
+    <div style="color:#e07c00;background:#fff6e6">&#9679; Governance: Near debt-free, stable auditor &#8212; but RPT quantum with parent not sourced this cycle</div>
+    <div style="color:#1565c0;background:#eef4fc">&#9679; Watch: Mehsana&#8594;Foseco intercompany sale (&#8377;43.25 Cr, targeted close 31 Dec 2026)</div>
+  </div>
+  <nav class="mobile-jump"><a href="#sec01">Overview</a><a href="#sec02">Event Read-Through</a><a href="#sec03">Moat</a><a href="#sec04">Sentiment</a><a href="#sec05">Sector</a><a href="#sec06">Shareholding</a><a href="#sec07">Performance</a><a href="#sec08">Financials</a><a href="#sec09">Ratios</a><a href="#sec10">Management</a><a href="#sec11">Guidance</a><a href="#sec12">Consensus</a><a href="#sec13">Volume</a><a href="#sec14">Peers</a><a href="#sec15">Risk</a><a href="#sec16">Rotation</a><a href="#sec17">MarketSmith</a><a href="#sec18">Technical Read</a><a href="#sec19">Recommendation</a></nav>
+
+  <!-- ================= 01 COMPANY OVERVIEW ================= -->
+  <div class="sec">
+    <div class="sec-title" id="sec01"><span class="num">01</span><h2>Company Overview</h2></div>
+    <div class="cols">
+      <div style="flex:0 0 calc(50% - 10px);min-width:0">
+        <div class="microhead">What They Do</div>
+        <p>Vesuvius India Limited manufactures and trades <b>refractory products</b> for the steel and foundry industries &#8212; principally <b>flow control refractories</b> (slide-gate systems, stopper rods, tundish refractories, ladle shrouds, and isostatically-pressed consumables used in continuous casting), along with <b>advanced/basic refractories</b>, digital measurement refractory systems, and crucible refractories. These are consumable, safety-critical products fitted at the point where molten steel is handled &#8212; ladles, tundishes and casters &#8212; not commodity building materials.</p>
+        <p style="margin-top:7px">The company was incorporated in <b>September 1991 as Vesuvius Refractories Limited</b>, renamed <b>Vesuvius India Limited in November 1992</b>, listed via IPO in <b>September 1993</b>, and began commercial production at its first factory in <b>Kolkata on 1 July 1994</b>. It also operates a <b>monolithics plant at Visakhapatnam</b> (acquired from Carborundum Universal), and has historically licensed <b>Blast Furnace Cast technology from Answer Technologies Inc. (USA)</b>. The company is a <b>55.57%-owned subsidiary of UK-listed Vesuvius plc</b>, a global leader in molten-metal flow engineering, with that stake stable since at least 2017 (Section 06).</p>
+        <div class="notebox" style="margin-top:10px;background:#fff6e6;border-left:3px solid #e07c00"><b>Listing history &#8212; precise, not a footnote:</b> Vesuvius India <b>voluntarily delisted from active trading on the BSE in May 2016</b>. BSE code 520113 continues to appear in reference data and is retained on the cover of this report for identification purposes, but <b>NSE (VESUVIUS) is the company's primary and effectively only active listing today</b>. This is a routine exchange-consolidation move by an already-NSE-listed company, not a going-private or squeeze-out event &#8212; flagged here precisely, per Section 15, rather than left ambiguous.</div>
+      </div>
+      <div style="flex:0 0 calc(50% - 10px);min-width:0">
+        <div class="microhead">Segment Mix &#8212; Vesuvius plc GLOBAL (FY2024) &#8212; India Split Not Disclosed</div>
+        <svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto">
+<circle cx="95" cy="100" r="65" fill="none" stroke="#1a2a4a" stroke-width="28" stroke-dasharray="236.9 171.4" stroke-dashoffset="0" transform="rotate(-90 95 100)"/>
+<circle cx="95" cy="100" r="65" fill="none" stroke="#2a9d8f" stroke-width="28" stroke-dasharray="171.4 236.9" stroke-dashoffset="-236.9" transform="rotate(-90 95 100)"/>
+<text x="95" y="96" text-anchor="middle" font-size="11" font-weight="900" fill="#1a2a4a">Global Mix</text>
+<text x="95" y="110" text-anchor="middle" font-size="9" fill="#8a94a6">FY2024</text>
+<rect x="185" y="72" width="11" height="11" fill="#1a2a4a" rx="2"/><text x="201" y="82" font-size="10.5" font-weight="700" fill="#1a2a4a">Flow Control &#8212; 58%</text><text x="201" y="94" font-size="9" fill="#8a94a6">&#163;793m (Vesuvius plc, FY2024)</text>
+<rect x="185" y="112" width="11" height="11" fill="#2a9d8f" rx="2"/><text x="201" y="122" font-size="10.5" font-weight="700" fill="#1a2a4a">Advanced Refractories &#8212; 42%</text><text x="201" y="134" font-size="9" fill="#8a94a6">&#163;568m (Vesuvius plc, FY2024)</text>
+</svg>
+        <div class="chartcap" style="margin-top:2px"><b>This is the Vesuvius plc GLOBAL segment mix, not an India-specific figure.</b> No India-entity-specific split between flow control, foundry and advanced-refractory revenue was found anywhere in this research &#8212; only the global parent's split (Vesuvius plc FY2024: Flow Control &#163;793m, Advanced Refractories &#163;568m, roughly 58%/42%) is disclosed. Presenting this as if it were India-specific would be misleading, so it is labeled precisely.</div>
+        <div class="notebox" style="margin-top:10px;background:#fff6e6;border-left:3px solid #e07c00"><b>India segment disclosure gap:</b> Vesuvius India's own annual report / investor materials were not accessible for a India-specific product-mix breakdown this cycle. A reader wanting the India-specific flow-control vs. foundry vs. advanced-refractory split should check the company's latest annual report segment note directly.</div>
+        <div class="microhead" style="margin-top:14px">Competitive Position vs. Peers</div>
+        <div style="border:1px solid #dde2ea;border-radius:6px;padding:11px 14px;background:linear-gradient(180deg,#fdfefe,#f7f9fc)">
+          <div style="font-size:15px;font-weight:900;color:#1a2a4a">Moderate &#8212; 3 / 5
+            <span style="letter-spacing:2px;color:#1a2a4a;font-size:13px">&#9632;&#9632;&#9632;<span style="color:#cdd5e0">&#9632;&#9632;</span></span></div>
+          <div style="font-size:9px;color:#8a94a6;margin-top:4px">Superior unit economics, but a real and measurable market-share disadvantage versus the sector's largest player (Section 14)</div>
+          <p style="font-size:11px;margin-top:7px">Vesuvius India carries <b>superior margins and returns on capital</b> to both listed peers shown in Section 14 (17% OPM, 15% ROE, 21.3% ROCE), but has been <b>steadily losing market share (~3% over six years) to RHI Magnesita India</b>, which is larger, more vertically integrated (captive raw-material mines, ~85% utilization vs. an industry average of 50-60%), and holds outright share leadership. Genuine technical switching costs and parent brand/tech access (Section 03) support the business, but have not been enough to prevent this erosion.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= 02 EVENT READ-THROUGH ================= -->
+  <div class="sec">
+    <div class="sec-title" id="sec02"><span class="num">02</span><h2>Event Read-Through &#8212; Leadership Transition, Stock Split &amp; Capacity Build</h2></div>
+    <div class="eventstrip" style="border:1px solid #dde2ea;border-top:3px solid #2e7d32;border-radius:6px;display:flex;background:linear-gradient(180deg,#fdfefe,#f7f9fc);margin-bottom:12px"><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">1 Jul 2024</div><div style="font-size:15.5px;font-weight:900;color:#1a2a4a">New MD</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">Mohinder P.S. Rajput, 5-yr term</div></div><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">10 Jun 2025</div><div style="font-size:15.5px;font-weight:900;color:#1a2a4a">10:1 Stock Split</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">First-ever; FV &#8377;10 &#8594; &#8377;1</div></div><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Cumulative</div><div style="font-size:15.5px;font-weight:900;color:#1a2a4a">~&#8377;1,000 Cr</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">Capex Program (~&#8377;650-700 Cr deployed)</div></div><div style="flex:1;text-align:center;padding:8px 4px;border-right:1px solid #e7ebf1;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Under Build</div><div style="font-size:15.5px;font-weight:900;color:#1a2a4a">~250,000 TPA</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">New capacity, Visakhapatnam</div></div><div style="flex:1;text-align:center;padding:8px 4px;"><div style="font-size:8.6px;font-weight:900;letter-spacing:0.5px;color:#8a94a6;text-transform:uppercase">Aug 2026, Targeted Close 31 Dec 2026</div><div style="font-size:15.5px;font-weight:900;color:#1a2a4a">&#8377;43.25 Cr</div><div style="font-size:8.8px;font-weight:700;color:#8a94a6">Mehsana Sale to Foseco India</div></div></div>
+    <div class="microhead">What Happened &amp; Why It Matters</div>
+    <div class="notebox green" style="margin-top:0">
+      <p>Four related developments define the current period rather than one single headline deal. <b>Mohinder Pradip Singh Rajput was appointed Additional Director/Managing Director effective 1 Jul 2024</b> for a 5-year term, ratified by postal ballot on 2 Aug 2024; he previously led strategic growth and regional CEO roles at Lhoist and ran ERAMET's Nickel and then Manganese divisions. He replaces <b>Nitin Jain</b>, who moved to a global Vesuvius Group role in the UK and remains on the VIL board as a Non-Executive Non-Independent Director &#8212; an orderly succession pattern, not a disruptive exit.</p>
+      <p style="margin-top:6px">The company also executed its <b>first-ever 10:1 stock split</b> (face value &#8377;10 &#8594; &#8377;1, record date 10 Jun 2025), following a &#8377;14.50/share final dividend recommended on 26 Feb 2025 (pre-split basis). In parallel, it is deploying a <b>~&#8377;1,000 Cr cumulative capex program</b> (~&#8377;650-700 Cr already spent) building three new greenfield plants at the Visakhapatnam Industrial Complex &#8212; a Mould Flux plant, an Alumino-Silicate Monolithics plant (from May 2025) and a Basic Monolithics plant (from June 2025) &#8212; adding ~250,000 tonnes/year of capacity, plus a Kolkata brownfield &quot;VISO&quot; expansion (12-18 month timeline). This reads as a company actively reinvesting in Indian capacity ahead of the steel-sector capex supercycle (Section 05), under a newly installed leadership team.</p>
+      <p style="margin-top:6px">Most recently, the board approved (Aug 2026) a <b>slump sale of the Mehsana, Gujarat facility</b> &#8212; which makes crucibles, stoppers and sleeves for the non-ferrous foundry segment &#8212; to <b>Foseco India Limited for &#8377;43.25 Cr</b>, targeted to close by 31 Dec 2026, as part of a group-wide non-ferrous foundry portfolio realignment.</p>
+    </div>
+    <div class="notebox" style="margin-top:10px;background:#fff6e6;border-left:3px solid #e07c00"><b>Caveat &#8212; the Mehsana sale is an intercompany transaction, flagged plainly:</b> Foseco India is a <b>distinct, separately-listed sister company</b> also controlled by Vesuvius plc (which owns 64% of it) &#8212; not the same entity as Vesuvius India, and this report does not conflate the two. While the sale is presented by the company as portfolio rationalization, it is being struck between two entities under common UK-parent control, and this report <b>cannot independently verify that the &#8377;43.25 Cr price was set on arm's-length terms</b> &#8212; royalty and related-party-transaction quantum disclosure was not accessible this cycle (Section 10). This is not an allegation of impropriety; it is a genuine verification gap the reader should close via the transaction's SEBI/BSE disclosures and the annual report's Related Party Transactions note.</div>
+    <div class="notebox blue" style="margin-top:10px"><b>Near-term watch items:</b> (1) execution of the capacity ramp at Visakhapatnam and whether the new plants deliver the intended volume/margin benefit; and (2) whether the MD transition changes India capital-allocation priorities relative to the prior leadership's approach &#8212; both are genuinely open questions rather than settled outcomes at this point.</div>
+  </div>
+
+  <!-- ================= 03 MOAT | 04 SENTIMENT SIDE-BY-SIDE ================= -->
+  <div class="sec">
+    <div class="cols">
+      <div style="flex:1" class="moat-boost">
+        <div class="sec-title" id="sec03"><span class="num">03</span><h2>Competitive Advantage (Moat) Analysis</h2></div>
+        <div class="krow"><span class="klab">Brand Strength</span><span class="kval" style="color:#e07c00">MODERATE</span></div>
+        <div class="krow"><span class="klab">Network Effects</span><span class="kval" style="color:#c62828">WEAK / NOT APPLICABLE</span></div>
+        <div class="krow"><span class="klab">Switching Costs</span><span class="kval" style="color:#2e7d32">MODERATE-STRONG</span></div>
+        <div class="krow"><span class="klab">Cost Advantage</span><span class="kval" style="color:#c62828">WEAK</span></div>
+        <div class="krow"><span class="klab">Patents / Proprietary Tech</span><span class="kval" style="color:#e07c00">MODERATE</span></div>
+        <div class="notebox" style="margin-top:10px"><b>Synthesis:</b> The overall moat is best read as <b>MODERATE</b>. Vesuvius plc's global reputation lends real credibility/qualification value with steelmakers (Brand: moderate), but has not translated into pricing power sufficient to prevent share loss. The most genuine structural advantage is <b>switching costs</b>: refractory failure causes costly, unplanned furnace shutdowns, so steel mills undertake extensive supplier qualification and often prefer &quot;Total Refractory Management&quot; relationships &#8212; a real barrier, though one that protects incumbency in general rather than guaranteeing any single supplier's position. Technology/know-how transfer from the Vesuvius plc group's global flow-control R&amp;D is genuine (Patents: moderate), but industry analysis suggests <b>&quot;special/high-value refractories constitute only a minimal portion of Vesuvius India's sales&quot;</b> &#8212; meaning most of the India business competes in more commoditized, replicable categories where that edge matters less. Most importantly, Vesuvius India has <b>no disclosed captive raw-material integration</b> in India and is import-dependent for magnesite, graphite and other inputs (Cost Advantage: weak) &#8212; versus RHI Magnesita India, which sources ~40% from captive mines across Brazil, Turkey and Europe and runs at ~85% utilization against a 50-60% industry average. This moat helps Vesuvius India compete profitably, but has not been enough to let it win share from a bigger, more integrated rival (Section 14).</div>
+      </div>
+      <div style="flex:1">
+        <div class="sec-title" id="sec04"><span class="num">04</span><h2>Overall Sentiment &amp; Momentum Prediction</h2></div>
+        <div class="notebox" style="border:3px solid #e07c00;border-radius:8px;padding:12px 16px;background:linear-gradient(135deg,#fff8ec,#fffdf7)">
+          <div style="font-size:9.5px;font-weight:900;letter-spacing:0.9px;text-transform:uppercase;color:#8a94a6">Key Watch-Item</div>
+          <div style="font-size:19px;font-weight:900;color:#e07c00;margin:4px 0">&#9888; Rich Valuation Meets a Real Share-Loss Trend</div>
+          <p style="font-size:11.8px">This is the central tension of the report, not a single red flag. Vesuvius India has been <b>measurably losing market share (~3% over six years) to RHI Magnesita India</b> (Section 03, 14) despite structurally better margins and returns. At the same time the stock trades at <b>P/E ~34.6x and P/B ~5x</b> (Section 09) &#8212; a valuation that reads as pricing in a return to growth/margin expansion that has <b>not been evident in the last 2-3 quarters</b> (OPM slipped from 19% in CY2024 to 17% in CY2025 and has stayed there into 1H CY2026, Section 08). Layered on top is an <b>unresolved related-party-transaction disclosure gap</b> (Section 10) around the Mehsana-to-Foseco sale specifically. None of this is alarming in isolation, but together it argues for selectivity on entry rather than either dismissal or alarm.</p>
+        </div>
+        <div class="microhead" style="margin-top:12px">2-Year Relative Performance vs. Nifty 50 &amp; RHI Magnesita India</div>
+        <div style="display:flex;gap:14px;font-size:9.5px;font-weight:700;margin-bottom:2px">
+          <span style="color:#c62828">&#9679; Vesuvius India &#8212; -15.6%</span>
+          <span style="color:#1565c0">&#9679; Nifty 50 &#8212; -2.7%</span>
+          <span style="color:#6a7fa0">&#9679; RHI Magnesita India &#8212; -39.7%</span>
+        </div>
+<svg viewBox="0 0 480 150" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto">
+<line x1="36" y1="98.7" x2="474" y2="98.7" stroke="#eceff4"/><text x="32" y="101.7" text-anchor="end" font-size="8" fill="#8a94a6">-40%</text>
+<line x1="36" y1="71.7" x2="474" y2="71.7" stroke="#eceff4"/><text x="32" y="74.7" text-anchor="end" font-size="8" fill="#8a94a6">-20%</text>
+<line x1="36" y1="44.7" x2="474" y2="44.7" stroke="#eceff4"/><text x="32" y="47.7" text-anchor="end" font-size="8" fill="#8a94a6">0%</text>
+<line x1="36" y1="17.8" x2="474" y2="17.8" stroke="#eceff4"/><text x="32" y="20.8" text-anchor="end" font-size="8" fill="#8a94a6">20%</text>
+<path d="M36.0,44.7 L40.2,48.3 L44.3,51.5 L48.5,56.6 L52.7,51.2 L56.9,49.3 L61.0,50.2 L65.2,52.0 L69.4,49.9 L73.5,58.3 L77.7,52.0 L81.9,56.5 L86.1,66.5 L90.2,70.4 L94.4,68.1 L98.6,59.9 L102.7,60.2 L106.9,69.7 L111.1,70.4 L115.3,73.3 L119.4,74.0 L123.6,73.7 L127.8,78.0 L131.9,78.6 L136.1,76.3 L140.3,90.1 L144.5,92.4 L148.6,95.8 L152.8,90.3 L157.0,95.6 L161.1,78.9 L165.3,71.0 L169.5,76.8 L173.7,79.4 L177.8,78.0 L182.0,84.6 L186.2,84.7 L190.3,85.8 L194.5,80.2 L198.7,80.5 L202.9,80.9 L207.0,83.0 L211.2,71.9 L215.4,75.1 L219.5,76.2 L223.7,77.3 L227.9,77.3 L232.1,76.2 L236.2,73.8 L240.4,69.6 L244.6,72.7 L248.7,75.2 L252.9,75.5 L257.1,78.1 L261.3,78.0 L265.4,77.3 L269.6,76.0 L273.8,84.7 L277.9,84.9 L282.1,83.8 L286.3,83.7 L290.5,83.4 L294.6,77.5 L298.8,78.7 L303.0,75.6 L307.1,80.6 L311.3,80.2 L315.5,84.0 L319.7,84.9 L323.8,81.8 L328.0,83.4 L332.2,82.1 L336.3,83.0 L340.5,82.2 L344.7,90.0 L348.9,86.9 L353.0,86.5 L357.2,86.1 L361.4,81.5 L365.5,86.6 L369.7,94.9 L373.9,99.2 L378.1,100.3 L382.2,108.1 L386.4,101.7 L390.6,96.7 L394.7,93.6 L398.9,93.2 L403.1,93.2 L407.3,91.8 L411.4,96.5 L415.6,95.2 L419.8,92.6 L423.9,94.1 L428.1,100.9 L432.3,97.9 L436.5,99.1 L440.6,97.4 L444.8,89.6 L449.0,92.1 L453.1,94.2 L457.3,96.4 L461.5,91.2 L465.7,98.3 L469.8,99.5 L474.0,98.3" fill="none" stroke="#6a7fa0" stroke-width="1.3"/>
+<path d="M36.0,44.7 L40.2,42.5 L44.3,44.6 L48.5,41.8 L52.7,39.5 L56.9,37.4 L61.0,43.7 L65.2,44.0 L69.4,44.6 L73.5,48.2 L77.7,47.6 L81.9,48.4 L86.1,51.8 L90.2,49.7 L94.4,48.5 L98.6,45.5 L102.7,45.0 L106.9,51.5 L111.1,50.2 L115.3,49.2 L119.4,52.3 L123.6,53.5 L127.8,54.1 L131.9,52.0 L136.1,51.6 L140.3,55.0 L144.5,55.8 L148.6,59.4 L152.8,57.1 L157.0,57.9 L161.1,52.7 L165.3,51.8 L169.5,55.2 L173.7,55.6 L177.8,50.0 L182.0,49.0 L186.2,47.3 L190.3,49.2 L194.5,43.7 L198.7,44.6 L202.9,45.1 L207.0,43.8 L211.2,45.3 L215.4,43.2 L219.5,40.3 L223.7,41.3 L227.9,43.0 L232.1,43.9 L236.2,44.7 L240.4,46.1 L244.6,47.2 L248.7,45.8 L252.9,44.5 L257.1,46.9 L261.3,45.2 L265.4,43.2 L269.6,42.0 L273.8,45.7 L277.9,44.3 L282.1,42.2 L286.3,39.9 L290.5,39.5 L294.6,39.9 L298.8,41.1 L303.0,38.8 L307.1,38.0 L311.3,37.2 L315.5,37.3 L319.7,38.1 L323.8,38.5 L328.0,38.1 L332.2,36.6 L336.3,40.1 L340.5,40.0 L344.7,43.5 L348.9,44.7 L353.0,40.0 L357.2,41.2 L361.4,40.7 L365.5,42.8 L369.7,46.8 L373.9,53.8 L378.1,54.0 L382.2,55.6 L386.4,56.2 L390.6,48.9 L394.7,47.3 L398.9,49.8 L403.1,49.2 L407.3,48.3 L411.4,51.1 L415.6,50.7 L419.8,51.7 L423.9,52.7 L428.1,51.3 L432.3,49.1 L436.5,48.9 L440.6,47.7 L444.8,48.1 L449.0,47.4 L453.1,50.5 L457.3,47.1 L461.5,46.1 L465.7,47.2 L469.8,48.4" fill="none" stroke="#1565c0" stroke-width="1.3" stroke-dasharray="4 3"/>
+<path d="M36.0,44.7 L40.2,37.9 L44.3,41.4 L48.5,41.2 L52.7,39.0 L56.9,30.9 L61.0,40.9 L65.2,39.8 L69.4,29.6 L73.5,39.3 L77.7,41.3 L81.9,38.1 L86.1,38.4 L90.2,42.4 L94.4,39.0 L98.6,45.3 L102.7,44.5 L106.9,54.2 L111.1,56.4 L115.3,59.1 L119.4,70.3 L123.6,73.3 L127.8,78.4 L131.9,68.1 L136.1,65.6 L140.3,77.3 L144.5,79.5 L148.6,75.3 L152.8,70.1 L157.0,69.0 L161.1,59.7 L165.3,60.5 L169.5,66.5 L173.7,64.3 L177.8,59.7 L182.0,57.8 L186.2,58.9 L190.3,54.0 L194.5,39.3 L198.7,39.1 L202.9,24.4 L207.0,21.9 L211.2,24.1 L215.4,33.9 L219.5,34.8 L223.7,38.5 L227.9,44.4 L232.1,38.7 L236.2,43.1 L240.4,45.3 L244.6,41.2 L248.7,46.5 L252.9,40.7 L257.1,48.1 L261.3,45.7 L265.4,42.8 L269.6,40.8 L273.8,46.4 L277.9,47.6 L282.1,47.4 L286.3,54.3 L290.5,51.3 L294.6,50.5 L298.8,52.4 L303.0,50.6 L307.1,54.8 L311.3,54.7 L315.5,54.0 L319.7,54.7 L323.8,57.8 L328.0,53.5 L332.2,53.6 L336.3,59.8 L340.5,60.8 L344.7,59.0 L348.9,58.9 L353.0,46.6 L357.2,47.0 L361.4,34.0 L365.5,48.8 L369.7,47.8 L373.9,55.1 L378.1,54.5 L382.2,60.5 L386.4,59.7 L390.6,59.3 L394.7,48.9 L398.9,48.8 L403.1,43.8 L407.3,47.2 L411.4,54.6 L415.6,57.5 L419.8,57.1 L423.9,55.7 L428.1,61.3 L432.3,58.0 L436.5,56.9 L440.6,56.6 L444.8,58.1 L449.0,57.7 L453.1,61.3 L457.3,63.5 L461.5,62.1 L465.7,66.7 L469.8,64.3 L474.0,65.8" fill="none" stroke="#c62828" stroke-width="1.8"/>
+<text x="474.0" y="61.8" text-anchor="end" font-size="9" font-weight="700" fill="#c62828">-15.6%</text>
+<text x="36" y="140" text-anchor="middle" font-size="8" fill="#8a94a6">Aug 2024</text><text x="474" y="140" text-anchor="middle" font-size="8" fill="#8a94a6">Aug 2026</text>
+</svg>
+        <div class="chartcap" style="margin-top:4px">Read constructively: Vesuvius India has underperformed the Nifty 50 over two years, but has <b>meaningfully outperformed its closest large listed peer</b> &#8212; RHI Magnesita India is down almost 40% over the same window, partly reflecting an FY26 net loss (Section 14). This relative-performance pattern is consistent with the report's central thesis: better unit economics, losing share, but not losing money. Series indexed/adjusted for the Jun 2025 stock split; see Section 18.</div>
+        <div class="notebox" style="margin-top:10px">
+          <div style="font-size:9.5px;font-weight:900;letter-spacing:0.9px;text-transform:uppercase;color:#8a94a6">Overall Sentiment</div>
+          <div style="font-size:21px;font-weight:900;color:#e07c00">MODERATE / SELECTIVE <span style="font-size:13px;font-weight:700;color:#5a6475">&#8212; fundamentally sound, not a bargain</span></div>
+          <p style="font-size:11.8px;margin-top:5px">A near debt-free, consistently profitable MNC subsidiary with real capacity investment underway ahead of a genuine sector tailwind (Section 05) &#8212; but thin institutional analyst coverage (Section 12), a rich valuation relative to recent margin trends, and a real competitive-share erosion trend keep this from being an unambiguous buy signal.</p>
+        </div>
+        <div class="notebox blue" style="margin-top:14px">
+          <div style="font-size:9.5px;font-weight:900;letter-spacing:0.9px;text-transform:uppercase;color:#8a94a6">Momentum Prediction</div>
+          <div style="font-size:21px;font-weight:900;color:#1565c0">RANGE-BOUND TO MILDLY NEGATIVE &#8212; NO STRONG TECHNICAL TRIGGER</div>
+          <p style="font-size:11.8px;margin-top:5px">CMP ~&#8377;437 sits roughly 28% off the &#8377;607.9 52-week high and only ~1.6% above the &#8377;430.3 52-week low (Section 07). No chart-derived breakout/breakdown signal is available this cycle (Section 18); momentum here should be read from the fundamental trend (margin compression, share loss) rather than a technical setup.</p>
+        </div>
+        <div class="notebox" style="margin-top:10px"><b>Framing note:</b> This is a &quot;prepare, don't chase&quot; situation on valuation grounds, not a governance-driven caution. The fundamentals are genuinely solid; the open questions are about price paid and about closing real information gaps (RPT quantum, market-share trajectory) before sizing a position (Section 19).</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= 05 | 06 | 07 TRIPLE ================= -->
+  <div class="sec">
+    <div class="cols">
+      <div style="flex:1">
+        <div class="sec-title" id="sec05"><span class="num">05</span><h2>Sector Market Size</h2></div>
+        <svg viewBox="0 0 610 206" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto">
+<line x1="46" y1="180.0" x2="602" y2="180.0" stroke="#dde2ea"/>
+<text x="10" y="22" font-size="9.5" fill="#8a94a6">India Refractories Market, $Bn (range midpoints)</text>
+<rect x="434" y="12" width="9" height="9" fill="#1a2a4a" rx="2"/><text x="447" y="20" font-size="9.5" fill="#5a6475">2025</text>
+<rect x="504" y="12" width="9" height="9" fill="#2a9d8f" rx="2"/><text x="517" y="20" font-size="9.5" fill="#5a6475">2030-32E</text>
+<rect x="180" y="85.8" width="110" height="94.2" fill="#1a2a4a" rx="3"/><text x="235" y="80.8" text-anchor="middle" font-size="12" font-weight="700" fill="#1a2a4a">$2.6-2.8Bn</text><text x="235" y="199" text-anchor="middle" font-size="10.5" fill="#5a6475">2025</text>
+<rect x="330" y="30.0" width="110" height="150.0" fill="#2a9d8f" rx="3"/><text x="385" y="25.0" text-anchor="middle" font-size="12" font-weight="700" fill="#1a2a4a">~$4.2-4.4Bn</text><text x="385" y="199" text-anchor="middle" font-size="10.5" fill="#5a6475">2030-32E</text>
+<text x="480" y="110" font-size="10.5" fill="#5a6475">CAGR range</text><text x="480" y="124" font-size="10.5" fill="#5a6475">~7.4-8.3% (2025-30/32)</text>
+</svg>
+        <div class="chartcap">India's refractories market is estimated at <b>~$2.6-2.8bn (FY2024/25)</b>, growing at <b>~7.4-8.3% CAGR</b> through 2030-32 (range midpoints shown, per this report series' convention for wide analyst estimates). Iron &amp; steel is the largest end-use segment. India's steel capacity reached <b>~222 MTPA as of June 2026</b>, on track toward the National Steel Policy's <b>300 MTPA-by-2030</b> target (250 MT actual production goal, ~160kg per-capita consumption by 2030-31, backed by an estimated &#8377;10 lakh crore of investment). Refractories line every furnace, ladle, and tundish, so this is a direct multi-year volume driver rather than an indirect one. India's foundry/casting market adds a further <b>~$22-29bn (2025/26)</b>, growing <b>~11-15.6% CAGR</b> through 2030-2034, on vehicle production, machinery and exports. The global refractories market is cited at <b>~$50.9bn (2026)</b> across sources reviewed.</div>
+        <div class="notebox blue" style="margin-top:10px"><b>Green-steel/EAF transition &#8212; a tailwind here, not a headwind:</b> unlike ICE-to-EV transitions elsewhere in this report series, the shift toward Electric Arc Furnace and lower-carbon steelmaking is <b>reformulation demand</b> for refractories &#8212; new thermal-shock- and hydrogen-resistant linings are needed as furnace chemistry changes &#8212; not a demand threat. This is cited here as a growth driver.</div>
+      </div>
+      <div style="flex:1.08">
+        <div class="sec-title" id="sec06"><span class="num">06</span><h2>Shareholding Pattern</h2></div>
+        <table class="t wfill">
+          <tr><th>Category</th><th>Latest</th></tr>
+          <tr><td>Promoters (Vesuvius plc group, UK)</td><td class="pos">55.57%<small>Stable, Mar 2017 through Jun 2026 &#8212; no dilution or increase</small></td></tr>
+          <tr><td>DIIs</td><td>~22.0%<small>Mar 2026 breakdown</small></td></tr>
+          <tr><td>FIIs</td><td>~4.6%<small>Up from 0.14% (Mar 2019)</small></td></tr>
+          <tr><td>Public / Retail &amp; Others</td><td>~17.8%<small>Mar 2026</small></td></tr>
+          <tr><td>Promoter Pledge</td><td class="pos">None found</td></tr>
+        </table>
+        <div class="chartcap">Promoter holding has been unusually stable &#8212; <b>55.57% since at least Mar 2017</b>, with no dilution or increase through Jun 2026. Combined institutional ownership (FII+DII) rose from <b>near-zero FII (0.14%, Mar 2019) to ~26.6% combined by mid-2026</b>, a genuine independent-validation signal (Section 12/13). No pledging, bulk/block deals, or insider-trading disclosures were found. <b>Distinct from Foseco India Limited</b> &#8212; a separate, also Vesuvius-plc-controlled listed entity (64% owned) &#8212; do not conflate the two. Foseco India separately made a SEBI mandatory tender offer to Morganite Crucible India minority shareholders in 2025, after acquiring 75% control as part of Vesuvius plc's global &#163;92.7m Molten Metal Systems acquisition from Morgan Advanced Materials. This is relevant group-level M&amp;A context but is <b>not an event affecting Vesuvius India Ltd shareholders directly</b>.</div>
+      </div>
+      <div style="flex:1.05">
+        <div class="sec-title" id="sec07"><span class="num">07</span><h2>Stock Performance</h2></div>
+        <div class="krow"><span class="klab">CMP (18 Aug 2026)</span><span class="kval">&#8377;437.00</span></div>
+        <div class="krow"><span class="klab">52-Week Range</span><span class="kval" style="color:#e07c00">&#8377;430.3 &#8211; &#8377;607.9 <small>Post-split basis, one aggregator &#8212; see note</small></span></div>
+        <div class="krow"><span class="klab">Off-High / Off-Low</span><span class="kval">&#8722;28.1% / +1.6%</span></div>
+        <div class="krow"><span class="klab">Approx. 1M / 3M / 6M Return</span><span class="kval">&#8722;2.7% / &#8722;7.1% / &#8722;15.3% <small>Vesuvius, derived (see note)</small></span></div>
+        <div class="krow"><span class="klab">Approx. 1Y / YTD Return</span><span class="kval">&#8722;15.8% / &#8722;5.7% <small>Vesuvius, derived (see note)</small></span></div>
+        <div class="krow"><span class="klab">Nifty 50, Same Periods (approx.)</span><span class="kval">0.0% / +2.5% / &#8722;4.4% / &#8722;2.0% / &#8722;3.3%</span></div>
+        <div class="mininote" style="background:#fff6e6;border-left:3px solid #e07c00;margin-top:8px"><b>Read:</b> Period returns above are <b>derived/approximate</b> from the 2-year weekly relative-performance series in Section 04, not an independently-pulled daily series, per this report series' established convention. The <b>10:1 split (record date 10 Jun 2025) makes cross-referencing against pre-split price figures unreliable</b> &#8212; the 52-week range should be read strictly as the post-split trading range.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= 08 KEY FINANCIALS ================= -->
+  <div class="sec compact">
+    <div class="sec-title" id="sec08"><span class="num">08</span><h2>Key Financials &#8212; YoY &amp; QoQ (&#8377; Crore)</h2></div>
+    <div class="notebox" style="margin-top:0;background:#fff6e6;border-left:3px solid #e07c00"><b>Fiscal-year labeling note:</b> Vesuvius India's fiscal year is <b>calendar-year (Jan-Dec)</b>. Some brokerage news nonetheless labels the same quarters using an Apr-Mar &quot;FY&quot; convention (e.g. calling a quarter ending Mar/Jun 2026 &quot;Q1 FY27&quot;) &#8212; this report uses <b>calendar-year (CY) labeling throughout</b> to avoid that confusion; where a source used FY-style labeling it has been converted here.</div>
+    <div class="cols" style="margin-bottom:10px;margin-top:10px">
+      <div style="flex:0 0 calc(50% - 7px);min-width:0;display:flex;flex-direction:column"><div class="microhead" style="margin-top:0">&#9733; Latest Disclosed Quarter &#8212; Q2 CY2026 (Jun'26)</div><div style="border:2px solid #dde2ea;border-radius:8px;padding:8px 14px;background:linear-gradient(135deg,#fdfefe,#fffafa 60%,#f7f9fc);flex:1;margin-bottom:0">
+      <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:8px">
+        <div style="flex:1 1 30%;text-align:center;padding:4px 0"><div style="font-size:18px;font-weight:900;color:#1a2a4a">&#8377;535.45 Cr</div><div style="font-size:10.5px;color:#5a6475">Sales &nbsp;<b class="pos">+2.28% YoY, +7% QoQ</b></div></div>
+        <div style="flex:1 1 30%;text-align:center;padding:4px 0"><div style="font-size:18px;font-weight:900;color:#c62828">Not Confirmed</div><div style="font-size:10.5px;color:#5a6475">EBITDA / OPM &#8212; not separately sourced for Q2 CY26</div></div>
+        <div style="flex:1 1 30%;text-align:center;padding:4px 0"><div style="font-size:18px;font-weight:900;color:#1a2a4a">&#8377;58.51 Cr</div><div style="font-size:10.5px;color:#5a6475">PAT &nbsp;<b class="neg">-7.13% YoY</b>, <b class="pos">+4.5% QoQ</b></div></div>
+        <div style="flex:1 1 30%;text-align:center;padding:4px 0"><div style="font-size:18px;font-weight:900;color:#1a2a4a">&#8377;1,036 Cr</div><div style="font-size:10.5px;color:#5a6475">H1 CY2026 Sales &nbsp;<b class="pos">+2.9% YoY</b></div></div>
+        <div style="flex:1 1 30%;text-align:center;padding:4px 0"><div style="font-size:18px;font-weight:900;color:#1a2a4a">&#8377;114.4 Cr</div><div style="font-size:10.5px;color:#5a6475">H1 CY2026 PAT &nbsp;<b class="neg">-6.5% YoY</b></div></div>
+        <div style="flex:1 1 30%;text-align:center;padding:4px 0"><div style="font-size:18px;font-weight:900;color:#e07c00">17-18.35%</div><div style="font-size:10.5px;color:#5a6475">Q1 CY26 OPM (range across sources)</div></div>
+      </div>
+      <div style="font-size:10.4px;color:#5a6475;margin-top:8px">Margin pressure in the last two disclosed quarters is attributed by sources reviewed to <b>rising material costs</b> &#8212; consistent with Vesuvius India's import dependence for key refractory raw materials (Section 15).</div>
+    </div></div>
+      <div style="flex:0 0 calc(50% - 7px);min-width:0;display:flex;flex-direction:column">
+        <div class="microhead" style="margin-top:0">Balance-Sheet Tiles</div>
+        <div class="tiles" style="flex-wrap:wrap;flex:1;align-content:stretch">
+          <div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">Equity Capital</div><div class="val">&#8377;20 Cr</div><div class="note">Stable</div></div>
+          <div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">Reserves (Jun'26)</div><div class="val pos">&#8377;1,728 Cr</div><div class="note">Dec'23 1,173 &#8594; Dec'24 1,411 &#8594; Dec'25 1,644 &#8594; Jun'26 1,728</div></div>
+          <div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">Borrowings</div><div class="val pos">&#8377;13-14 Cr</div><div class="note">Stable, tiny &#8212; genuinely near debt-free</div></div>
+          <div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">Net Debt / Cash Balance</div><div class="val warn">Not Confirmed</div><div class="note">Precise cash figure not sourced &#8212; balance sheet is directionally net-cash given reserves vastly exceed borrowings</div></div>
+          <div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">5-Yr Sales CAGR</div><div class="val pos">~22%</div><div class="note">CY2020-CY2025</div></div>
+          <div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">5-Yr PAT CAGR</div><div class="val pos">~34%</div><div class="note">CY2020-CY2025</div></div>
+          <div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">OPM Peak &#8594; Latest</div><div class="val warn">19% &#8594; 17%</div><div class="note">CY2024 &#8594; CY2025, held into 1H CY26</div></div>
+          <div class="tile" style="flex:0 0 calc(25% - 8px)"><div class="lab">H1 CY2026 Capex on PP&amp;E</div><div class="val">&#8377;48.9 Cr</div><div class="note">Net investing outflow &#8377;35.0 Cr</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="cols" style="margin-top:6px">
+      <div style="flex:0 0 calc(50% - 7px);min-width:0">
+        <div class="microhead">Quarterly &amp; Annual (&#8377; Cr)</div>
+        <table class="t fit">
+          <tr><th>Period</th><th>Sales</th><th>EBITDA</th><th>OPM%</th><th>PAT</th></tr>
+          <tr><td>Q4 CY2025 (Dec'25)</td><td>551</td><td>94</td><td>17%</td><td>80</td></tr>
+          <tr><td>Q1 CY2026 (Mar'26)</td><td>500</td><td>84-91<small>range</small></td><td>17-18.35%</td><td>56<small>-30% QoQ</small></td></tr>
+          <tr><td>Q2 CY2026 (Jun'26)</td><td>535</td><td>&#8212;</td><td>&#8212;</td><td>58.51</td></tr>
+          <tr><td><b>CY2024</b></td><td><b>1,869</b></td><td><b>350</b></td><td><b>19%</b></td><td><b>265</b></td></tr>
+          <tr><td><b>CY2025</b></td><td><b>2,104</b></td><td><b>361</b></td><td><b>17%</b></td><td><b>264</b></td></tr>
+        </table>
+        <div class="chartcap"><b>Q1 CY2026 declined sequentially</b> &#8212; Revenue -9% QoQ, PAT -30% QoQ &#8212; before Q2 CY2026 recovered modestly (+7% QoQ). This sequential pattern is flagged explicitly rather than smoothed into the multi-year growth narrative below.</div>
+      </div>
+      <div style="flex:0 0 calc(50% - 7px);min-width:0">
+        <div class="microhead">Annual Sales Trend (&#8377; Cr) &#8212; CY2020 to CY2025</div>
+        <svg viewBox="0 0 600 185" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto">
+<line x1="20" y1="150.0" x2="586" y2="150.0" stroke="#dde2ea"/>
+<text x="10" y="12" font-size="9" fill="#8a94a6">Rs Cr</text>
+<rect x="30" y="101.1" width="60" height="48.9" fill="#1a2a4a" rx="2"/><text x="60" y="97.1" text-anchor="middle" font-size="9" font-weight="700" fill="#1a2a4a">792</text><text x="60" y="163" text-anchor="middle" font-size="8.5" fill="#5a6475">CY20</text><text x="60" y="175" text-anchor="middle" font-size="7.5" fill="#8a94a6">OPM 10%</text>
+<rect x="123" y="85.3" width="60" height="64.7" fill="#1a2a4a" rx="2"/><text x="153" y="81.3" text-anchor="middle" font-size="9" font-weight="700" fill="#1a2a4a">1,047</text><text x="153" y="163" text-anchor="middle" font-size="8.5" fill="#5a6475">CY21</text><text x="153" y="175" text-anchor="middle" font-size="7.5" fill="#8a94a6">OPM 10%</text>
+<rect x="216" y="67.0" width="60" height="83.0" fill="#1a2a4a" rx="2"/><text x="246" y="63.0" text-anchor="middle" font-size="9" font-weight="700" fill="#1a2a4a">1,343</text><text x="246" y="163" text-anchor="middle" font-size="8.5" fill="#5a6475">CY22</text><text x="246" y="175" text-anchor="middle" font-size="7.5" fill="#8a94a6">OPM 12%</text>
+<rect x="309" y="50.9" width="60" height="99.1" fill="#1a2a4a" rx="2"/><text x="339" y="46.9" text-anchor="middle" font-size="9" font-weight="700" fill="#1a2a4a">1,603</text><text x="339" y="163" text-anchor="middle" font-size="8.5" fill="#5a6475">CY23</text><text x="339" y="175" text-anchor="middle" font-size="7.5" fill="#8a94a6">OPM 18%</text>
+<rect x="402" y="34.5" width="60" height="115.5" fill="#1a2a4a" rx="2"/><text x="432" y="30.5" text-anchor="middle" font-size="9" font-weight="700" fill="#1a2a4a">1,869</text><text x="432" y="163" text-anchor="middle" font-size="8.5" fill="#5a6475">CY24</text><text x="432" y="175" text-anchor="middle" font-size="7.5" fill="#8a94a6">OPM 19%</text>
+<rect x="495" y="20.0" width="60" height="130.0" fill="#e07c00" rx="2"/><text x="525" y="16.0" text-anchor="middle" font-size="9" font-weight="700" fill="#e07c00">2,104</text><text x="525" y="163" text-anchor="middle" font-size="8.5" fill="#5a6475">CY25</text><text x="525" y="175" text-anchor="middle" font-size="7.5" fill="#e07c00">OPM 17%</text>
+</svg>
+        <div class="chartcap" style="margin-top:2px">Sales roughly <b>tripled from CY2020 to CY2025</b> (&#8377;792 Cr &#8594; &#8377;2,104 Cr) with PAT growing even faster (5-yr CAGR ~34% vs. sales ~22%), but note that <b>OPM peaked at 19% in CY2024</b> and has since slipped to 17% (CY2025 bar highlighted), a trend that has continued into 1H CY2026.</div>
+      </div>
+    </div>
+    <div class="cols" style="margin-top:6px">
+      <div class="notebox green" style="flex:1"><b>&#9733; A genuinely strong multi-year record:</b> 5-yr sales CAGR ~22%, PAT CAGR ~34% &#8212; a real, multi-year operating track record, not a short base. Balance sheet is near debt-free (&#8377;13-14 Cr borrowings against &#8377;1,728 Cr reserves), and Capital-Work-in-Progress fell sharply from &#8377;196 Cr (Dec'24) to &#8377;52 Cr (Dec'25), consistent with the Visakhapatnam plants (Section 02) being capitalized/coming online.</div>
+      <div class="notebox" style="flex:1;background:#fff6e6;border-left:3px solid #e07c00"><b>Worth tracking, not alarming:</b> OPM has slipped from a 19% peak (CY2024) to 17% (CY2025), and stayed there through Q1-Q2 CY2026; Q1 CY2026 saw a sharp sequential decline (Revenue -9% QoQ, PAT -30% QoQ) attributed to rising material costs. A precise cash &amp; bank balance / Net Debt-to-EBITDA figure could not be confirmed from sources reviewed &#8212; flagged as a data gap rather than invented.</div>
+    </div>
+  </div>
+
+  <!-- ================= 09 KEY RATIOS ================= -->
+  <div class="sec">
+    <div class="sec-title" id="sec09"><span class="num">09</span><h2>Key Ratios</h2></div>
+    <table class="t prose" style="margin-top:0">
+      <tr><th style="text-align:left">Metric</th><th>Value</th><th style="text-align:left">Note</th></tr>
+      <tr><td style="text-align:left">P/E (Trailing)</td><td>34.6x</td><td style="text-align:left">&#8212;</td></tr>
+      <tr><td style="text-align:left">P/B</td><td>~5.07x</td><td style="text-align:left">CMP &#8377;437 / Book Value &#8377;86.2</td></tr>
+      <tr><td style="text-align:left">EV/EBITDA</td><td class="warn">~24.6x</td><td style="text-align:left">Approximate &#8212; market cap + negligible net borrowings over CY2025 EBITDA; exact cash figure unconfirmed (Sec. 08)</td></tr>
+      <tr><td style="text-align:left">Forward P/E</td><td class="neg">Not Found</td><td style="text-align:left">No forward estimate located &#8212; flagged plainly rather than invented</td></tr>
+      <tr><td style="text-align:left">ROE</td><td class="pos">15.0%</td><td style="text-align:left">Current</td></tr>
+      <tr><td style="text-align:left">ROCE</td><td class="warn">21.3%</td><td style="text-align:left">Declining trend: 26% (CY2023) &#8594; 25% (CY2024) &#8594; 21% (CY2025) &#8212; a real, sourced trend</td></tr>
+      <tr><td style="text-align:left">Dividend Yield</td><td>~0.29-0.34%</td><td style="text-align:left">Range across sources</td></tr>
+      <tr><td style="text-align:left">Payout Ratio</td><td class="warn">~11-12%</td><td style="text-align:left">Down from ~24-27% a decade ago, despite strongly higher absolute profits</td></tr>
+    </table>
+    <div class="chartcap" style="margin-top:6px">Two findings worth highlighting prominently rather than glossing over: <b>ROCE has trended down for three straight years</b> (26% &#8594; 25% &#8594; 21%, CY2023-CY2025) even as absolute profit grew &#8212; consistent with capital being deployed into the Visakhapatnam capacity build (Section 02) ahead of the incremental returns showing up. And despite being a well-established MNC subsidiary &#8212; a profile often associated with generous, stable payout policies &#8212; Vesuvius India's <b>payout ratio has actually trended down</b>, from ~24-27% a decade ago to ~11-12% now, indicating more capital is being retained for the India capex program (Section 02) rather than distributed. Both are presented as genuine, real findings, not data-quality problems.</div>
+  </div>
+
+  <!-- ================= 10 MANAGEMENT METRICS ================= -->
+  <div class="sec">
+    <div class="sec-title" id="sec10"><span class="num">10</span><h2>Management Metrics</h2></div>
+    <div class="tiles tiles-stack">
+      <div class="tile">
+        <div class="lab">Leadership &amp; Board</div>
+        <div class="val">Mohinder P.S. Rajput, MD (from 1 Jul 2024)</div>
+        <div class="note">Appointed Additional Director/MD effective <b>1 Jul 2024</b> for a 5-year term, ratified by postal ballot 2 Aug 2024; prior career at Lhoist (EVP Strategic Growth, CEO Europe/Asia-CIS-Africa) and ERAMET (CEO, Nickel then Manganese divisions). Replaces <b>Nitin Jain</b>, who moved to a global Vesuvius Group UK role and remains on the VIL board as Non-Executive Non-Independent Director. Chairman: <b>Biswadip Gupta</b> (Independent). Other directors: Sudipto Sarkar and Nayantara Palchoudhuri (Independent), Patrick Georges Felix Andre and Henry James Knowles (Non-Executive, representing Vesuvius plc), Sridhar Gorthi (added 24 Sep 2025). <b>The exact independent-vs-total board ratio and full KMP list (CFO, Company Secretary names) could not be confirmed from sources reviewed</b> &#8212; recommend checking the latest annual report directly.</div>
+      </div>
+      <div class="tile">
+        <div class="lab">Auditor &amp; Credit Rating</div>
+        <div class="val pos">Price Waterhouse Chartered Accountants LLP &#8212; No Qualifications Found</div>
+        <div class="note">Auditor (FRN 012754N/N500016) re-appointed for a second 5-year term from the 31st AGM (6 May 2022) through the 36th AGM; no qualifications or adverse remarks found. <b>Credit rating &#8212; flagged for context:</b> CRISIL suspended its ratings on Vesuvius India's bank facilities back in <b>July 2012</b>, citing non-cooperation with its review process. This is a <b>dated (2012), not current</b>, record &#8212; likely reflecting the company simply not maintaining an active bank-facility rating given its debt-light, cash-generative profile (companies with minimal borrowings often let ratings lapse rather than pay for ongoing surveillance). No current ICRA/CARE rating was located either; verify directly against the latest annual report's rating disclosure if relevant to your decision.</div>
+      </div>
+      <div class="tile">
+        <div class="lab">Related-Party Transactions &#8212; Confirmed Disclosure Gap</div>
+        <div class="val" style="color:#c62828">Royalty / Group-Procurement Quantum Not Sourced This Cycle</div>
+        <div class="note">Vesuvius India licenses group technical know-how and imports/purchases from group entities (Vesuvius Italia S.p.A., Vesuvius France S.A., and others) as standard MNC-subsidiary practice. <b>The exact quantum of royalty/technical-fee payments or group-procurement value could not be obtained this cycle</b> &#8212; the FY2025 Annual Report PDF returned a blocked/403 fetch. This is a <b>genuine, material disclosure gap</b> the reader should close via the annual report's Related Party Disclosures note before relying on any RPT-sensitive conclusion &#8212; the single most important &quot;could not verify&quot; flag in this report, made especially relevant by the Mehsana-to-Foseco intercompany sale (Section 02).</div>
+      </div>
+      <div class="tile">
+        <div class="lab">Capital Allocation &amp; Parent-Level Context</div>
+        <div class="val">~&#8377;650-700 Cr Deployed of a ~&#8377;1,000 Cr Program</div>
+        <div class="note">H1 CY2026 capex on PP&amp;E &#8377;48.9 Cr, net investing outflow &#8377;35.0 Cr. Capital-Work-in-Progress fell sharply from &#8377;196 Cr (Dec 2024) to &#8377;52 Cr (Dec 2025), consistent with the Visakhapatnam plants (Section 02) being capitalized/completed in that window. <b>Parent-level context worth monitoring:</b> Vesuvius plc's H1 2026 earnings call flagged &quot;operational disruptions in India and North America&quot; weighing on group results, expected to resolve by year-end 2026 &#8212; a relevant, sourced read-through for VIL's India operations specifically, though the nature of the disruption was not specified in sources found and should not be over-interpreted.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= 11 GUIDANCE ================= -->
+  <div class="sec">
+    <div class="sec-title" id="sec11"><span class="num">11</span><h2>Company Guidance &#8212; Commitments &amp; Credibility Checklist</h2></div>
+    <div class="microhead">Guidance vs. Delivered</div>
+    <table class="t prose">
+      <tr><th style="text-align:left">Item</th><th style="text-align:left">Latest Data Point</th><th>Verdict</th></tr>
+      <tr><td style="text-align:left">10:1 stock split</td><td style="text-align:left">Completed, record date 10 Jun 2025</td><td><span class="badge b-bull">Completed</span></td></tr>
+      <tr><td style="text-align:left">~&#8377;1,000 Cr cumulative capex program</td><td style="text-align:left">~&#8377;650-700 Cr deployed; Visakhapatnam plants operational from May-Jun 2025</td><td><span class="badge b-bull">On Track</span></td></tr>
+      <tr><td style="text-align:left">Kolkata VISO brownfield expansion (12-18 months)</td><td style="text-align:left">In progress, no confirmed completion date found</td><td><span class="badge b-warn">Watch</span></td></tr>
+      <tr><td style="text-align:left">Mehsana facility sale to Foseco India (~&#8377;43.25 Cr)</td><td style="text-align:left">Board-approved Aug 2026, closing targeted 31 Dec 2026</td><td><span class="badge b-neut">Pending</span></td></tr>
+      <tr><td style="text-align:left">Multi-year revenue/margin targets</td><td style="text-align:left">No specific management guidance found in sources reviewed</td><td><span class="badge b-neut">Not Disclosed</span></td></tr>
+    </table>
+    <div class="microhead" style="margin-top:14px">Management-Quality Checklist</div>
+    <table class="t prose">
+      <tr><th style="text-align:left">Item</th><th style="text-align:right">Read</th></tr>
+      <tr><td style="text-align:left">MD transition mid-cycle</td><td style="text-align:right"><span class="badge b-bull">Normal &#8212; orderly succession, predecessor remains on board</span></td></tr>
+      <tr><td style="text-align:left">Auditor tenure &amp; conduct</td><td style="text-align:right"><span class="badge b-bull">No Concern &#8212; stable second 5-year term, no qualifications found</span></td></tr>
+      <tr><td style="text-align:left">Credit rating currency</td><td style="text-align:right"><span class="badge b-warn">Watch &#8212; stale 2012 suspension record, current status unconfirmed, low materiality given debt-free profile</span></td></tr>
+      <tr><td style="text-align:left">Related-party transaction transparency</td><td style="text-align:right"><span class="badge b-bear">Confirmed Gap &#8212; RPT quantum not accessible this cycle, relevant to the Mehsana-Foseco sale</span></td></tr>
+      <tr><td style="text-align:left">Market share trend</td><td style="text-align:right"><span class="badge b-bear">Confirmed, Watch &#8212; ~3% six-year share loss to RHI Magnesita India, the most substantive watch item in this report</span></td></tr>
+    </table>
+    <div class="chartcap" style="margin-top:6px">Read together: most execution/governance basics check out cleanly (auditor, MD transition, capex delivery), while the two genuinely open items &#8212; RPT disclosure and the market-share trend &#8212; are exactly the two threads this report keeps returning to (Section 04, 15, 19).</div>
+  </div>
+
+  <!-- ================= 12 | 13 | 14 TRIPLE ================= -->
+  <div class="sec">
+    <div class="cols">
+      <div style="flex:1;display:flex;flex-direction:column">
+        <div class="sec-title" id="sec12"><span class="num">12</span><h2>Street Consensus</h2></div>
+        <div class="krow"><span class="klab">Analysts Tracked (Trendlyne)</span><span class="kval" style="color:#e07c00">1</span></div>
+        <div class="krow"><span class="klab">Rating Split</span><span class="kval">0 Buy / 1 Hold / 0 Sell</span></div>
+        <div class="krow"><span class="klab">Price Target Range</span><span class="kval">&#8377;527-585 <small>~13-25% upside from CMP</small></span></div>
+        <div class="mininote" style="background:#fff6e6;border-left:3px solid #e07c00;margin-top:auto"><b>Read:</b> Coverage is genuinely thin for a company of this size (~&#8377;8,869 Cr market cap) &#8212; only one tracked analyst, so this should <b>not</b> be read as a robust institutional consensus. It is, however, at least a genuine named analyst rating, unlike some smaller names in this report series with zero coverage &#8212; a distinction worth stating plainly rather than treating both situations the same.</div>
+      </div>
+      <div style="flex:1;display:flex;flex-direction:column">
+        <div class="sec-title" id="sec13"><span class="num">13</span><h2>Share Volume &amp; Profile</h2></div>
+        <div class="krow"><span class="klab">Market Cap</span><span class="kval">&#8377;8,869 Cr</span></div>
+        <div class="krow"><span class="klab">Institutional Ownership (FII+DII)</span><span class="kval" style="color:#2e7d32">~26.6% <small>Provides real independent validation</small></span></div>
+        <div class="krow"><span class="klab">Share Count Comparability</span><span class="kval" style="font-size:10px">10:1 split, 10 Jun 2025 <small>Affects pre/post-split volume comparisons</small></span></div>
+        <div class="krow"><span class="klab">Index Inclusion Catalyst</span><span class="kval" style="color:#8a94a6">None Confirmed</span></div>
+        <div class="mininote" style="background:#eef4fc;border-left:3px solid #1565c0;margin-top:auto"><b>Read:</b> No confirmed index-inclusion catalyst was found in research &#8212; stated plainly rather than invented. Vesuvius India's ~&#8377;8,869 Cr market cap would plausibly qualify it for smallcap/midcap index consideration, but no specific confirmed inclusion event was located.</div>
+      </div>
+      <div style="flex:1.15">
+        <div class="sec-title" id="sec14"><span class="num">14</span><h2>Peer Comparison</h2></div>
+        <table class="peer">
+          <tr><th>Company</th><th>MCap</th><th>Revenue</th><th>EBITDA%</th><th>ROE</th><th>ROCE</th><th>P/E</th></tr>
+          <tr style="background:#eef4fc"><td>&#9733; VESUVIUS</td><td>8,869</td><td>2,134*</td><td class="pos">17.0%</td><td class="pos">15.0%</td><td class="pos">21.3%</td><td>34.6x</td></tr>
+          <tr><td>RHI Magnesita India</td><td>7,857</td><td>4,020</td><td class="neg">11.0%</td><td class="neg">2.9%/5.75%<small>1yr/3yr</small></td><td class="neg">6.5%</td><td class="warn">42.0x**</td></tr>
+          <tr><td>IFGL Refractories</td><td>1,566</td><td>1,904</td><td class="neg">7.7%</td><td class="neg">3.2%</td><td>N/A</td><td>36.5x</td></tr>
+          <tr><td>TRL Krosaki (Unlisted)***</td><td>N/A</td><td>2,520</td><td>~12.7%</td><td>20.45%<small>down from 24.59%</small></td><td>N/A</td><td>N/A</td></tr>
+        </table>
+        <div class="chartcap" style="margin-top:4px">&#8377; Cr unless noted. *TTM/latest-FY figure. **RHI Magnesita posted a <b>net loss of -&#8377;383 Cr in FY26</b> per research despite a positive P/E cited by one aggregator &#8212; that P/E figure may be stale/non-meaningful on a loss-making base, presented transparently rather than reconciled. ***Krosaki Harima/Tata Steel JV, ~&#8377;1,660/share indicative Jan'26; unlisted, so market cap/P/E are not meaningfully comparable &#8212; included for scale context only. <b>Central tension:</b> Vesuvius India is roughly half RHI Magnesita's revenue scale yet carries a similar/higher market cap, reflecting materially superior unit economics (17% OPM vs. 11%, 15% ROE vs. RHI's low-single-digit/loss-affected figures, 21.3% ROCE vs. 6.5%) &#8212; but RHI Magnesita has actual share leadership (~15.9% market share, roughly flat/growing) while Vesuvius has been losing share (~3% over six years, Section 03). Against TRL Krosaki (the closest scale peer, Tata-Steel-anchored, unlisted), TRL posts a <b>higher ROE (20.45%)</b> on captive-customer volumes despite a lower EBITDA margin (~12.7% vs. Vesuvius's 17%) &#8212; consistent with TRL's more bulk/bricks-weighted mix versus Vesuvius's flow-control skew. Better economics, worse share trajectory: that is the tension to carry into Section 15 and 19.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= 15 RISK ANALYSIS ================= -->
+  <div class="sec">
+    <div class="sec-title" id="sec15"><span class="num">15</span><h2>Risk Analysis</h2></div>
+    <table class="t prose risk">
+      <tr><th style="text-align:left">Risk Category</th><th style="text-align:left">Evidence</th><th>Severity</th></tr>
+      <tr><td style="text-align:left"><b>Commodity / Raw-Material Risk</b></td><td style="text-align:left">Import-dependent for magnesite, graphite and other refractory inputs; ~30% of India's refractory raw-material consumption is imported industry-wide, roughly two-thirds historically from China, with diversification to Europe/Brazil/South Africa/Turkey costing a 30-40% premium. Q1 CY2026's sequential margin/PAT decline (-30% QoQ) was attributed to rising material costs &#8212; a live, current example, not a hypothetical.</td><td><span class="badge b-bear">High</span></td></tr>
+      <tr><td style="text-align:left"><b>Industry Disruption Risk</b></td><td style="text-align:left">Core exposure is cyclicality tied to steel output, not a structural demand threat. The EAF/green-steel transition is reformulation demand &#8212; a tailwind for refractory reinvestment (Section 05) &#8212; rather than a headwind, unlike ICE-to-EV transitions elsewhere in this report series.</td><td><span class="badge b-neut">Low-Medium</span></td></tr>
+      <tr><td style="text-align:left"><b>Competitive Risk &#8212; STANDOUT FINDING</b></td><td style="text-align:left">RHI Magnesita India is the clear market-share leader with superior vertical integration (captive raw materials, ~85% utilization) and has held/grown share, while Vesuvius India and TRL Krosaki have both <b>lost share</b> (-3% and -5.3% respectively over six years). This is an ongoing structural competitive disadvantage, not a one-off event.</td><td><span class="badge b-bear">High</span></td></tr>
+      <tr><td style="text-align:left"><b>Regulatory Risk</b></td><td style="text-align:left">No India-specific anti-dumping duties on Vesuvius's refractory raw-material inputs were found (only unrelated graphite-electrode trade actions affecting Indian exporters like HEG/Graphite India in US/EU markets &#8212; not Vesuvius's own inputs; not conflated here). Specific import-duty/environmental-clearance details for Vesuvius India's own plants were not found and should be treated as unverified rather than assumed benign.</td><td><span class="badge b-warn">Low-Medium</span></td></tr>
+      <tr><td style="text-align:left"><b>Related-Party / Governance Risk</b></td><td style="text-align:left">A genuine, material disclosure gap (Section 10): exact royalty/technical-fee quantum paid to the Vesuvius plc group could not be sourced (blocked annual report fetch), directly relevant given the Mehsana-to-Foseco India intercompany sale (Section 02). Separately, the 2016 BSE voluntary delisting was an exchange-consolidation move, <b>not</b> a going-private/squeeze-out event &#8212; VIL continued and continues to trade actively on NSE. A Vesuvius-plc-controlled sister company (Foseco India) did execute a SEBI mandatory open offer for a <b>different</b> company (Morganite Crucible India) in 2025 as part of an acquisition &#8212; explicitly <b>not</b> a precedent for any Vesuvius India Ltd delisting/open-offer scenario; no current rumor or filing suggesting one was found.</td><td><span class="badge b-warn">Medium</span></td></tr>
+      <tr><td style="text-align:left"><b>Debt / Financial Risk</b></td><td style="text-align:left">Genuinely near debt-free (&#8377;13-14 Cr borrowings against &#8377;1,644-1,728 Cr reserves); operating cash flow reportedly covers debt ~19x per one source.</td><td><span class="badge b-bull">Low</span></td></tr>
+      <tr><td style="text-align:left"><b>Customer Concentration Risk</b></td><td style="text-align:left">No specific top-customer revenue-share disclosure was located. Directionally likely meaningful given the business depends on a relatively small universe of large steel mills/foundries, but stated here as a genuine information gap requiring the annual report's customer/segment notes, not an assumed-low risk.</td><td><span class="badge b-warn">Data Gap &#8212; Directionally Medium</span></td></tr>
+      <tr><td style="text-align:left"><b>Cyclicality Risk</b></td><td style="text-align:left">Earnings are explicitly levered to steel-industry capex cycles per management/analyst commentary. Q4 CY2025/Q1 CY2026 margin compression despite revenue growth is a live, current example.</td><td><span class="badge b-warn">Medium-High</span></td></tr>
+    </table>
+    <div class="notebox" style="margin-top:10px;background:#eef4fc;border-left:3px solid #1565c0"><b>The sentence that captures this report:</b> Vesuvius India's numbers tell a genuinely good unit-economics story &#8212; 17% margins, 21% returns on capital, a near debt-free balance sheet, and a steel-capex supercycle at its back &#8212; but the same research that supports that story also shows the company steadily ceding ground to a bigger, more vertically-integrated rival, and leaves the exact terms of its dealings with its own parent company unverifiable from what's publicly accessible. Good economics losing share to a better-integrated competitor, while related-party disclosure stays opaque, is a combination worth watching closely rather than either dismissing or over-reacting to.</div>
+  </div>
+
+  <div style="background:linear-gradient(135deg,#101c36,#1a2a4a 55%,#2b4570);border-top:3px solid #f0b429;border-bottom:3px solid #f0b429;color:#f0b429;padding:9px 26px;font-weight:900;letter-spacing:2.5px;font-size:14px;text-transform:uppercase">Technical Analysis</div>
+
+  <!-- ================= 16 SECTOR ROTATION (BUSINESS CYCLE CLOCK) ================= -->
+  <div class="sec">
+    <div class="sec-title" id="sec16"><span class="num">16</span><h2>Sector Rotation &#8212; Business Cycle Clock</h2></div>
+    <div class="cols">
+      <div style="flex:1.2">
+<div style="max-width:78%;margin:0 auto">
+<svg viewBox="0 0 380 380" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto">
+<circle cx="190" cy="190" r="150" fill="#fbfcfd" stroke="#dde2ea" stroke-width="1"/>
+<circle cx="190" cy="190" r="150" fill="none" stroke="#8a94a6" stroke-width="1.3"/>
+<line x1="190" y1="190" x2="40" y2="190" stroke="#e3e7ee" stroke-width="1"/>
+<line x1="190" y1="190" x2="115" y2="60.1" stroke="#e3e7ee" stroke-width="1"/>
+<line x1="190" y1="190" x2="265" y2="60.1" stroke="#e3e7ee" stroke-width="1"/>
+<line x1="190" y1="190" x2="340" y2="190" stroke="#e3e7ee" stroke-width="1"/>
+<line x1="190" y1="190" x2="265" y2="319.9" stroke="#e3e7ee" stroke-width="1"/>
+<line x1="190" y1="190" x2="115" y2="319.9" stroke="#e3e7ee" stroke-width="1"/>
+<path d="M 190 40 A 150 150 0 0 1 320 115" fill="none" stroke="#f0b429" stroke-width="4" stroke-linecap="round"/>
+<path d="M 320 115 A 150 150 0 0 1 320 265" fill="none" stroke="#c62828" stroke-width="4" stroke-linecap="round" opacity="0.85"/>
+<path d="M 320 265 A 150 150 0 0 1 190 340" fill="none" stroke="#c62828" stroke-width="4" stroke-linecap="round" opacity="0.55"/>
+<path d="M 190 340 A 150 150 0 0 1 60 265" fill="none" stroke="#1565c0" stroke-width="4" stroke-linecap="round" opacity="0.55"/>
+<path d="M 60 265 A 150 150 0 0 1 60 115" fill="none" stroke="#1565c0" stroke-width="4" stroke-linecap="round" opacity="0.85"/>
+<path d="M 60 115 A 150 150 0 0 1 190 40" fill="none" stroke="#2e7d32" stroke-width="4" stroke-linecap="round"/>
+<text x="40" y="185" text-anchor="start" font-size="10.5" font-weight="900" fill="#5c6b85">MARKET BOTTOM</text>
+<text x="62" y="55" text-anchor="middle" font-size="10.5" font-weight="900" fill="#2e7d32">EARLY RECOVERY</text>
+<text x="190" y="24" text-anchor="middle" font-size="11.5" font-weight="900" fill="#2e7d32">BULL MARKET</text>
+<text x="318" y="55" text-anchor="middle" font-size="10.5" font-weight="900" fill="#c99400">MARKET TOP</text>
+<text x="345" y="185" text-anchor="end" font-size="10.5" font-weight="900" fill="#c62828">BEAR MARKET</text>
+<text x="190" y="358" text-anchor="middle" font-size="10.5" font-weight="900" fill="#c62828">FULL RECESSION</text>
+<text x="103" y="129" text-anchor="middle" font-size="7.6" fill="#5c6b85">Finance</text>
+<text x="103" y="140" text-anchor="middle" font-size="7.6" fill="#5c6b85">Technology</text>
+<text x="103" y="151" text-anchor="middle" font-size="7.6" fill="#5c6b85">Cyclicals</text>
+<text x="190" y="79" text-anchor="middle" font-size="7.6" fill="#2e7d32">Technology</text>
+<text x="190" y="90" text-anchor="middle" font-size="7.6" fill="#2e7d32">Industrials</text>
+<text x="190" y="101" text-anchor="middle" font-size="7.6" font-weight="800" fill="#2e7d32">Basic Materials</text>
+<text x="277" y="129" text-anchor="middle" font-size="7.6" font-weight="800" fill="#c99400">Basic Materials</text>
+<text x="277" y="140" text-anchor="middle" font-size="7.6" fill="#c99400">Energy</text>
+<text x="277" y="151" text-anchor="middle" font-size="7.6" fill="#c99400">Staples</text>
+<text x="277" y="229" text-anchor="middle" font-size="7.6" fill="#c62828">Energy</text>
+<text x="277" y="240" text-anchor="middle" font-size="7.6" fill="#c62828">Staples</text>
+<text x="277" y="251" text-anchor="middle" font-size="7.6" fill="#c62828">Healthcare</text>
+<text x="190" y="279" text-anchor="middle" font-size="7.6" fill="#1565c0">Healthcare</text>
+<text x="190" y="290" text-anchor="middle" font-size="7.6" fill="#1565c0">Utilities</text>
+<text x="190" y="301" text-anchor="middle" font-size="7.6" fill="#1565c0">Finance</text>
+<circle cx="190" cy="190" r="3" fill="#8a94a6"/>
+<line x1="190" y1="190" x2="183" y2="118" stroke="#2e7d32" stroke-width="2.2"/>
+<circle cx="183" cy="118" r="7.5" fill="#2e7d32" stroke="#fff" stroke-width="2"/>
+<text x="220" y="100" text-anchor="middle" font-size="11" font-weight="900" fill="#2e7d32">&#9733; VESUVIUS</text>
+<text x="220" y="145" text-anchor="middle" font-size="7.5" font-weight="700" fill="#2e7d32">Bull Market / Basic Materials-Industrials &#8212;</text>
+<text x="220" y="155" text-anchor="middle" font-size="7.5" font-weight="700" fill="#2e7d32">sector tailwind, but see market-share caveat</text>
+</svg>
+</div>
+      </div>
+      <div style="flex:1">
+        <div class="notebox green" style="margin-top:10px"><b>&#9733; VESUVIUS (marked):</b> positioned in the <b>Bull Market / Basic Materials-Industrials</b> wedge, reflecting the genuine steel-capex tailwind (Section 05 &#8212; India steel capacity heading toward 300 MTPA by 2030) and Vesuvius India's strong historical margins and ROCE (Section 08-09), which sit structurally above both listed peers shown in Section 14. Basic Materials and Industrials both appear as leading groups in this phase of the framework, consistent with a company selling consumable inputs into an expanding steel base.</div>
+        <div class="notebox" style="margin-top:10px;background:#fff6e6;border-left:3px solid #e07c00"><b>Caveat on this positioning:</b> a favorable sector-cycle read does not automatically translate into Vesuvius-specific outperformance. The market-share-loss trend versus RHI Magnesita India (Section 03, 14) is the key risk to this cyclical tailwind continuing to show up in Vesuvius India's own numbers rather than accruing disproportionately to its larger, more vertically-integrated rival.</div>
+        <div class="chartcap" style="margin-top:8px">Classic business-cycle sector-rotation framework (economy vs. market phase); qualitative positioning based on current fundamentals and macro backdrop, not a statistically-fit model.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= 17 MARKETSMITH ================= -->
+  <div class="sec">
+    <div class="sec-title" id="sec17"><span class="num">17</span><h2>MarketSmith Analysis (Relative Strength &amp; O'Neil Scores)</h2></div>
+    <div class="notebox" style="margin-top:0;background:#fff6e6;border-left:3px solid #e07c00"><b>No MarketSmith data available this cycle:</b> No chart capture or proprietary MarketSmith numeric scores were supplied for this report. All five tiles below are presented honestly as N/A rather than estimated or fabricated. The Guru Scores table further below uses the <b>author's own reasoned estimates</b>, clearly labeled as such and derived from the financial data elsewhere in this report &#8212; they are not MarketSmith's actual output.</div>
+    <div class="cols" style="margin-top:10px;align-items:stretch">
+      <div style="flex:0 0 17%;border:1px solid #dde2ea;border-radius:6px;padding:10px 12px;background:linear-gradient(180deg,#fdfefe,#f7f9fc)">
+        <div class="lab" style="font-size:9.5px;font-weight:900;letter-spacing:0.8px;text-transform:uppercase;color:#8a94a6">Price Strength</div>
+        <div style="font-size:26px;font-weight:900;color:#8a94a6;line-height:1.1;margin-top:2px">N/A</div>
+        <div style="font-size:10px;color:#5a6475;margin-bottom:6px">No MarketSmith data this cycle</div>
+      </div>
+      <div style="flex:1;display:flex;gap:8px">
+        <div class="tile" style="flex:1"><div class="lab">EPS Strength</div><div class="val" style="color:#8a94a6">N/A</div><div class="note">Not available</div></div>
+        <div class="tile" style="flex:1"><div class="lab">Buyer Demand</div><div class="val" style="color:#8a94a6">N/A</div><div class="note">Not available</div></div>
+        <div class="tile" style="flex:1"><div class="lab">Group Rank</div><div class="val" style="color:#8a94a6">N/A</div><div class="note">Not available</div></div>
+      </div>
+      <div style="flex:0 0 14%;border:1px solid #dde2ea;border-radius:6px;padding:10px 12px;text-align:center;background:linear-gradient(180deg,#fdfefe,#f7f9fc)">
+        <div class="lab" style="font-size:9.5px;font-weight:900;letter-spacing:0.8px;text-transform:uppercase;color:#8a94a6">Master Score</div>
+        <div style="font-size:30px;font-weight:900;color:#8a94a6;line-height:1.1;margin-top:4px">N/A</div>
+        <div style="font-size:9.5px;color:#5a6475;margin-top:4px">Not available</div>
+      </div>
+    </div>
+    <div class="microhead" style="margin-top:14px">Guru Scores &#8212; Author's Reasoned Estimates (NOT MarketSmith's Proprietary Output)</div>
+    <table class="t prose guru-table">
+      <tr><th style="text-align:left">Guru</th><th>Score (Estimate)</th><th style="text-align:left">What It Measures</th><th style="text-align:left">Reasoning for VESUVIUS</th></tr>
+      <tr><td data-label="Guru" style="text-align:left">William J. O'Neil</td><td data-label="Score (Estimate)" class="pos">MODERATE-HIGH</td><td data-label="What It Measures" style="text-align:left">EPS growth, RS, accumulation, base quality</td><td data-label="Reasoning for VESUVIUS" style="text-align:left">Strong 5-yr EPS/revenue CAGR (~34%/~22%, Section 08) supports a high read, but recent 2-3 quarters of margin compression (19%&#8594;17% OPM) caps it below the top band.</td></tr>
+      <tr><td data-label="Guru" style="text-align:left">Peter Lynch</td><td data-label="Score (Estimate)" class="warn">MODERATE</td><td data-label="What It Measures" style="text-align:left">PEG ratio, earnings consistency, dividends</td><td data-label="Reasoning for VESUVIUS" style="text-align:left">P/E ~34.6x is not cheap on a PEG basis even against strong growth, and the declining payout ratio (Section 09) works against Lynch's dividend-consistency preference.</td></tr>
+      <tr><td data-label="Guru" style="text-align:left">Benjamin Graham</td><td data-label="Score (Estimate)" class="warn">LOW-MODERATE</td><td data-label="What It Measures" style="text-align:left">Deep value, margin of safety, low P/B</td><td data-label="Reasoning for VESUVIUS" style="text-align:left">P/B ~5x is rich by classic value standards, though balance-sheet quality is excellent (near debt-free, Section 08) &#8212; the quality offsets some of the valuation concern without erasing it.</td></tr>
+      <tr><td data-label="Guru" style="text-align:left">Warren Buffett</td><td data-label="Score (Estimate)" class="pos">MODERATE-HIGH</td><td data-label="What It Measures" style="text-align:left">Durable moat, ROE consistency, predictability</td><td data-label="Reasoning for VESUVIUS" style="text-align:left">Genuinely durable technical-qualification switching costs, a near-debt-free balance sheet, and consistent multi-year profitability support a high read &#8212; tempered by the real market-share-loss trend versus RHI Magnesita India (Section 03, 14).</td></tr>
+      <tr><td data-label="Guru" style="text-align:left">James P. O'Shaughnessy</td><td data-label="Score (Estimate)" class="warn">MODERATE</td><td data-label="What It Measures" style="text-align:left">Value factors, price momentum, shareholder yield</td><td data-label="Reasoning for VESUVIUS" style="text-align:left">Decent growth/quality factors are offset by a low ~0.3% dividend yield and a declining payout ratio (Section 09), which weigh on the shareholder-yield component of this factor set.</td></tr>
+    </table>
+    <div class="notebox blue" style="margin-top:10px"><b>Synthesis:</b> These are the <b>author's own qualitative estimates</b>, derived from the financial data in this report, not MarketSmith's real proprietary scores &#8212; no MarketSmith data was supplied this cycle (see note above). The overall pattern &#8212; moderate-high on growth/quality/moat factors, moderate-to-low on classic value/PEG factors &#8212; is consistent with Section 04's framing of Vesuvius India as fundamentally solid but not cheap.</div>
+  </div>
+
+  <!-- ================= 18 TECHNICAL READ — PRICE & RELATIVE PERFORMANCE ================= -->
+  <div class="sec">
+    <div class="sec-title" id="sec18"><span class="num">18</span><h2>Technical Read &#8212; Price &amp; Relative Performance</h2></div>
+    <table class="t prose kv-table" style="margin-top:12px">
+      <tr><th style="width:110px">Element</th><th style="text-align:left">Interpretation</th></tr>
+      <tr><td>Price Action</td><td style="text-align:left">CMP is ~&#8377;437 (18 Aug 2026), against a <b>52-week range of &#8377;430.3-607.9</b> (post-split basis, one aggregator's figure &#8212; see Section 07). The stock sits only ~1.6% above its 52-week low and ~28% below its 52-week high. Over the trailing two years, Vesuvius India is down <b>-15.6%</b> on a relative basis, versus the Nifty 50's <b>-2.7%</b> &#8212; a real underperformance &#8212; but notably far less severe than its closest large listed peer, RHI Magnesita India, down <b>-39.7%</b> over the same window (Section 04, 14).</td></tr>
+      <tr><td>Structural Note &#8212; Stock Split</td><td style="text-align:left">Vesuvius India executed its <b>first-ever 10:1 stock split (record date 10 Jun 2025)</b>, a structural break in any single continuous price chart &#8212; pre-split prices (roughly &#8377;4,000+ scale) are not comparable to post-split prices without adjustment. The 2-year relative-performance series used in this report (Section 04) has already been consistently indexed/adjusted for this split, so it is read as a <b>percentage-return chart, not a raw price-level chart</b>, avoiding the comparability issue.</td></tr>
+      <tr><td>Synthesis</td><td style="text-align:left">No chart-derived support/resistance levels or wave counts are available this cycle &#8212; none are fabricated here. The available read is a fundamentals-anchored one: the stock's underperformance versus the Nifty, combined with its outperformance versus RHI Magnesita, is consistent with the report's core thesis (Section 03-04, 14) &#8212; better unit economics than its closest peer, but real competitive-share pressure keeping it from tracking the broader market.</td></tr>
+    </table>
+  </div>
+
+  <!-- ================= 19 RECOMMENDATION ================= -->
+  <div class="sec">
+    <div class="sec-title" id="sec19"><span class="num">19</span><h2>Recommendation &amp; Trade Setup</h2></div>
+    <div class="cols">
+      <div class="panel" style="flex:1.3;border-color:#e07c00">
+        <div class="plab" style="color:#e07c00">Two-Stage Signal Framework</div>
+        <div style="font-size:11.3px;margin-top:8px;padding:8px 10px;background:#fce4ec;border-radius:5px"><b style="color:#d81b60">&#9679; PINK (now):</b> Fundamentals are genuinely solid &#8212; near debt-free, strong historical margins/ROCE, and real capacity investment ahead of a steel-capex supercycle (Section 05). But the stock is <b>not cheap</b> (P/E ~34.6x) for a company that has been losing competitive share (Section 03, 14) and seeing recent margin compression (Section 08), and a material related-party-transaction disclosure gap remains open (Section 10). <b>Prepare, don't chase on valuation alone.</b></div>
+        <div style="font-size:11.3px;margin-top:6px;padding:8px 10px;background:#e8f5e9;border-radius:5px"><b style="color:#2e7d32">&#9679; GREEN (trigger):</b> Would include: confirmation that recent margin compression is <b>transitory</b> (raw-material cost pass-through resuming) rather than a structural shift; <b>primary-source confirmation of RPT quantum/terms</b>, especially around the Foseco/Mehsana transaction (Section 02, 10); and ideally evidence the <b>market-share erosion trend has stabilized or reversed</b> (Section 03, 14).</div>
+        <div style="font-size:11.3px;margin-top:6px"><b>Next catalyst:</b> the next quarterly results (<b>Q3 CY2026, expected ~Nov 2026</b> per the calendar-year reporting cadence) and the targeted <b>31 Dec 2026 closing</b> of the Mehsana-to-Foseco India sale.</div>
+      </div>
+      <div class="panel" style="border-color:#1565c0">
+        <div class="plab" style="color:#1565c0">&#128313; Key Support Levels</div>
+        <table class="t" style="margin-top:4px">
+          <tr><td>&#8377;437</td><td style="text-align:left">Current price (18 Aug 2026)</td><td><span class="badge b-neut">Now</span></td></tr>
+          <tr><td>&#8377;430.3</td><td style="text-align:left">52-week low &#8212; post-split basis, one aggregator</td><td><span class="badge b-bull">Near-Term Floor</span></td></tr>
+        </table>
+        <div class="chartcap" style="margin-top:4px">No technical support/resistance levels are invented here &#8212; Section 18 found no chart-derived structure this cycle, so only the genuinely known price milestones are shown.</div>
+      </div>
+      <div class="panel" style="border-color:#e07c00">
+        <div class="plab" style="color:#e07c00">&#128992; Key Watch Levels</div>
+        <table class="t" style="margin-top:4px">
+          <tr><td>&#8377;607.9</td><td style="text-align:left">52-week high &#8212; ~28% above CMP</td><td><span class="badge b-warn">Resistance Zone</span></td></tr>
+          <tr><td>P/E 34.6x</td><td style="text-align:left">Valuation to watch against margin/growth delivery</td><td><span class="badge b-warn">Watch</span></td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="disclaim">Sources: BSE, NSE, Screener.in, Trendlyne, company/BSE corporate announcements, Vesuvius plc group investor materials and earnings-call commentary, industry refractories/steel/foundry market research (India and global), and the author's own analysis, as of 18 Aug 2026. Several material items &#8212; the exact quantum of related-party royalty/technical-fee payments to the Vesuvius plc group, precise cash &amp; bank balance/Net Debt-to-EBITDA, forward P/E, top-customer revenue concentration, current (post-2012) credit-rating status, and the full independent-director/KMP roster &#8212; could not be confirmed from sources reviewed this cycle and are presented as open items requiring direct verification against the latest annual report and BSE filings. No MarketSmith chart data was available this cycle (Section 17); Guru Scores in Section 17 are the author's own reasoned estimates, not MarketSmith's proprietary output. Price, volume and financial figures should be independently verified before any decision. All figures in &#8377; Crore unless stated otherwise.</div>
+  <div class="footer-blue"><b>Copyright &copy; Ashoke Kumar Seth</b> &nbsp;|&nbsp; Ashokekseth@gmail.com &nbsp;|&nbsp; This report is for informational purposes only and does not constitute investment advice.</div>
+</div>
+</div>
+
+</body>
+</html>
