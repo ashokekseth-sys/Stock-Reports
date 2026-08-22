@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Forest Fire Detection System</title>
+  <meta name="description" content="Ranger console for a LoRa-mesh forest fire early-warning network: node health, live risk map, confidence-tiered alerts, escalation and outcome feedback.">
+  <meta name="theme-color" content="#0d1117">
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+
+  <!-- 2.1 Login — forest officer authentication -->
+  <div id="login-screen">
+    <form class="login-card" id="login-form" autocomplete="off">
+      <div class="login-brand">
+        <span class="mark">🌲</span>
+        <div>
+          <h1>Forest Fire Detection System</h1>
+          <div style="font-size:11px;color:var(--text-3);letter-spacing:0.06em;text-transform:uppercase">Ranger console</div>
+        </div>
+      </div>
+      <p class="login-sub">
+        Early warning from a canopy-mounted LoRa sensor mesh. Sign in with your forest department credentials.
+      </p>
+
+      <div class="login-error hidden" id="login-error"></div>
+
+      <div class="field">
+        <label for="login-user">Officer ID</label>
+        <input type="text" id="login-user" placeholder="ranger" autocomplete="username" required>
+      </div>
+      <div class="field">
+        <label for="login-pass">Password</label>
+        <input type="password" id="login-pass" placeholder="••••••••" autocomplete="current-password" required>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block" style="margin-top:6px">Sign in</button>
+
+      <div class="login-hint">
+        Demo accounts — <code>ranger</code>, <code>officer</code> or <code>watch</code>, password
+        <code>forest123</code>. <a href="#" id="demo-fill">Fill demo credentials</a>
+        <span class="demo-note">⚠ Prototype authentication runs entirely in the browser. Wire this screen to the
+        department's identity provider before field deployment.</span>
+      </div>
+    </form>
+  </div>
+
+  <!-- Application shell -->
+  <div id="app-shell" class="hidden">
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <span class="mark">🌲</span>
+        <div>
+          <div class="title">Forest Fire<br>Detection</div>
+          <div class="subtitle">Ranger console</div>
+        </div>
+      </div>
+      <nav class="nav" id="nav"></nav>
+      <div class="sidebar-foot">
+        <div class="user-chip">
+          <div class="avatar" id="user-initials">–</div>
+          <div>
+            <div class="name" id="user-name">–</div>
+            <div class="role" id="user-role">–</div>
+          </div>
+        </div>
+        <button class="btn btn-sm btn-block" id="logout">Sign out</button>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <h2 id="view-title">Dashboard</h2>
+          <div class="crumb" id="view-crumb"></div>
+        </div>
+        <div class="spacer"></div>
+        <div class="live-pill" id="live-pill"><span class="dot pulse"></span>connecting…</div>
+      </header>
+      <div class="view" id="view"></div>
+    </main>
+  </div>
+
+  <div id="toasts"></div>
+
+  <script src="js/util.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/network.js"></script>
+  <script src="js/alerts.js"></script>
+  <script src="js/charts.js"></script>
+  <script src="js/map.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/views.js"></script>
+  <script src="js/views2.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
