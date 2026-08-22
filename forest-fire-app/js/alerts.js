@@ -315,7 +315,11 @@
         at: now,
         kind: kind,                       // 'alert' | 'cluster'
         subjectId: subject.id,
-        nodeLabel: subject.nodeLabel || (subject.nodeIds || []).join(', '),
+        /* Clusters are named by size and sector — a 15-node membership list is
+           unreadable in the log and in an SMS body alike. */
+        nodeLabel: subject.nodeLabel ||
+          ((subject.nodeIds || []).length + ' nodes · ' + (subject.sector || '')),
+        nodeIds: subject.nodeIds || [subject.nodeId],
         tier: subject.tier,
         confidence: subject.confidence,
         level: level,

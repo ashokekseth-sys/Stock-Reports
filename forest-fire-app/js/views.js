@@ -520,7 +520,13 @@
       list.slice(0, 200).map(function (e) {
         return '<tr>' +
           '<td style="white-space:nowrap">' + esc(U.fmtDateTime(e.at)) + '</td>' +
-          '<td><span class="chip">' + esc(e.kind === 'cluster' ? 'CLUSTER' : 'ALERT') + '</span> ' + esc(e.nodeLabel) + '</td>' +
+          '<td style="min-width:190px"><span class="chip">' + esc(e.kind === 'cluster' ? 'CLUSTER' : 'ALERT') +
+            '</span> ' + esc(e.nodeLabel) +
+            ((e.nodeIds && e.nodeIds.length > 1)
+              ? '<div style="font-size:11px;color:var(--text-3);font-family:var(--mono);margin-top:3px">' +
+                esc(e.nodeIds.slice(0, 3).join(', ')) +
+                (e.nodeIds.length > 3 ? ' +' + (e.nodeIds.length - 3) + ' more' : '') + '</div>'
+              : '') + '</td>' +
           '<td>' + UI.tierBadge(e.tier) + '</td>' +
           '<td class="num">' + esc(e.level) + '</td>' +
           '<td>' + esc(icon[e.channel] || '') + ' ' + esc(e.channel.toUpperCase()) + '</td>' +
